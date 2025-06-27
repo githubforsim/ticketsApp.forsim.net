@@ -1,0 +1,133 @@
+.content {
+  padding-top: 20px;
+  padding-left: 280px;
+}
+
+.ticketTable th.numTicket,
+.ticketTable td.numTicket {
+  width: 50px;
+}
+.ticketTable th.num,
+.ticketTable td.num {
+  width: 40px;
+}
+
+.ticketTable th.numEvent,
+.ticketTable td.numEvent {
+  width: 50px;
+}
+
+.ticketTable th.date,
+.ticketTable td.date {
+  width: 125px;
+}
+
+.ticketTable th.type,
+.ticketTable td.type {
+  width: 100px;
+}
+
+.ticketTable th.urgence,
+.ticketTable td.urgence {
+  width: 75px;
+}
+
+.ticketTable th.demandeur,
+.ticketTable td.demandeur {
+  width: 75px;
+}
+
+.ticketTable th.title,
+.ticketTable td.title {
+  width: 200px;
+  max-width: 400px; 
+  word-wrap: break-word; 
+  white-space: normal; 
+}
+.ticketTable th.comparaison,
+.ticketTable td.comparaison {
+  width: 75px;
+}
+.ticketTable th.message,
+.ticketTable td.message {
+  width: 50px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #48aad7;
+}
+
+.ticketTable {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 1200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.ticketTable thead tr {
+  background-color: #48aad7;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ticketTable th,
+.ticketTable td {
+  padding: 12px 15px;
+  border-right: 1px solid #dddddd;
+}
+
+.ticketTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.ticketTable tbody tr:nth-of-type(even) {
+  background-color: #faf9f9;
+}
+
+.ticketTable tbody tr:last-of-type {
+  border-bottom: 2px solid #48aad7;
+}
+
+.open_btn:link,
+.open_btn:visited {
+  border-radius: 5px;
+  background-color: #48aad7;
+  color: rgb(255, 255, 255);
+  border: 1px solid #48aad7;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.solved_btn:link,
+.solved_btn:visited {
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #48aad7;
+  border: 1px solid #48aad7;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.solved_btn:hover {
+  background-color: #48aad7;
+  color: #ffffff;
+}
+
+
+.logo {
+  display: block;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+}

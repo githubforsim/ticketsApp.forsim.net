@@ -1,0 +1,59 @@
+.content {
+  padding-top: 20px;
+  padding-left: 280px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#details label {
+  color: #48aad7;
+  font-weight: 500;
+  font-size: large;
+}
+
+#user_details div {
+  margin-bottom: 15px;
+}
+#user_details {
+  margin-left: 150px;
+  margin-right: 180px;
+  margin-bottom: 20px;
+  bottom: 300px;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 9%, 93%);
+  display: block;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+div input[type="submit"] {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  padding: 8px 20px;
+  background-color: #48aad7;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+div input[type="submit"]:hover {
+  background-color: #1a678b;
+}
+
+#user_details .produits {
+  display: flex;
+  align-items: center;
+}
+
+#user_details .produits .details {
+  margin-right: 8px;
+}

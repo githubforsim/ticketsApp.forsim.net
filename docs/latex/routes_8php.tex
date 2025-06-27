@@ -1,0 +1,134 @@
+\doxysection{Référence du fichier config/routes.php}
+\hypertarget{routes_8php}{}\label{routes_8php}\index{config/routes.php@{config/routes.php}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{routes_8php_a60413e88dd46cc94fdd4efcc46e33039}{if}} (session\+\_\+status()==PHP\+\_\+\+SESSION\+\_\+\+NONE)
+\item 
+\mbox{\hyperlink{routes_8php_aaaefd5ec1296c970c71972a05549ef9f}{\$ticket\+Controller}} = new \mbox{\hyperlink{class_ticket_controller}{Ticket\+Controller}}()
+\item 
+\mbox{\hyperlink{routes_8php_a448b4271f7c45652b70a8107287ec524}{\$login\+Controller}} = new \mbox{\hyperlink{class_login_controller}{Login\+Controller}}()
+\item 
+\mbox{\hyperlink{routes_8php_a1b76478f129d3454b20845dbf99863cb}{\$admin\+Controller}} = new \mbox{\hyperlink{class_admin_controller}{Admin\+Controller}}()
+\item 
+\mbox{\hyperlink{routes_8php_a37c866e0dd005b2054896f4c4fb88132}{\$request\+Method}} = \$\+\_\+\+SERVER\mbox{[}\textquotesingle{}REQUEST\+\_\+\+METHOD\textquotesingle{}\mbox{]}
+\item 
+\mbox{\hyperlink{routes_8php_a1d9a0ce1fb5fc4cb1094094b3eb912a1}{\$path\+Info}} = isset(\$\+\_\+\+SERVER\mbox{[}\textquotesingle{}PATH\+\_\+\+INFO\textquotesingle{}\mbox{]}) ? \$\+\_\+\+SERVER\mbox{[}\textquotesingle{}PATH\+\_\+\+INFO\textquotesingle{}\mbox{]} \+: \textquotesingle{}\textquotesingle{}
+\item 
+\mbox{\hyperlink{routes_8php_abb35c8495a232b510389fa6d7b15d38a}{\$request}} = substr(\$path\+Info, 1)
+\item 
+\mbox{\hyperlink{routes_8php_a7fd0384e6fc79c4dac5e25ab16d186ba}{\$request\+Ressource}} = array\+\_\+shift(\$request)
+\item 
+\mbox{\hyperlink{routes_8php_ae97941710d863131c700f069b109991e}{\$id}} = array\+\_\+shift(\$request)
+\item 
+\mbox{\hyperlink{_ticket_controller_8php_a60413e88dd46cc94fdd4efcc46e33039}{if}}(isset(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}username\textquotesingle{}\mbox{]})) \mbox{\hyperlink{routes_8php_aeb154798c244b4119871b717c88a4a37}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des variables}
+\Hypertarget{routes_8php_a1b76478f129d3454b20845dbf99863cb}\index{routes.php@{routes.php}!\$adminController@{\$adminController}}
+\index{\$adminController@{\$adminController}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{\$adminController}{\$adminController}}
+{\footnotesize\ttfamily \label{routes_8php_a1b76478f129d3454b20845dbf99863cb} 
+\$admin\+Controller = new \mbox{\hyperlink{class_admin_controller}{Admin\+Controller}}()}
+
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00016}{16}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+
+\Hypertarget{routes_8php_ae97941710d863131c700f069b109991e}\index{routes.php@{routes.php}!\$id@{\$id}}
+\index{\$id@{\$id}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{\$id}{\$id}}
+{\footnotesize\ttfamily \label{routes_8php_ae97941710d863131c700f069b109991e} 
+\$id = array\+\_\+shift(\$request)}
+
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00036}{36}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+
+\Hypertarget{routes_8php_a448b4271f7c45652b70a8107287ec524}\index{routes.php@{routes.php}!\$loginController@{\$loginController}}
+\index{\$loginController@{\$loginController}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{\$loginController}{\$loginController}}
+{\footnotesize\ttfamily \label{routes_8php_a448b4271f7c45652b70a8107287ec524} 
+\$login\+Controller = new \mbox{\hyperlink{class_login_controller}{Login\+Controller}}()}
+
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00015}{15}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+
+\Hypertarget{routes_8php_a1d9a0ce1fb5fc4cb1094094b3eb912a1}\index{routes.php@{routes.php}!\$pathInfo@{\$pathInfo}}
+\index{\$pathInfo@{\$pathInfo}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{\$pathInfo}{\$pathInfo}}
+{\footnotesize\ttfamily \label{routes_8php_a1d9a0ce1fb5fc4cb1094094b3eb912a1} 
+\$path\+Info = isset(\$\+\_\+\+SERVER\mbox{[}\textquotesingle{}PATH\+\_\+\+INFO\textquotesingle{}\mbox{]}) ? \$\+\_\+\+SERVER\mbox{[}\textquotesingle{}PATH\+\_\+\+INFO\textquotesingle{}\mbox{]} \+: \textquotesingle{}\textquotesingle{}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00031}{31}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+
+\Hypertarget{routes_8php_abb35c8495a232b510389fa6d7b15d38a}\index{routes.php@{routes.php}!\$request@{\$request}}
+\index{\$request@{\$request}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{\$request}{\$request}}
+{\footnotesize\ttfamily \label{routes_8php_abb35c8495a232b510389fa6d7b15d38a} 
+\$request = substr(\$path\+Info, 1)}
+
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00032}{32}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+
+\Hypertarget{routes_8php_a37c866e0dd005b2054896f4c4fb88132}\index{routes.php@{routes.php}!\$requestMethod@{\$requestMethod}}
+\index{\$requestMethod@{\$requestMethod}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{\$requestMethod}{\$requestMethod}}
+{\footnotesize\ttfamily \label{routes_8php_a37c866e0dd005b2054896f4c4fb88132} 
+\$request\+Method = \$\+\_\+\+SERVER\mbox{[}\textquotesingle{}REQUEST\+\_\+\+METHOD\textquotesingle{}\mbox{]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00028}{28}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+
+\Hypertarget{routes_8php_a7fd0384e6fc79c4dac5e25ab16d186ba}\index{routes.php@{routes.php}!\$requestRessource@{\$requestRessource}}
+\index{\$requestRessource@{\$requestRessource}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{\$requestRessource}{\$requestRessource}}
+{\footnotesize\ttfamily \label{routes_8php_a7fd0384e6fc79c4dac5e25ab16d186ba} 
+\$request\+Ressource = array\+\_\+shift(\$request)}
+
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00035}{35}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+
+\Hypertarget{routes_8php_aaaefd5ec1296c970c71972a05549ef9f}\index{routes.php@{routes.php}!\$ticketController@{\$ticketController}}
+\index{\$ticketController@{\$ticketController}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{\$ticketController}{\$ticketController}}
+{\footnotesize\ttfamily \label{routes_8php_aaaefd5ec1296c970c71972a05549ef9f} 
+\$ticket\+Controller = new \mbox{\hyperlink{class_ticket_controller}{Ticket\+Controller}}()}
+
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00014}{14}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+
+\Hypertarget{routes_8php_aeb154798c244b4119871b717c88a4a37}\index{routes.php@{routes.php}!else@{else}}
+\index{else@{else}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \label{routes_8php_aeb154798c244b4119871b717c88a4a37} 
+\mbox{\hyperlink{_ticket_controller_8php_a60413e88dd46cc94fdd4efcc46e33039}{if}} (isset( \$\+\_\+\+SESSION\mbox{[} \textquotesingle{}username\textquotesingle{}\mbox{]})) else}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \$username\ =\ \textcolor{keyword}{null}}
+
+\end{DoxyCode}
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00041}{41}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+
+\Hypertarget{routes_8php_a60413e88dd46cc94fdd4efcc46e33039}\index{routes.php@{routes.php}!if@{if}}
+\index{if@{if}!routes.php@{routes.php}}
+\doxysubsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily \label{routes_8php_a60413e88dd46cc94fdd4efcc46e33039} 
+if(session\+\_\+status()==PHP\+\_\+\+SESSION\+\_\+\+NONE) (\begin{DoxyParamCaption}\item[{session\+\_\+status()}]{}{ = {\ttfamily =~PHP\+\_\+SESSION\+\_\+NONE}}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{routes_8php_source_l00004}{4}} du fichier \mbox{\hyperlink{routes_8php_source}{routes.\+php}}.
+

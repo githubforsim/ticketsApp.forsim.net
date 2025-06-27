@@ -1,0 +1,13 @@
+Tentative de connexion pour: frederic.zitta@forsim.net
+Aucun utilisateur trouvé avec ce nom.
+Tentative de connexion pour: Frederic
+Utilisateur trouvé: Array
+(
+    [username] => Frederic
+    [mail] => frederic.zitta@forsim.net
+    [entreprise] => FORSIM
+    [pwd] => $2y$10$iZTn0ectCpfFQCsgvP.AEejHFSQo4s40xLaZpZ60B/i2w2dHV0Pne
+    [role] => admin
+)
+
+Connexion réussie pour utilisateur spécial: Frederic avec rôle: admin

@@ -1,0 +1,156 @@
+#chat-box {
+  width: 100%;
+  height: 400px; /* Hauteur fixe pour permettre le défilement */
+  border: 1px solid #ccc;
+  overflow-y: auto; /* Activer le défilement vertical */
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; /* Affiche les messages récents en bas */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.sender-wrapper {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.receiver-wrapper {
+  align-items: flex-start;
+}
+
+.message {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  display: inline-block;
+  
+}
+
+.receiver {
+  background-color: #48aad7;
+  color: white;
+  align-self: flex-start;
+}
+
+.sender {
+  background-color: #ccc;
+  color: black;
+  align-self: flex-end;
+}
+
+.username {
+  font-size: 0.8em;
+  margin-bottom: 2px;
+}
+
+.date {
+  font-size: 0.8em;
+  margin-top: 2px;
+  color: #666;
+}
+
+.sender-wrapper .date {
+  margin-left: auto;
+}
+
+#chat-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+#message {
+  flex: 1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#send-btn {
+  background-color: #48aad7;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 20px;
+}
+
+#send-btn:hover {
+  background-color: #1a678b;
+}
+
+.content {
+  padding-top: 20px;
+  padding-left: 280px;
+}
+
+#details label {
+  color: #48aad7;
+  font-weight: bold;
+  font-size: large;
+}
+
+.attachment label {
+  color: #48aad7;
+  font-weight: normal;
+  font-size: large;
+}
+
+#ticket_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ticket {
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 9%, 93%);
+  margin-top: 150px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.ticket div {
+  margin-bottom: 10px;
+}
+
+.solved_btn:link,
+.solved_btn:visited {
+  border-radius: 5px;
+  background-color: #48aad7;
+  color: rgb(255, 255, 255);
+  border: 1px solid #48aad7;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.open_btn:link,
+.open_btn:visited {
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #48aad7;
+  border: 1px solid #48aad7;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.open_btn:hover {
+  background-color: #48aad7;
+  color: #ffffff;
+}

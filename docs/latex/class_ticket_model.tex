@@ -1,0 +1,1038 @@
+\doxysection{Référence de la classe Ticket\+Model}
+\hypertarget{class_ticket_model}{}\label{class_ticket_model}\index{TicketModel@{TicketModel}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ticket_model_a13b56d69ca995d4189526b1e8444322b}{\+\_\+\+\_\+construct}} (PDO \$db)
+\item 
+\mbox{\hyperlink{class_ticket_model_aa890b5d5bf8065abf8cdfde313cf331d}{log\+Event}} (\$ticket\+\_\+id, \$username, \$statut\+\_\+evenement\+\_\+id)
+\item 
+\mbox{\hyperlink{class_ticket_model_a8b8b94de7ee885832483476c59bd585e}{create\+Ticket}} (\$titre, \$description, \$date\+\_\+creation, \$statut\+\_\+id, \$urgence\+\_\+id, \$username, \$produit\+\_\+id, \$type\+\_\+id, \$files\+Data=null)
+\item 
+\mbox{\hyperlink{class_ticket_model_a0cb32cfa860dcc6221a01410f97ec5e7}{create\+Ticket\+Save}} (\$ticket\+Id, \$titre, \$description, \$date\+\_\+creation, \$statut\+\_\+id, \$urgence\+\_\+id, \$username, \$produit\+\_\+id, \$type\+\_\+id)
+\item 
+\mbox{\hyperlink{class_ticket_model_a81d5384304182d0291773ac54ef4a78e}{add\+Attachment}} (\$ticket\+Id, \$filename)
+\item 
+\mbox{\hyperlink{class_ticket_model_aa1c0f21e67236d8a44e3687ec24da045}{get\+User\+Event\+History}} (\$produit\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a96e4b01092bb8a212a3eb3afe8f0d7c5}{get\+Ticket\+Event\+History}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_af85e0e1f82a4053f9137bbdd7db84215}{get\+Open\+Ticket}} (\$produit\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a1b39e59fa6fce2bc4b24ecad1fc80fa2}{get\+Urgence}} ()
+\item 
+\mbox{\hyperlink{class_ticket_model_a673e054af50370d655860de368d4efdb}{get\+Produit}} ()
+\item 
+\mbox{\hyperlink{class_ticket_model_adc43c9c2b568234536e09fd190967e47}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{class_ticket_model_a3a9a0c42a1b9f7817892202f09a28ac9}{get\+Solved\+Ticket}} (\$produit\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a1d1607fa99638511e9d16e7fd4f1cf2b}{get\+Closed\+Ticket}} (\$produit\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_afa31424ce9b8bf37519a4764eb5f419a}{get\+Ticket\+Details}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a438351d16af56bfd0eeb3f3478f4edcb}{get\+Ticket\+Save\+Details}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a427fe08044a2eb7ce35d007997fb8c82}{get\+Closed\+Details}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a35e2dbe6d938e4bd1eaeebdece43e196}{get\+Solved\+Details}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a7d6e92e827242620d3872e650a9d29e0}{set\+Open}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_ticket_model_a436b099317a53abdc6a61bd8bd6926a3}{set\+Close}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_ticket_model_a60a1aa6f035f2ac3ab62031f336cc1ad}{set\+Solve}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_ticket_model_abc1e0e5613760521633e91a744ea5ca2}{get\+Attachments\+Ticket}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_ticket_model_ac19fcc708fe69ef742f89a7121b5300d}{get\+Attachment}} (\$attachment\+Id)
+\item 
+\mbox{\hyperlink{class_ticket_model_a256006eaa887212381bcfd9dad92002a}{delete\+Attachment}} (\$attachment\+Id)
+\item 
+\mbox{\hyperlink{class_ticket_model_a2a335a06e4449c6904bddf13ed87297a}{update\+Tickets\+Details}} (\$ticket\+\_\+id, \$new\+Title, \$new\+Description)
+\item 
+\mbox{\hyperlink{class_ticket_model_a9b5812c2b2d6648ef2b638e1f0753930}{get\+All\+Ticket\+Messages}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a58fd7d03ab34f8325b0178ea98caf014}{send\+Message}} (\$ticket\+\_\+id, \$message, \$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a77512eadd5c4a9581d4800459f1c4e80}{get\+Produits\+By\+User}} (\$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_aad51fab568370a70c84fc45fdd5d0019}{get\+First\+Produit\+By\+User}} (\$username)
+\item 
+\mbox{\hyperlink{class_ticket_model_a2035c61e8b0aaaddadc613179e0c7460}{get\+User\+Mail}} (\$username)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ticket_model_a59ef6b9cfddef4424f3aab8615b173ea}{\$db}}
+\begin{DoxyCompactList}\small\item\em Instance de PDO pour la connexion à la base de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00007}{7}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_ticket_model_a13b56d69ca995d4189526b1e8444322b}\index{TicketModel@{TicketModel}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a13b56d69ca995d4189526b1e8444322b} 
+Ticket\+Model\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{PDO}]{\$db}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00015}{15}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \$this-\/>db\ =\ \mbox{\hyperlink{class_ticket_model_a59ef6b9cfddef4424f3aab8615b173ea}{\$db}};}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_ticket_model_a81d5384304182d0291773ac54ef4a78e}\index{TicketModel@{TicketModel}!addAttachment@{addAttachment}}
+\index{addAttachment@{addAttachment}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{addAttachment()}{addAttachment()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a81d5384304182d0291773ac54ef4a78e} 
+Ticket\+Model\+::add\+Attachment (\begin{DoxyParamCaption}\item[{}]{\$ticket\+Id}{, }\item[{}]{\$filename}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00152}{152}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153\ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ attachments\ (ticket\_id,\ filename)\ VALUES\ (:ticket\_id,\ :filename)"{}};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticketId);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':filename'},\ \$filename);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérification\ si\ l'exécution\ est\ réussite\ sinon\ erreur}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Créer\ un\ événement\ pour\ l'ajout\ de\ la\ pièce\ jointe}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \$statut\_evenement\_id\ =\ 5;\ \textcolor{comment}{//\ 5\ =\ Attachment\ added}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_ticket_model_aa890b5d5bf8065abf8cdfde313cf331d}{logEvent}}(\$ticketId,\ \$username,\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ \$e)\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gérer\ l'exception\ selon\ les\ besoins}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ log\ event:\ "{}}\ .\ \$e-\/>getMessage());}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ execute\ SQL\ query:\ "{}}\ .\ \$query);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Failed\ to\ add\ attachment\ to\ the\ database.'});}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a8b8b94de7ee885832483476c59bd585e}\index{TicketModel@{TicketModel}!createTicket@{createTicket}}
+\index{createTicket@{createTicket}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{createTicket()}{createTicket()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a8b8b94de7ee885832483476c59bd585e} 
+Ticket\+Model\+::create\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$titre}{, }\item[{}]{\$description}{, }\item[{}]{\$date\+\_\+creation}{, }\item[{}]{\$statut\+\_\+id}{, }\item[{}]{\$urgence\+\_\+id}{, }\item[{}]{\$username}{, }\item[{}]{\$produit\+\_\+id}{, }\item[{}]{\$type\+\_\+id}{, }\item[{}]{\$files\+Data}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00079}{79}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Utiliser\ la\ date\ et\ l'heure\ actuelles}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \$date\_creation\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ ticket\ (titre,\ description,\ date\_creation,\ statut\_id,\ urgence\_id,\ username,\ produit\_id,\ type\_id)\ }}
+\DoxyCodeLine{00086\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ VALUES\ (:titre,\ :description,\ :date\_creation,\ :statut\_id,\ :urgence\_id,\ :username,\ :produit\_id,\ :type\_id)"{}};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':titre'},\ \$titre);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':description'},\ \$description);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':date\_creation'},\ \$date\_creation);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':statut\_id'},\ \$statut\_id);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':urgence\_id'},\ \$urgence\_id);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':produit\_id'},\ \$produit\_id);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':type\_id'},\ \$type\_id);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \$ticketId\ =\ \$this-\/>db-\/>lastInsertId();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauvegarde\ des\ pièces\ jointes\ si\ elles\ existent}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$filesData)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>createAttachments(\$ticketId,\ \$filesData,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Appel\ de\ la\ fonction\ createTicketSave\ pour\ sauvegarder\ le\ ticket\ dans\ ticket\_save}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_ticket_model_a0cb32cfa860dcc6221a01410f97ec5e7}{createTicketSave}}(\$ticketId,\ \$titre,\ \$description,\ \$date\_creation,\ \$statut\_id,\ \$urgence\_id,\ \$username,\ \$produit\_id,\ \$type\_id);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Renvoi\ de\ l'ID\ du\ ticket\ créé}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ticketId;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Si\ échec\ renvoi\ false}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a0cb32cfa860dcc6221a01410f97ec5e7}\index{TicketModel@{TicketModel}!createTicketSave@{createTicketSave}}
+\index{createTicketSave@{createTicketSave}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{createTicketSave()}{createTicketSave()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a0cb32cfa860dcc6221a01410f97ec5e7} 
+Ticket\+Model\+::create\+Ticket\+Save (\begin{DoxyParamCaption}\item[{}]{\$ticket\+Id}{, }\item[{}]{\$titre}{, }\item[{}]{\$description}{, }\item[{}]{\$date\+\_\+creation}{, }\item[{}]{\$statut\+\_\+id}{, }\item[{}]{\$urgence\+\_\+id}{, }\item[{}]{\$username}{, }\item[{}]{\$produit\+\_\+id}{, }\item[{}]{\$type\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00128}{128}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129\ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ ticket\_save\ (ticket\_id,\ titre,\ description,\ date\_creation,\ statut\_id,\ urgence\_id,\ username,\ produit\_id,\ type\_id)\ }}
+\DoxyCodeLine{00131\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VALUES\ (:ticket\_id,\ :titre,\ :description,\ :date\_creation,\ :statut\_id,\ :urgence\_id,\ :username,\ :produit\_id,\ :type\_id)"{}};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticketId);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':titre'},\ \$titre);}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':description'},\ \$description);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':date\_creation'},\ \$date\_creation);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':statut\_id'},\ \$statut\_id);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':urgence\_id'},\ \$urgence\_id);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':produit\_id'},\ \$produit\_id);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':type\_id'},\ \$type\_id);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a256006eaa887212381bcfd9dad92002a}\index{TicketModel@{TicketModel}!deleteAttachment@{deleteAttachment}}
+\index{deleteAttachment@{deleteAttachment}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{deleteAttachment()}{deleteAttachment()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a256006eaa887212381bcfd9dad92002a} 
+Ticket\+Model\+::delete\+Attachment (\begin{DoxyParamCaption}\item[{}]{\$attachment\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00595}{595}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00596\ \ \ \ \ \{}
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}DELETE\ FROM\ attachments\ WHERE\ attachment\_id=:attachment\_id"{}};}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ \$result\ =\ \$stmt-\/>bindValue(\textcolor{stringliteral}{':attachment\_id'},\ \$attachmentId);}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \$stmt-\/>execute();\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$result)\ \{}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'There\ was\ an\ error\ deleting\ the\ attachment.'});}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00606\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a9b5812c2b2d6648ef2b638e1f0753930}\index{TicketModel@{TicketModel}!getAllTicketMessages@{getAllTicketMessages}}
+\index{getAllTicketMessages@{getAllTicketMessages}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getAllTicketMessages()}{getAllTicketMessages()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a9b5812c2b2d6648ef2b638e1f0753930} 
+Ticket\+Model\+::get\+All\+Ticket\+Messages (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00668}{668}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00668\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ \$query\ =\ \$this-\/>db-\/>prepare(\textcolor{stringliteral}{'}}
+\DoxyCodeLine{00670\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ SELECT\ message\_sent,\ message\_sender,\ message\_receiver,\ date\_sent\ }}
+\DoxyCodeLine{00671\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ FROM\ chat\_messages\ }}
+\DoxyCodeLine{00672\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ WHERE\ ticket\_id\ =\ :ticket\_id\ AND\ (message\_sender\ =\ :username\ OR\ message\_receiver\ =\ :username)}}
+\DoxyCodeLine{00673\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ ORDER\ BY\ date\_sent\ ASC}}
+\DoxyCodeLine{00674\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ '});}
+\DoxyCodeLine{00675\ \ \ \ \ \ \ \ \ \$query-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id,\ PDO::PARAM\_INT);}
+\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ \$query-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00677\ \ \ \ \ \ \ \ \ \$query-\/>execute();}
+\DoxyCodeLine{00678\ \ \ \ \ }
+\DoxyCodeLine{00679\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$query-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00680\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_ac19fcc708fe69ef742f89a7121b5300d}\index{TicketModel@{TicketModel}!getAttachment@{getAttachment}}
+\index{getAttachment@{getAttachment}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getAttachment()}{getAttachment()}}
+{\footnotesize\ttfamily \label{class_ticket_model_ac19fcc708fe69ef742f89a7121b5300d} 
+Ticket\+Model\+::get\+Attachment (\begin{DoxyParamCaption}\item[{}]{\$attachment\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00581}{581}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00582\ \ \ \ \ \{}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ attachments\ WHERE\ attachment\_id=:attachment\_id"{}};}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \$stmt-\/>bindValue(\textcolor{stringliteral}{':attachment\_id'},\ \$attachmentId);}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \$stmt-\/>execute();}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00588\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_abc1e0e5613760521633e91a744ea5ca2}\index{TicketModel@{TicketModel}!getAttachmentsTicket@{getAttachmentsTicket}}
+\index{getAttachmentsTicket@{getAttachmentsTicket}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getAttachmentsTicket()}{getAttachmentsTicket()}}
+{\footnotesize\ttfamily \label{class_ticket_model_abc1e0e5613760521633e91a744ea5ca2} 
+Ticket\+Model\+::get\+Attachments\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00567}{567}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00568\ \ \ \ \ \{}
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ attachments\ WHERE\ ticket\_id=:ticket\_id"{}};}
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \$stmt-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ \$stmt-\/>execute();}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00574\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a427fe08044a2eb7ce35d007997fb8c82}\index{TicketModel@{TicketModel}!getClosedDetails@{getClosedDetails}}
+\index{getClosedDetails@{getClosedDetails}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getClosedDetails()}{getClosedDetails()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a427fe08044a2eb7ce35d007997fb8c82} 
+Ticket\+Model\+::get\+Closed\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00387}{387}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00388\ \ \ \ \ \{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ t.description,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00390\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00391\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00392\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00393\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00394\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00395\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 3\ AND\ t.ticket\_id\ =\ :ticket\_id\ AND\ us.username\ =\ :username"{}};}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id,\ \textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \$result\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$result;}
+\DoxyCodeLine{00400\ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a1d1607fa99638511e9d16e7fd4f1cf2b}\index{TicketModel@{TicketModel}!getClosedTicket@{getClosedTicket}}
+\index{getClosedTicket@{getClosedTicket}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getClosedTicket()}{getClosedTicket()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a1d1607fa99638511e9d16e7fd4f1cf2b} 
+Ticket\+Model\+::get\+Closed\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00312}{312}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00313\ \ \ \ \ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00315\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00316\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00317\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00318\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00319\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00320\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 3\ AND\ \ p.produit\_id\ =\ :produit\_id\ AND\ us.username\ =\ :username}}
+\DoxyCodeLine{00321\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ ORDER\ BY\ t.ticket\_id"{}};}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':produit\_id'}\ =>\ \$produit\_id,\ \textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_aad51fab568370a70c84fc45fdd5d0019}\index{TicketModel@{TicketModel}!getFirstProduitByUser@{getFirstProduitByUser}}
+\index{getFirstProduitByUser@{getFirstProduitByUser}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getFirstProduitByUser()}{getFirstProduitByUser()}}
+{\footnotesize\ttfamily \label{class_ticket_model_aad51fab568370a70c84fc45fdd5d0019} 
+Ticket\+Model\+::get\+First\+Produit\+By\+User (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00736}{736}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00737\ \ \ \ \ \{}
+\DoxyCodeLine{00738\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ p.*\ }}
+\DoxyCodeLine{00739\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM\ produit\ p\ }}
+\DoxyCodeLine{00740\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ user\_produit\ up\ ON\ p.produit\_id\ =\ up.produit\_id\ }}
+\DoxyCodeLine{00741\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ up.username\ =\ :username\ }}
+\DoxyCodeLine{00742\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ORDER\ BY\ p.produit\_id\ ASC\ }}
+\DoxyCodeLine{00743\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LIMIT\ 1"{}};}
+\DoxyCodeLine{00744\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00745\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00746\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00747\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_af85e0e1f82a4053f9137bbdd7db84215}\index{TicketModel@{TicketModel}!getOpenTicket@{getOpenTicket}}
+\index{getOpenTicket@{getOpenTicket}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getOpenTicket()}{getOpenTicket()}}
+{\footnotesize\ttfamily \label{class_ticket_model_af85e0e1f82a4053f9137bbdd7db84215} 
+Ticket\+Model\+::get\+Open\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00230}{230}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00231\ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00233\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00234\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00235\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00236\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00237\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00238\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 1\ AND\ \ p.produit\_id\ =\ :produit\_id\ AND\ us.username\ =\ :username}}
+\DoxyCodeLine{00239\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ ORDER\ BY\ t.ticket\_id"{}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':produit\_id'}\ =>\ \$produit\_id,\ \textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00243\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a673e054af50370d655860de368d4efdb}\index{TicketModel@{TicketModel}!getProduit@{getProduit}}
+\index{getProduit@{getProduit}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getProduit()}{getProduit()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a673e054af50370d655860de368d4efdb} 
+Ticket\+Model\+::get\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00262}{262}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00263\ \ \ \ \ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ produit"{}};}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \$tickets\ =\ \$statement-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$tickets;}
+\DoxyCodeLine{00269\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a77512eadd5c4a9581d4800459f1c4e80}\index{TicketModel@{TicketModel}!getProduitsByUser@{getProduitsByUser}}
+\index{getProduitsByUser@{getProduitsByUser}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getProduitsByUser()}{getProduitsByUser()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a77512eadd5c4a9581d4800459f1c4e80} 
+Ticket\+Model\+::get\+Produits\+By\+User (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00728}{728}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00729\ \ \ \ \ \{}
+\DoxyCodeLine{00730\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ p.*\ FROM\ produit\ p\ INNER\ JOIN\ user\_produit\ up\ ON\ p.produit\_id\ =\ up.produit\_id\ WHERE\ up.username\ =\ :username"{}};}
+\DoxyCodeLine{00731\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00732\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00733\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00734\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a35e2dbe6d938e4bd1eaeebdece43e196}\index{TicketModel@{TicketModel}!getSolvedDetails@{getSolvedDetails}}
+\index{getSolvedDetails@{getSolvedDetails}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getSolvedDetails()}{getSolvedDetails()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a35e2dbe6d938e4bd1eaeebdece43e196} 
+Ticket\+Model\+::get\+Solved\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00408}{408}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00409\ \ \ \ \ \{}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ t.description,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00411\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00412\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00413\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00414\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00415\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00416\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 2\ AND\ t.ticket\_id\ =\ :ticket\_id\ AND\ us.username\ =\ :username"{}};}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id,\ \textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \$result\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$result;}
+\DoxyCodeLine{00421\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a3a9a0c42a1b9f7817892202f09a28ac9}\index{TicketModel@{TicketModel}!getSolvedTicket@{getSolvedTicket}}
+\index{getSolvedTicket@{getSolvedTicket}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getSolvedTicket()}{getSolvedTicket()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a3a9a0c42a1b9f7817892202f09a28ac9} 
+Ticket\+Model\+::get\+Solved\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00291}{291}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00292\ \ \ \ \ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00294\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00295\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00296\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00297\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00298\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00299\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 2\ AND\ \ p.produit\_id\ =\ :produit\_id\ AND\ us.username\ =\ :username}}
+\DoxyCodeLine{00300\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ ORDER\ BY\ t.ticket\_id"{}};}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':produit\_id'}\ =>\ \$produit\_id,\ \textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00304\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_afa31424ce9b8bf37519a4764eb5f419a}\index{TicketModel@{TicketModel}!getTicketDetails@{getTicketDetails}}
+\index{getTicketDetails@{getTicketDetails}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getTicketDetails()}{getTicketDetails()}}
+{\footnotesize\ttfamily \label{class_ticket_model_afa31424ce9b8bf37519a4764eb5f419a} 
+Ticket\+Model\+::get\+Ticket\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00333}{333}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00334\ \ \ \ \ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ t.description,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00336\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00337\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00338\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00339\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00340\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00341\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 1\ AND\ t.ticket\_id\ =\ :ticket\_id\ AND\ us.username\ =\ :username"{}};}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id,\ \textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \$result\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$result;}
+\DoxyCodeLine{00346\ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a96e4b01092bb8a212a3eb3afe8f0d7c5}\index{TicketModel@{TicketModel}!getTicketEventHistory@{getTicketEventHistory}}
+\index{getTicketEventHistory@{getTicketEventHistory}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getTicketEventHistory()}{getTicketEventHistory()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a96e4b01092bb8a212a3eb3afe8f0d7c5} 
+Ticket\+Model\+::get\+Ticket\+Event\+History (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00206}{206}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00207\ \ \ \ \ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ e.evenement\_id,\ e.ticket\_id,\ DATE\_FORMAT(e.date\_evenement,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_evenement,\ e.username,\ se.event\_type,\ e.titre,\ p.nom\_produit,\ e.description,\ t.statut\_id\ }}
+\DoxyCodeLine{00209\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM\ evenement\ e}}
+\DoxyCodeLine{00210\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ statut\_evenement\ se\ ON\ e.statut\_evenement\_id\ =\ se.statut\_evenement\_id}}
+\DoxyCodeLine{00211\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ ticket\ t\ ON\ e.ticket\_id\ =\ t.ticket\_id}}
+\DoxyCodeLine{00212\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00213\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ e.ticket\_id\ =\ :ticket\_id\ AND\ t.username\ =\ :username}}
+\DoxyCodeLine{00214\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ORDER\ BY\ e.date\_evenement\ DESC"{}};}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id,}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':username'}\ =>\ \$username}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a438351d16af56bfd0eeb3f3478f4edcb}\index{TicketModel@{TicketModel}!getTicketSaveDetails@{getTicketSaveDetails}}
+\index{getTicketSaveDetails@{getTicketSaveDetails}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getTicketSaveDetails()}{getTicketSaveDetails()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a438351d16af56bfd0eeb3f3478f4edcb} 
+Ticket\+Model\+::get\+Ticket\+Save\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00354}{354}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00355\ \ \ \ \ \{}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ t.description,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ }}
+\DoxyCodeLine{00357\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username}}
+\DoxyCodeLine{00358\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ FROM\ ticket\_save\ t}}
+\DoxyCodeLine{00359\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00360\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00361\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00362\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00363\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00364\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ WHERE\ t.ticket\_save\_id\ =\ (}}
+\DoxyCodeLine{00365\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ MAX(t2.ticket\_save\_id)}}
+\DoxyCodeLine{00366\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM\ ticket\_save\ t2}}
+\DoxyCodeLine{00367\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ t2.ticket\_id\ =\ t.ticket\_id}}
+\DoxyCodeLine{00368\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ t2.ticket\_save\_id\ <\ (}}
+\DoxyCodeLine{00369\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ MAX(t3.ticket\_save\_id)}}
+\DoxyCodeLine{00370\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM\ ticket\_save\ t3}}
+\DoxyCodeLine{00371\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ t3.ticket\_id\ =\ t.ticket\_id}}
+\DoxyCodeLine{00372\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )}}
+\DoxyCodeLine{00373\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ )\ AND\ t.ticket\_id\ =\ :ticket\_id;}}
+\DoxyCodeLine{00374\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ us.username\ =\ :username"{}};}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id,\ \textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \$result\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$result\ ?:\ [];\ \textcolor{comment}{//\ Retourne\ un\ tableau\ vide\ si\ aucun\ résultat}}
+\DoxyCodeLine{00379\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_adc43c9c2b568234536e09fd190967e47}\index{TicketModel@{TicketModel}!getType@{getType}}
+\index{getType@{getType}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_ticket_model_adc43c9c2b568234536e09fd190967e47} 
+Ticket\+Model\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00275}{275}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00276\ \ \ \ \ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ type"{}};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \$tickets\ =\ \$statement-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{comment}{//var\_dump(\$tickets);}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$tickets;}
+\DoxyCodeLine{00283\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a1b39e59fa6fce2bc4b24ecad1fc80fa2}\index{TicketModel@{TicketModel}!getUrgence@{getUrgence}}
+\index{getUrgence@{getUrgence}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getUrgence()}{getUrgence()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a1b39e59fa6fce2bc4b24ecad1fc80fa2} 
+Ticket\+Model\+::get\+Urgence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00249}{249}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00250\ \ \ \ \ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ urgence"{}};}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \$tickets\ =\ \$statement-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$tickets;}
+\DoxyCodeLine{00256\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_aa1c0f21e67236d8a44e3687ec24da045}\index{TicketModel@{TicketModel}!getUserEventHistory@{getUserEventHistory}}
+\index{getUserEventHistory@{getUserEventHistory}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getUserEventHistory()}{getUserEventHistory()}}
+{\footnotesize\ttfamily \label{class_ticket_model_aa1c0f21e67236d8a44e3687ec24da045} 
+Ticket\+Model\+::get\+User\+Event\+History (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00185}{185}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00186\ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ e.evenement\_id,\ e.ticket\_id,\ DATE\_FORMAT(e.date\_evenement,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_evenement,\ e.username,\ se.event\_type,\ e.titre,\ p.nom\_produit,\ e.description,\ t.statut\_id\ }}
+\DoxyCodeLine{00188\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM\ evenement\ e}}
+\DoxyCodeLine{00189\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ statut\_evenement\ se\ ON\ e.statut\_evenement\_id\ =\ se.statut\_evenement\_id}}
+\DoxyCodeLine{00190\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ ticket\ t\ ON\ e.ticket\_id\ =\ t.ticket\_id}}
+\DoxyCodeLine{00191\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00192\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ p.produit\_id\ =\ :produit\_id\ AND\ t.username\ =\ :username}}
+\DoxyCodeLine{00193\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ORDER\ BY\ e.date\_evenement\ DESC"{}};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':produit\_id'}\ =>\ \$produit\_id,\ \textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a2035c61e8b0aaaddadc613179e0c7460}\index{TicketModel@{TicketModel}!getUserMail@{getUserMail}}
+\index{getUserMail@{getUserMail}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{getUserMail()}{getUserMail()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a2035c61e8b0aaaddadc613179e0c7460} 
+Ticket\+Model\+::get\+User\+Mail (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00754}{754}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00755\ \ \ \ \ \{}
+\DoxyCodeLine{00756\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ mail\ FROM\ user\ WHERE\ username\ =\ :username"{}};}
+\DoxyCodeLine{00757\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00758\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ \$userData\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00760\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00761\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$userData\ \&\&\ isset(\$userData[\textcolor{stringliteral}{'mail'}]))\ \{}
+\DoxyCodeLine{00762\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$userData[\textcolor{stringliteral}{'mail'}];\ \textcolor{comment}{//Récupération\ du\ mail\ en\ chaîne\ de\ caract\ plutôt\ qu'en\ tableau}}
+\DoxyCodeLine{00763\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00764\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{''};\ }
+\DoxyCodeLine{00765\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00766\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_aa890b5d5bf8065abf8cdfde313cf331d}\index{TicketModel@{TicketModel}!logEvent@{logEvent}}
+\index{logEvent@{logEvent}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{logEvent()}{logEvent()}}
+{\footnotesize\ttfamily \label{class_ticket_model_aa890b5d5bf8065abf8cdfde313cf331d} 
+Ticket\+Model\+::log\+Event (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{, }\item[{}]{\$statut\+\_\+evenement\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00028}{28}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ le\ titre,\ la\ description\ et\ le\ produit\_id\ du\ ticket}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ titre,\ description,\ produit\_id\ FROM\ ticket\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$ticket)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Ticket\ not\ found.'});}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Préparer\ les\ données\ pour\ l'insertion\ dans\ la\ table\ evenement}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \$titre\ =\ \$ticket[\textcolor{stringliteral}{'titre'}];}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \$description\ =\ \$ticket[\textcolor{stringliteral}{'description'}];}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \$produit\_id\ =\ \$ticket[\textcolor{stringliteral}{'produit\_id'}];}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \$date\_evenement\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});\ \textcolor{comment}{//\ Utiliser\ la\ date\ et\ l'heure\ actuelles}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insérer\ les\ données\ dans\ la\ table\ evenement}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ evenement\ (ticket\_id,\ username,\ date\_evenement,\ statut\_evenement\_id,\ titre,\ description,\ produit\_id)\ }}
+\DoxyCodeLine{00050\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VALUES\ (:ticket\_id,\ :username,\ :date\_evenement,\ :statut\_evenement\_id,\ :titre,\ :description,\ :produit\_id)"{}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':date\_evenement'},\ \$date\_evenement);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':statut\_evenement\_id'},\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':titre'},\ \$titre);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':description'},\ \$description);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':produit\_id'},\ \$produit\_id);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ log\ event:\ "{}}\ .\ \$query);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Failed\ to\ log\ event.'});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a58fd7d03ab34f8325b0178ea98caf014}\index{TicketModel@{TicketModel}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a58fd7d03ab34f8325b0178ea98caf014} 
+Ticket\+Model\+::send\+Message (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$message}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00689}{689}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00689\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00690\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00691\ \ \ \ \ \ \ \ \ \$date\_sent\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});}
+\DoxyCodeLine{00692\ \ \ \ \ }
+\DoxyCodeLine{00693\ }
+\DoxyCodeLine{00694\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ le\ créateur\ du\ ticket}}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \$query\ =\ \$this-\/>db-\/>prepare(\textcolor{stringliteral}{'}}
+\DoxyCodeLine{00696\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ SELECT\ username\ }}
+\DoxyCodeLine{00697\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ FROM\ ticket\ }}
+\DoxyCodeLine{00698\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ WHERE\ ticket\_id\ =\ :ticket\_id}}
+\DoxyCodeLine{00699\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ '});}
+\DoxyCodeLine{00700\ \ \ \ \ \ \ \ \ \$query-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id,\ PDO::PARAM\_INT);}
+\DoxyCodeLine{00701\ \ \ \ \ \ \ \ \ \$query-\/>execute();}
+\DoxyCodeLine{00702\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$query-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$ticket)\ \{}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Ticket\ not\ found"{}});}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00707\ \ \ \ \ }
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \$receiver\ =\ \textcolor{stringliteral}{"{}frederic.zitta"{}};}
+\DoxyCodeLine{00709\ \ \ \ \ }
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insérer\ le\ message\ dans\ la\ table\ chat\_message}}
+\DoxyCodeLine{00711\ \ \ \ \ \ \ \ \ \$insertQuery\ =\ \$this-\/>db-\/>prepare(\textcolor{stringliteral}{'}}
+\DoxyCodeLine{00712\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INSERT\ INTO\ chat\_messages\ (message\_sender,\ message\_receiver,\ message\_sent,\ date\_sent,\ ticket\_id)\ }}
+\DoxyCodeLine{00713\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ VALUES\ (:message\_sender,\ :message\_receiver,\ :message\_sent,\ :date\_sent,\ :ticket\_id)}}
+\DoxyCodeLine{00714\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ '});}
+\DoxyCodeLine{00715\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':message\_sender'},\ \$username,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00716\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':message\_receiver'},\ \$receiver,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00717\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':message\_sent'},\ \$message,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':date\_sent'},\ \$date\_sent,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id,\ PDO::PARAM\_INT);}
+\DoxyCodeLine{00720\ \ \ \ \ \ \ \ \ \$insertQuery-\/>execute();}
+\DoxyCodeLine{00721\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a436b099317a53abdc6a61bd8bd6926a3}\index{TicketModel@{TicketModel}!setClose@{setClose}}
+\index{setClose@{setClose}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{setClose()}{setClose()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a436b099317a53abdc6a61bd8bd6926a3} 
+Ticket\+Model\+::set\+Close (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00474}{474}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00475\ \ \ \ \ \{}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \$statut\_id\ =\ 3;}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ l'état\ actuel\ du\ ticket}}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ ticket\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id]);}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00484\ }
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ticket)\ \{}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauvegarder\ l'état\ actuel\ du\ ticket\ dans\ ticket\_save}}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_ticket_model_a0cb32cfa860dcc6221a01410f97ec5e7}{createTicketSave}}(}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'ticket\_id'}],}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'titre'}],}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'description'}],}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'date\_creation'}],}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$statut\_id,}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'urgence\_id'}],}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$username,}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'produit\_id'}],}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'type\_id'}]}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00498\ }
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mettre\ à\ jour\ le\ statut\ du\ ticket}}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}UPDATE\ ticket\ SET\ statut\_id\ =\ 3,\ date\_creation\ =\ :current\_time\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \$current\_time\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});\ \textcolor{comment}{//\ Récupère\ la\ date\ et\ l'heure\ actuelles}}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \ \ \$stmt-\/>execute([}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':current\_time'}\ =>\ \$current\_time,}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>rowCount();}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Ticket\ with\ ID\ \$ticket\_id\ not\ found."{}});}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00513\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a7d6e92e827242620d3872e650a9d29e0}\index{TicketModel@{TicketModel}!setOpen@{setOpen}}
+\index{setOpen@{setOpen}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{setOpen()}{setOpen()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a7d6e92e827242620d3872e650a9d29e0} 
+Ticket\+Model\+::set\+Open (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00428}{428}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00429\ \ \ \ \ \{}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \$statut\_id\ =\ 1;}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ l'état\ actuel\ du\ ticket}}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ ticket\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id]);}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ticket)\ \{}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauvegarder\ l'état\ actuel\ du\ ticket\ dans\ ticket\_save}}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_ticket_model_a0cb32cfa860dcc6221a01410f97ec5e7}{createTicketSave}}(}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'ticket\_id'}],}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'titre'}],}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'description'}],}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'date\_creation'}],}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$statut\_id,}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'urgence\_id'}],}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$username,}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'produit\_id'}],}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'type\_id'}]}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mettre\ à\ jour\ le\ statut\ du\ ticket}}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}UPDATE\ ticket\ SET\ statut\_id\ =\ 1,\ date\_creation\ =\ :current\_time\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \$current\_time\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});\ \textcolor{comment}{//\ Récupère\ la\ date\ et\ l'heure\ actuelles}}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \$stmt-\/>execute([}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':current\_time'}\ =>\ \$current\_time,}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>rowCount();}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Ticket\ with\ ID\ \$ticket\_id\ not\ found."{}});}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00467\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a60a1aa6f035f2ac3ab62031f336cc1ad}\index{TicketModel@{TicketModel}!setSolve@{setSolve}}
+\index{setSolve@{setSolve}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{setSolve()}{setSolve()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a60a1aa6f035f2ac3ab62031f336cc1ad} 
+Ticket\+Model\+::set\+Solve (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00520}{520}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00521\ \ \ \ \ \{}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \$statut\_id\ =\ 2;}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ l'état\ actuel\ du\ ticket}}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ ticket\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id]);}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00530\ }
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ticket)\ \{}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauvegarder\ l'état\ actuel\ du\ ticket\ dans\ ticket\_save}}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_ticket_model_a0cb32cfa860dcc6221a01410f97ec5e7}{createTicketSave}}(}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'ticket\_id'}],}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'titre'}],}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'description'}],}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'date\_creation'}],}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$statut\_id,}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'urgence\_id'}],}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$username,}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'produit\_id'}],}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'type\_id'}]}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00544\ }
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mettre\ à\ jour\ le\ statut\ du\ ticket}}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}UPDATE\ ticket\ SET\ statut\_id\ =\ 2,\ date\_creation\ =\ :current\_time\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \$current\_time\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \$stmt-\/>execute([}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':current\_time'}\ =>\ \$current\_time,}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{00553\ }
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>rowCount();}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Ticket\ with\ ID\ \$ticket\_id\ not\ found."{}});}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00559\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ticket_model_a2a335a06e4449c6904bddf13ed87297a}\index{TicketModel@{TicketModel}!updateTicketsDetails@{updateTicketsDetails}}
+\index{updateTicketsDetails@{updateTicketsDetails}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{updateTicketsDetails()}{updateTicketsDetails()}}
+{\footnotesize\ttfamily \label{class_ticket_model_a2a335a06e4449c6904bddf13ed87297a} 
+Ticket\+Model\+::update\+Tickets\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$new\+Title}{, }\item[{}]{\$new\+Description}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00615}{615}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00616\ \ \ \ \ \{}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00618\ \ \ \ \ \ \ \ \ \$date\_creation\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ l'état\ actuel\ du\ ticket}}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ ticket\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00626\ }
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ticket)\ \{}
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauvegarder\ l'état\ actuel\ du\ ticket\ dans\ ticket\_save}}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00630\ }
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mettre\ à\ jour\ le\ ticket\ avec\ les\ nouvelles\ valeurs}}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}UPDATE\ ticket\ SET\ titre\ =\ :newTitle,\ description\ =\ :newDescription,\ date\_creation\ =\ :date\_creation\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':newTitle'},\ \$newTitle);}
+\DoxyCodeLine{00636\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':newDescription'},\ \$newDescription);}
+\DoxyCodeLine{00637\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':date\_creation'},\ \$date\_creation);}
+\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_ticket_model_a0cb32cfa860dcc6221a01410f97ec5e7}{createTicketSave}}(}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'ticket\_id'}],}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$newTitle,}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$newDescription,}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$date\_creation,}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'statut\_id'}],}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'urgence\_id'}],}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$username,}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'produit\_id'}],}
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'type\_id'}]}
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ execute\ SQL\ query:\ "{}}\ .\ \$query);}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Ticket\ with\ ID\ \$ticket\_id\ not\ found."{}});}
+\DoxyCodeLine{00658\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00659\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00660\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_ticket_model_a59ef6b9cfddef4424f3aab8615b173ea}\index{TicketModel@{TicketModel}!\$db@{\$db}}
+\index{\$db@{\$db}!TicketModel@{TicketModel}}
+\doxysubsubsection{\texorpdfstring{\$db}{\$db}}
+{\footnotesize\ttfamily \label{class_ticket_model_a59ef6b9cfddef4424f3aab8615b173ea} 
+Ticket\+Model\+::\$db\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instance de PDO pour la connexion à la base de données. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{_ticket_model_8php_source_l00009}{9}} du fichier \mbox{\hyperlink{_ticket_model_8php_source}{Ticket\+Model.\+php}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+app/src/\+Models/\mbox{\hyperlink{_ticket_model_8php}{Ticket\+Model.\+php}}\end{DoxyCompactItemize}

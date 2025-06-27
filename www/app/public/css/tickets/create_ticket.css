@@ -1,0 +1,174 @@
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+
+  padding-top: 20px;
+  padding-left: 260px;
+  max-width: 60rem;
+  height: 100%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  margin-bottom: 20px;
+  color: #48aad7;
+}
+
+label {
+  color: #48aad7;
+  font-size: large;
+}
+
+#ticket_form {
+  margin-left: 320px;
+  margin-right: auto;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 9%, 93%);
+  display: block;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+#ticket_form div {
+  margin-bottom: 20px;
+}
+
+#titre {
+  width: 100%;
+  height: 20px;
+}
+
+input[type="radio"] {
+  margin-left: 4px; /* Ajoute un espacement de 10 pixels à droite du bouton radio */
+  margin-right: 2px; /* Ajoute un espacement de 10 pixels à droite du bouton radio */
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  resize: none;
+}
+
+#attachment {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+#attachment label {
+  display: inline-block;
+  width: 180px;
+}
+
+#attachment + label {
+  position: static;
+  width: 180px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #48aad7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  overflow: hidden; /* Prevent text overflow */
+  transition: transform 0.2s ease-out;
+}
+
+#attachment:hover + label,
+#attachment:focus + label {
+  transform: scale(1.02);
+}
+
+#attachment:focus + label {
+  outline: 1px solid #496aff;
+  outline: -webkit-focus-ring-color auto 2px;
+}
+
+.file-container {
+  display: flex;
+  align-items: center;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column; /* Display file names in a column */
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.file-list li {
+  display: flex;
+  align-items: center;
+  margin-right: 15px; /* Adjust the margin to create space between items */
+  color: rgb(104, 98, 98);
+  font-size: 13px;
+}
+
+.file-list span {
+}
+
+.remove-button {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  width: 13px; /* Adjust the width to your preference */
+  height: 13px; /* Adjust the height to your preference */
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.remove-button::before,
+.remove-button::after {
+  content: "";
+  position: absolute;
+  width: 1.5px; /* Adjust the width of the lines */
+  height: 8px; /* Adjust the height of the lines */
+  background-color: white;
+}
+
+.remove-button::before {
+  transform: rotate(45deg);
+}
+
+.remove-button::after {
+  transform: rotate(-45deg);
+}
+
+div input[type="submit"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+div input[type="submit"]:hover {
+  background-color: #45a049;
+}

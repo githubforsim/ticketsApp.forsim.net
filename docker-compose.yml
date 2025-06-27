@@ -1,0 +1,32 @@
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: bODw50eeKjPT/rVW
+      MYSQL_DATABASE: ticketsApp
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./ticket_app.sql:/docker-entrypoint-initdb.d/ticket_app.sql
+    restart: always
+  web:
+    build: ./docker/web    
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - db
+    volumes:
+      - ./apache-config:/etc/apache2/sites-available
+      - ./certs:/etc/letsencrypt
+      - ./www:/var/www/html/ticketsApp
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: db
+

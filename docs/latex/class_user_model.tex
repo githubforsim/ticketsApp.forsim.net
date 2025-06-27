@@ -1,0 +1,175 @@
+\doxysection{Référence de la classe User\+Model}
+\hypertarget{class_user_model}{}\label{class_user_model}\index{UserModel@{UserModel}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_model_af292531c94e3a3678b6b61e7ec74ce15}{\+\_\+\+\_\+construct}} (PDO \$db)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_user_model}{User\+Model}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user_model_aa6b3350b96deb4f2c37b55e660ad3289}{get\+User\+By\+Username}} (\$username)
+\begin{DoxyCompactList}\small\item\em Méthode pour récupérer les informations d\textquotesingle{}un utilisateur par son nom d\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user_model_a2b6ffcd0b2c70f3c6f87a534baf173fd}{get\+User\+Role}} (\$username)
+\begin{DoxyCompactList}\small\item\em Méthode qui récupère le rôle d\textquotesingle{}un utilisateur en base de données. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user_model_a732632e43408b26e8139afced0277b93}{is\+Username\+Exists}} (\$username)
+\begin{DoxyCompactList}\small\item\em Fonction qui vérifie si un nom d\textquotesingle{}utilisateur existe déjà en base de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_model_a5185f77a451191d7d7127466fb964dad}{\$db}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+
+
+Définition à la ligne \mbox{\hyperlink{_user_model_8php_source_l00007}{7}} du fichier \mbox{\hyperlink{_user_model_8php_source}{User\+Model.\+php}}.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_user_model_af292531c94e3a3678b6b61e7ec74ce15}\index{UserModel@{UserModel}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!UserModel@{UserModel}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_user_model_af292531c94e3a3678b6b61e7ec74ce15} 
+User\+Model\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{PDO}]{\$db}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{class_user_model}{User\+Model}. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+PDO & {\em \$db} & Instance de PDO représentant la connexion à la base de données. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne \mbox{\hyperlink{_user_model_8php_source_l00016}{16}} du fichier \mbox{\hyperlink{_user_model_8php_source}{User\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \$this-\/>db\ =\ \mbox{\hyperlink{class_user_model_a5185f77a451191d7d7127466fb964dad}{\$db}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_user_model_aa6b3350b96deb4f2c37b55e660ad3289}\index{UserModel@{UserModel}!getUserByUsername@{getUserByUsername}}
+\index{getUserByUsername@{getUserByUsername}!UserModel@{UserModel}}
+\doxysubsubsection{\texorpdfstring{getUserByUsername()}{getUserByUsername()}}
+{\footnotesize\ttfamily \label{class_user_model_aa6b3350b96deb4f2c37b55e660ad3289} 
+User\+Model\+::get\+User\+By\+Username (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Méthode pour récupérer les informations d\textquotesingle{}un utilisateur par son nom d\textquotesingle{}utilisateur. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$username} & Nom d\textquotesingle{}utilisateur de l\textquotesingle{}utilisateur à récupérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+array\texorpdfstring{$\vert$}{|}false Tableau associatif contenant les informations de l\textquotesingle{}utilisateur, ou false si non trouvé. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{_user_model_8php_source_l00027}{27}} du fichier \mbox{\hyperlink{_user_model_8php_source}{User\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ user\ WHERE\ username=:username"{}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \$stmt-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \$stmt-\/>execute();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_model_a2b6ffcd0b2c70f3c6f87a534baf173fd}\index{UserModel@{UserModel}!getUserRole@{getUserRole}}
+\index{getUserRole@{getUserRole}!UserModel@{UserModel}}
+\doxysubsubsection{\texorpdfstring{getUserRole()}{getUserRole()}}
+{\footnotesize\ttfamily \label{class_user_model_a2b6ffcd0b2c70f3c6f87a534baf173fd} 
+User\+Model\+::get\+User\+Role (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Méthode qui récupère le rôle d\textquotesingle{}un utilisateur en base de données. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$username} & Nom d\textquotesingle{}utilisateur de l\textquotesingle{}utilisateur dont on veut récupérer le rôle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string\texorpdfstring{$\vert$}{|}null Rôle de l\textquotesingle{}utilisateur, ou null si non trouvé. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{_user_model_8php_source_l00042}{42}} du fichier \mbox{\hyperlink{_user_model_8php_source}{User\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ role\ FROM\ user\ WHERE\ username\ =\ :username"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \$stmt-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \$stmt-\/>execute();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchColumn();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_user_model_a732632e43408b26e8139afced0277b93}\index{UserModel@{UserModel}!isUsernameExists@{isUsernameExists}}
+\index{isUsernameExists@{isUsernameExists}!UserModel@{UserModel}}
+\doxysubsubsection{\texorpdfstring{isUsernameExists()}{isUsernameExists()}}
+{\footnotesize\ttfamily \label{class_user_model_a732632e43408b26e8139afced0277b93} 
+User\+Model\+::is\+Username\+Exists (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Fonction qui vérifie si un nom d\textquotesingle{}utilisateur existe déjà en base de données. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+string & {\em \$username} & Nom d\textquotesingle{}utilisateur à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool Vrai si le nom d\textquotesingle{}utilisateur existe déjà, faux sinon. 
+\end{DoxyReturn}
+
+
+Définition à la ligne \mbox{\hyperlink{_user_model_8php_source_l00057}{57}} du fichier \mbox{\hyperlink{_user_model_8php_source}{User\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ COUNT(*)\ FROM\ user\ WHERE\ username\ =\ :username"{}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \$count\ =\ \$statement-\/>fetchColumn();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$count\ >\ 0;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_user_model_a5185f77a451191d7d7127466fb964dad}\index{UserModel@{UserModel}!\$db@{\$db}}
+\index{\$db@{\$db}!UserModel@{UserModel}}
+\doxysubsubsection{\texorpdfstring{\$db}{\$db}}
+{\footnotesize\ttfamily \label{class_user_model_a5185f77a451191d7d7127466fb964dad} 
+User\+Model\+::\$db\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_user_model_8php_source_l00009}{9}} du fichier \mbox{\hyperlink{_user_model_8php_source}{User\+Model.\+php}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+app/src/\+Models/\mbox{\hyperlink{_user_model_8php}{User\+Model.\+php}}\end{DoxyCompactItemize}

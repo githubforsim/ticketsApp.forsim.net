@@ -1,0 +1,146 @@
+\doxysection{Login\+Controller.\+php}
+\hypertarget{_login_controller_8php_source}{}\label{_login_controller_8php_source}\index{app/src/Controllers/LoginController.php@{app/src/Controllers/LoginController.php}}
+\mbox{\hyperlink{_login_controller_8php}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00004}00004\ require\_once\ \_\_DIR\_\_\ .\ \textcolor{stringliteral}{'/../Models/UserModel.php'};}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00005}00005\ require\_once\ \_\_DIR\_\_\ .\ \textcolor{stringliteral}{'/../../../config/database.php'};}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00006}00006\ require\_once\ \_\_DIR\_\_\ .\ \textcolor{stringliteral}{'/../../../config/routes.php'};}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00009}00009\ \textcolor{comment}{/************************************************}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00010}00010\ \textcolor{comment}{\ *\ Contrôleur\ LoginController\ gérant\ les\ actions\ liées\ à\ l'authentification\ des\ utilisateurs.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00011}00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00012}00012\ \textcolor{comment}{\ *\ Ce\ contrôleur\ offre\ des\ méthodes\ pour\ gérer\ l'authentification\ des\ utilisateurs,}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00013}00013\ \textcolor{comment}{\ *\ y\ compris\ la\ connexion,\ la\ déconnexion\ et\ la\ gestion\ des\ demandes\ de\ changement\ de\ mot\ de\ passe.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00014}00014\ \textcolor{comment}{\ *\ Il\ utilise\ le\ modèle\ UserModel\ pour\ interagir\ avec\ la\ base\ de\ données\ et\ exécuter\ les\ opérations}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00015}00015\ \textcolor{comment}{\ *\ nécessaires\ à\ l'authentification.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00016}00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00017}00017\ \textcolor{comment}{\ *\ Les\ fonctionnalités\ spécifiques\ incluent\ :}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00018}00018\ \textcolor{comment}{\ *\ -\/\ Connexion\ d'un\ utilisateur\ avec\ validation\ des\ identifiants\ et\ gestion\ de\ session.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00019}00019\ \textcolor{comment}{\ *\ -\/\ Déconnexion\ d'un\ utilisateur\ en\ détruisant\ la\ session\ active.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00020}00020\ \textcolor{comment}{\ *\ -\/\ Gestion\ des\ demandes\ de\ changement\ de\ mot\ de\ passe\ en\ vérifiant\ l'existence\ de\ l'utilisateur.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00021}00021\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00022}00022\ \textcolor{comment}{\ *\ Ce\ contrôleur\ exploite\ les\ sessions\ PHP\ pour\ maintenir\ l'état\ de\ connexion\ des\ utilisateurs,}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00023}00023\ \textcolor{comment}{\ *\ redirigeant\ vers\ différentes\ vues\ en\ fonction\ du\ rôle\ de\ l'utilisateur\ (administrateur\ ou\ utilisateur\ standard).}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00024}00024\ \textcolor{comment}{\ *\ Les\ redirections\ sont\ gérées\ via\ des\ en-\/têtes\ HTTP\ pour\ diriger\ l'utilisateur\ vers\ les\ pages\ appropriées}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00025}00025\ \textcolor{comment}{\ *\ après\ une\ action\ d'authentification.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00026}00026\ \textcolor{comment}{\ ***********************************************/}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00027}\mbox{\hyperlink{class_login_controller}{00027}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_login_controller}{LoginController}}\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00029}\mbox{\hyperlink{class_login_controller_a0072c195f9f308062dbf759ac599b785}{00029}}\ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{class_login_controller_a0072c195f9f308062dbf759ac599b785}{\$UserModel}};}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00031}00031\ \textcolor{comment}{\ \ \ \ /************************************************}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00032}00032\ \textcolor{comment}{\ \ \ \ \ *\ Constructeur\ de\ la\ classe\ UserAuth}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00033}00033\ \textcolor{comment}{\ \ \ \ \ ***********************************************/}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00034}\mbox{\hyperlink{class_login_controller_a54a5326725f849d6bb08e8911a26927b}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_login_controller_a54a5326725f849d6bb08e8911a26927b}{\_\_construct}}()\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00035}00035\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Établir\ une\ connexion\ à\ la\ base\ de\ données}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \$db\ =\ \mbox{\hyperlink{database_8php_a81a366428179a1f1020ce9438a27c51f}{dbConnect}}();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialiser\ le\ modèle\ UserModel\ avec\ la\ connexion\ à\ la\ base\ de\ données}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_user_model}{UserModel}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_user_model}{UserModel}}(\$db);}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00042}00042\ \textcolor{comment}{\ \ \ \ /************************************************}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00043}00043\ \textcolor{comment}{\ \ \ \ \ *\ Fonction\ pour\ récupérer\ et\ nettoyer\ un\ champ\ spécifique\ du\ tableau\ \$postData.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ *\ }}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ *\ @param\ array\ \$postData\ Le\ tableau\ contenant\ les\ données\ à\ nettoyer}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00046}00046\ \textcolor{comment}{\ \ \ \ \ *\ @param\ string\ \$field\ Le\ champ\ spécifique\ à\ récupérer\ et\ nettoyer}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00047}00047\ \textcolor{comment}{\ \ \ \ \ *\ @return\ string\ La\ valeur\ nettoyée\ du\ champ\ ou\ une\ chaîne\ vide\ si\ le\ champ\ n'existe\ pas}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00048}00048\ \textcolor{comment}{\ \ \ \ \ ***********************************************/}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00049}\mbox{\hyperlink{class_login_controller_a52cd2da8af60a6fdbd4c80e1e0ad2a15}{00049}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_login_controller_a52cd2da8af60a6fdbd4c80e1e0ad2a15}{getSanitizedInput}}(\$postData,\ \$field)}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//On\ vérifie\ si\ le\ champ\ existe\ dans\ le\ taleau\ \$postData}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$postData[\$field]))\ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Nettoyage\ de\ la\ valeur\ du\ champ\ avec\ le\ filtre\ FILTER\_SANITIZE\_STRING\ et\ renvoi\ de\ la\ valeur}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \$sanitizedValue\ =\ filter\_var(\$postData[\$field],\ FILTER\_SANITIZE\_STRING);}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$sanitizedValue;}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ le\ champ\ n'existe\ pas\ ,\ renvoi\ une\ chaine\ de\ caractère\ vide}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00062}00062\ \textcolor{comment}{\ \ \ \ /************************************************}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ *\ Fonction\ de\ connexion\ utilisateur.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ *\ }}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ *\ @param\ string\ \$username\ Le\ nom\ d'utilisateur\ à\ valider\ et\ à\ nettoyer}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ *\ @param\ string\ \$password\ Le\ mot\ de\ passe\ à\ valider\ et\ à\ nettoyer}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ ***********************************************/}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00068}\mbox{\hyperlink{class_login_controller_a13318bbb88aab6294b4cdb6b37b3dfa5}{00068}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_login_controller_a13318bbb88aab6294b4cdb6b37b3dfa5}{login}}(\$username,\ \$password)\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00069}00069\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Valide\ et\ nettoie\ les\ données}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \$username\ =\ trim(\$username);}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \$password\ =\ trim(\$password);}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vérifie\ si\ une\ session\ est\ cours,\ si\ non\ alors\ création\ d'une}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (session\_status()\ ==\ PHP\_SESSION\_NONE)\ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ session\_start();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \$user\ =\ \$this-\/>\mbox{\hyperlink{class_user_model}{UserModel}}-\/>\mbox{\hyperlink{class_user_model_aa6b3350b96deb4f2c37b55e660ad3289}{getUserByUsername}}(\$username);}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ les\ identifiants\ sont\ corrects}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$user\ \&\&\ password\_verify(\$password,\ \$user[\textcolor{stringliteral}{'pwd'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'username'}]\ =\ \$username;}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'loggedIn'}]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \$role\ =\ \$this-\/>\mbox{\hyperlink{class_user_model}{UserModel}}-\/>\mbox{\hyperlink{class_user_model_a2b6ffcd0b2c70f3c6f87a534baf173fd}{getUserRole}}(\$username);}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Définir\ le\ rôle\ de\ l'utilisateur\ dans\ la\ session}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'role'}]\ =\ \$role;}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Redirirection\ vers\ la\ page\ d'administration\ si\ l'utilisateur\ est\ un\ administrateur}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$role\ ===\ \textcolor{stringliteral}{'admin'})\ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/admin/admin\_view.php'});}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/index.php'});}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00098}00098\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/login\_view.php?erreur=1'});}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00104}00104\ \textcolor{comment}{\ \ \ \ /************************************************}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ *\ Fonction\ de\ déconnexion\ utilisateur.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \ *\ }}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00107}00107\ \textcolor{comment}{\ \ \ \ \ *\ Détruit\ la\ session\ en\ cours\ et\ redirige\ vers\ la\ page\ de\ connexion.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00108}00108\ \textcolor{comment}{\ \ \ \ \ ***********************************************/}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00109}\mbox{\hyperlink{class_login_controller_af4942bdfe5242fe1505a37f3b701afc8}{00109}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_login_controller_af4942bdfe5242fe1505a37f3b701afc8}{logout}}()}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00110}00110\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Démarrer\ la\ session\ et\ détruire\ toutes\ les\ données\ de\ session}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00112}00112\ \ \ \ \ \ \ \ \ session\_start();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00113}00113\ \ \ \ \ \ \ \ \ session\_destroy();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rediriger\ vers\ la\ page\ de\ connexion\ après\ la\ déconnexion}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00115}00115\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/login\_view.php'});}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00116}00116\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00119}00119\ \textcolor{comment}{\ \ \ \ /************************************************}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00120}00120\ \textcolor{comment}{\ \ \ \ \ *\ Fonction\ pour\ gérer\ la\ demande\ de\ changement\ de\ mot\ de\ passe\ utilisateur.}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00121}00121\ \textcolor{comment}{\ \ \ \ \ *\ }}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00122}00122\ \textcolor{comment}{\ \ \ \ \ *\ @param\ array\ \$postData\ Le\ tableau\ contenant\ les\ données\ POST}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00123}00123\ \textcolor{comment}{\ \ \ \ \ ***********************************************/}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00124}\mbox{\hyperlink{class_login_controller_a1b319a78a42c9374ced2fd32766be97f}{00124}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{class_login_controller_a1b319a78a42c9374ced2fd32766be97f}{passwordChangeRequest}}(\$postData)}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00125}00125\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ et\ nettoyer\ le\ nom\ d'utilisateur\ à\ partir\ des\ données\ POST}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00127}00127\ \ \ \ \ \ \ \ \ \$username\ =\ \$this-\/>\mbox{\hyperlink{class_login_controller_a52cd2da8af60a6fdbd4c80e1e0ad2a15}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'username'});}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifier\ si\ l'utilisateur\ existe\ dans\ la\ base\ de\ données}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\mbox{\hyperlink{class_user_model}{UserModel}}-\/>\mbox{\hyperlink{class_user_model_a732632e43408b26e8139afced0277b93}{isUsernameExists}}(\$username))\ \{}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rediriger\ vers\ une\ page\ d'erreur\ si\ l'utilisateur\ n'existe\ pas}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/password\_view.php?erreur=1'});}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00135}00135\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rediriger\ vers\ une\ page\ de\ confirmation\ si\ la\ demande\ de\ changement\ de\ mot\ de\ passe\ est\ valide}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00137}00137\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/password\_view.php?succes=1'});}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00138}00138\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00139}00139\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_login_controller_8php_source_l00140}00140\ \}}
+
+\end{DoxyCode}

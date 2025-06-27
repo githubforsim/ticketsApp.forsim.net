@@ -1,0 +1,886 @@
+\doxysection{Référence de la classe Admin\+Controller}
+\hypertarget{class_admin_controller}{}\label{class_admin_controller}\index{AdminController@{AdminController}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_admin_controller_a600bf99cf5e235b5cacdac99a37343cf}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_admin_controller_a63aafcf5dab45f5692bb51bcbce2a5f2}{create\+User}} (\$post\+Data)
+\item 
+\mbox{\hyperlink{class_admin_controller_adf2f9078c216b587c8c384a0a924b683}{create\+Attachments}} (\$ticket\+Id, \$files\+Data)
+\item 
+\mbox{\hyperlink{class_admin_controller_a58625e28c69545a20bd94c1b0d6c6220}{create\+Ticket}} (\$post\+Data, \$files\+Data)
+\item 
+\mbox{\hyperlink{class_admin_controller_a082b82c503a0f4c830a7a3ba32d4ff7b}{log\+Event}} (\$ticket\+\_\+id, \$username, \$statut\+\_\+evenement\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_a170c5c65e46d5e2ec9eb6b94e750b7b3}{get\+All\+Event\+History}} (\$produit\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_a7619fe884dee2eda7e2150d66fd45aec}{get\+All\+Open\+Tickets}} (\$produit\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_a4ea725f49fcfe7b4bd480275fa833e04}{get\+All\+Solved\+Tickets}} (\$produit\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_a354050c79045357b2ff925768e544ea5}{get\+All\+Closed\+Tickets}} (\$produit\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_a933eca2f571420c66540d142610e7064}{get\+Ticket\+Details\+And\+Events}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_a5e9fcb44cd7d9a51caafc284086534bc}{get\+Ticket\+Save\+Details}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_a39a96e6ce3d5da64fc68b81fb0f8ab85}{get\+Ticket\+Solved\+Save\+Details}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_afe61112eacaafa77b06fa381cae85b01}{get\+Ticket\+Closed\+Save\+Details}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_ada0ed1e059a0fe82ce93bd5ec6a413c7}{get\+Closed\+Details}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_a37d20ccb4f7cc195d827e3e04d29a9ab}{get\+Solved\+Details}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_controller_a84c246d5e7e7a88c6520f80110827429}{get\+Users}} ()
+\item 
+\mbox{\hyperlink{class_admin_controller_ae4545f381bd3c6dfda4e351a43de5c10}{get\+User\+By\+Username}} (\$username)
+\item 
+\mbox{\hyperlink{class_admin_controller_af5c95418a0de378436c5bb3dea1046f4}{get\+Ticket\+Messages}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_admin_controller_a448306d0317a19e9d5a3341016c77455}{get\+Ticket\+Messages\+Solved}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_admin_controller_aacd9d5e352632a4d32d29c3b589ec078}{get\+Ticket\+Messages\+Closed}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_admin_controller_a6590b6a48dac4d122a89eb541266cc47}{send\+Message}} (\$post\+Data, \$username)
+\item 
+\mbox{\hyperlink{class_admin_controller_a57d76c285e84adb3ad018f0b3834b803}{send\+Message\+Solved}} (\$post\+Data, \$username)
+\item 
+\mbox{\hyperlink{class_admin_controller_a15ce20fd44d8acab6ec4939d0dcda2e9}{send\+Message\+Closed}} (\$post\+Data, \$username)
+\item 
+\mbox{\hyperlink{class_admin_controller_ad8ef5189be059ee5a01abbc8dd43e181}{update\+Tickets\+Details}} (\$post\+Data)
+\item 
+\mbox{\hyperlink{class_admin_controller_ac13e58b134292fb463a7bab6de05a0ee}{update\+User\+Password}} (\$post\+Data)
+\item 
+\mbox{\hyperlink{class_admin_controller_abdae00b270df0c79eb9064d85739d0db}{get\+Produit}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}} (\$view, \$data=\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_admin_controller_abe6ab1b12772db25dca8b49d8cd61dab}{\$\+Admin\+Model}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{get\+Sanitized\+Input}} (\$post\+Data, \$field)
+\item 
+\mbox{\hyperlink{class_admin_controller_a1a7a728f284079c71d485a9d12a7c17a}{process\+Attachment}} (\$attachment)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00032}{32}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_admin_controller_a600bf99cf5e235b5cacdac99a37343cf}\index{AdminController@{AdminController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a600bf99cf5e235b5cacdac99a37343cf} 
+Admin\+Controller\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00040}{40}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \$db\ =\ \mbox{\hyperlink{database_8php_a81a366428179a1f1020ce9438a27c51f}{dbConnect}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_admin_model}{AdminModel}}(\$db);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_admin_controller_adf2f9078c216b587c8c384a0a924b683}\index{AdminController@{AdminController}!createAttachments@{createAttachments}}
+\index{createAttachments@{createAttachments}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{createAttachments()}{createAttachments()}}
+{\footnotesize\ttfamily \label{class_admin_controller_adf2f9078c216b587c8c384a0a924b683} 
+Admin\+Controller\+::create\+Attachments (\begin{DoxyParamCaption}\item[{}]{\$ticket\+Id}{, }\item[{}]{\$files\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00161}{161}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00162\ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \$maxFileSize\ =\ 10\ *\ 1024\ *\ 1024;\ \textcolor{comment}{//\ 10MB}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ il\ y\ a\ des\ pièces\ jointes\ dans\ le\ formulaire}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$filesData[\textcolor{stringliteral}{'attachment'}]))\ \{}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pour\ chacun\ des\ fichiers\ mis\ en\ pj}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \$attachments\ =\ \$filesData[\textcolor{stringliteral}{'attachment'}];}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$attachments[\textcolor{stringliteral}{'name'}]\ as\ \$key\ =>\ \$name)\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$attachment\ =\ array(}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'name'}\ =>\ \$filesData[\textcolor{stringliteral}{'attachment'}][\textcolor{stringliteral}{'name'}][\$key],}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'type'}\ =>\ \$filesData[\textcolor{stringliteral}{'attachment'}][\textcolor{stringliteral}{'type'}][\$key],}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'tmp\_name'}\ =>\ \$filesData[\textcolor{stringliteral}{'attachment'}][\textcolor{stringliteral}{'tmp\_name'}][\$key],}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'error'}\ =>\ \$filesData[\textcolor{stringliteral}{'attachment'}][\textcolor{stringliteral}{'error'}][\$key],}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'size'}\ =>\ \$filesData[\textcolor{stringliteral}{'attachment'}][\textcolor{stringliteral}{'size'}][\$key]}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$attachment[\textcolor{stringliteral}{'size'}]\ >\ \$maxFileSize)\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'La\ taille\ du\ fichier\ dépasse\ la\ limite\ autorisée.'});}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$attachment\_name\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a1a7a728f284079c71d485a9d12a7c17a}{processAttachment}}(\$attachment);\textcolor{comment}{//Vérification\ de\ l'extension\ et\ récupération\ du\ nom\ de\ pj\ nettoyé}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$upload\_dir\ =\ \_\_DIR\_\_\ .\ \textcolor{stringliteral}{'/../upload'};\ \textcolor{comment}{//Localisation\ du\ dossier\ où\ la\ pj\ est\ upload}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$original\_file\_name\ =\ pathinfo(\$attachment\_name,\ PATHINFO\_FILENAME);\textcolor{comment}{//récupération\ du\ nom\ de\ la\ pj}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$extension\ =\ pathinfo(\$attachment\_name,\ PATHINFO\_EXTENSION);\textcolor{comment}{//récupération\ de\ l'extension\ de\ la\ pj}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$attachment\_name\ =\ \$original\_file\_name\ .\ \$ticketId\ .\ \textcolor{charliteral}{'.'}\ .\ \$extension;\textcolor{comment}{//renomme\ le\ fichier\ avec\ TicketID}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$new\_destination\ =\ \$upload\_dir\ .\ DIRECTORY\_SEPARATOR\ .\ \$attachment\_name;\textcolor{comment}{//nom\ du\ chemin\ de\ destination\ complet}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\_dump(\$upload\_dir);}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ file\ content\ from\ the\ temporary\ location}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$file\_content\ =\ file\_get\_contents(\$attachment[\textcolor{stringliteral}{'tmp\_name'}]);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Déplace\ le\ fichier\ la\ pj\ au\ chemin\ de\ destination\ \$new\_destination,\ si\ erreur\ envoi\ d'une\ exception}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Write\ the\ file\ content\ to\ the\ new\ destination}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_put\_contents(\$new\_destination,\ \$file\_content)\ ===\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'An\ error\ occurred\ while\ moving\ the\ uploaded\ file.'});}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$root\ =\ realpath(\$\_SERVER[\textcolor{stringliteral}{"{}DOCUMENT\_ROOT"{}}]);\ \textcolor{comment}{//récupère\ la\ racine\ du\ chemin\ absolu\ du\ server\ C:\(\backslash\)wamp64\(\backslash\)www}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$relative\_path\ =\ str\_replace(\$root\ .\ DIRECTORY\_SEPARATOR,\ \textcolor{stringliteral}{''},\ \$new\_destination);\textcolor{comment}{//supprime\ \$root\ de\ la\ variable\ \$new\_destination}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$relative\_path\ =\ str\_replace(DIRECTORY\_SEPARATOR,\ \textcolor{charliteral}{'/'},\ \$relative\_path);\textcolor{comment}{//Remplace\ les\ séparateurs\ de\ répertoires\ par\ '/'}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ae905ca8c7cc680282c3841421524c501}{addAttachment}}(\$ticketId,\ \$relative\_path);\textcolor{comment}{//Ajoute\ la\ pièce\ jointe\ dans\ la\ bdd\ sous\ le\ nom\ ticketsApp/app/src/upload/nomTicketID.ext\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a58625e28c69545a20bd94c1b0d6c6220}\index{AdminController@{AdminController}!createTicket@{createTicket}}
+\index{createTicket@{createTicket}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{createTicket()}{createTicket()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a58625e28c69545a20bd94c1b0d6c6220} 
+Admin\+Controller\+::create\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{, }\item[{}]{\$files\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00216}{216}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00217\ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ On\ récupère\ les\ données\ entrées\ dans\ le\ formulaire}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ et\ nettoyage\ de\ celles-\/ci}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \$titre\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'titre'});}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \$description\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'description'});}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \$produit\_id\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'produit\_id'});}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \$type\_id\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'type\_id'});}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \$urgence\_id\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'urgence\_id'});\ \ \ \ \ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \$date\_creation\ =\ date(\textcolor{stringliteral}{'d-\/m-\/Y'});}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \$statut\_id\ =\ 1;\ \textcolor{comment}{//statut\ :\ en\ cours}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Convertir\ les\ entités\ HTML\ en\ caractères\ correspondants}}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \$titre\ =\ html\_entity\_decode(\$titre);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \$description\ =\ html\_entity\_decode(\$description);}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Réécrire\ les\ apostrophes\ pour\ les\ stocker\ correctement\ en\ base\ de\ données}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \$titre\ =\ str\_replace(\textcolor{stringliteral}{'\&\#39;'},\ \textcolor{stringliteral}{"{}'"{}},\ \$titre);}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \$description\ =\ str\_replace(\textcolor{stringliteral}{'\&\#39;'},\ \textcolor{stringliteral}{"{}'"{}},\ \$description);}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Appel\ de\ la\ fonction\ correspondante\ du\ modèle}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \$ticketId\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a0865960423f2dea5bc888bc19cd10adc}{createTicket}}(\$titre,\ \$description,\ \$date\_creation,\ \$statut\_id,\ \$urgence\_id,\ \$username,\ \$produit\_id,\ \$type\_id);}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Prépare\ une\ réponse\ dans\ un\ tableau\ en\ cas\ d'erreur}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \$response\ =\ array();}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ l'adresse\ e-\/mail\ de\ l'utilisateur\ à\ partir\ de\ la\ base\ de\ données}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \$email\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_aded5ff5d0e12ebd38ce7f4ccac73f903}{getUserMail}}(\$username);}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifiez\ si\ le\ ticket\ a\ été\ créé\ avec\ succès\ avant\ d'envoyer\ l'e-\/mail}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ticketId\ \&\&\ \$email)\ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_adf2f9078c216b587c8c384a0a924b683}{createAttachments}}(\$ticketId,\ \$filesData);}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Appel\ de\ la\ fonction\ logEvent\ pour\ enregistrer\ l'événement}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \$statut\_evenement\_id\ =\ 1;\ \textcolor{comment}{//\ 1\ =\ Opened,\ 2\ =\ Solved,\ 3\ =\ Closed,\ 4\ =\ Attachment\ deleted,\ 5\ =\ Attachment\ added}}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a082b82c503a0f4c830a7a3ba32d4ff7b}{logEvent}}(\$ticketId,\ \$username,\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ \$e)\ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gérer\ l'exception\ selon\ les\ besoins}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ log\ event:\ "{}}\ .\ \$e-\/>getMessage());}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Définir\ l'adresse\ e-\/mail\ de\ l'administrateur}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \$adminEmail\ =\ \textcolor{stringliteral}{'frederic.zitta@forsim.net'};}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Envoi\ de\ l'e-\/mail\ à\ l'adresse\ e-\/mail\ de\ l'utilisateur}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \$to\ =\ \$email;\ \textcolor{comment}{//\ Adresse\ e-\/mail\ de\ l'utilisateur}}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \$subject\ =\ \textcolor{stringliteral}{'Ticket\ créé\ avec\ succès'};\ \textcolor{comment}{//\ Sujet\ de\ l'e-\/mail}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Le\ contenu\ du\ message\ peut\ être\ personnalisé\ selon\ vos\ besoins}}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \$message\ =\ \textcolor{stringliteral}{"{}Cher\ utilisateur,\(\backslash\)n\(\backslash\)nVotre\ ticket\ a\ été\ créé\ avec\ succès.\(\backslash\)n\(\backslash\)nTitre\ du\ ticket\ :\ \$titre\(\backslash\)nDescription\ :\ \$description\(\backslash\)n\(\backslash\)nMerci\ de\ votre\ demande.\(\backslash\)nCordialement,\(\backslash\)nVotre\ équipe\ de\ support."{}};}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Entêtes\ de\ l'e-\/mail}}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \$headers\ =\ \textcolor{stringliteral}{'From:\ '}\ .\ \$adminEmail\ .\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}}\ .}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'Reply-\/To:\ '}\ .\ \$adminEmail\ .\ \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}}\ .}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'X-\/Mailer:\ PHP/'}\ .\ phpversion();}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Envoi\ de\ l'e-\/mail}}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ mail(\$to,\ \$subject,\ \$message,\ \$headers);}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \$response[\textcolor{stringliteral}{'status'}]\ =\ \textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \$response[\textcolor{stringliteral}{'message'}]\ =\ \textcolor{stringliteral}{'Failed\ to\ create\ ticket'};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Content-\/Type:\ application/json'});}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Conversion\ et\ envoi\ de\ la\ réponse\ au\ format\ JSON}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ echo\ json\_encode(\$response);}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00286\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a63aafcf5dab45f5692bb51bcbce2a5f2}\index{AdminController@{AdminController}!createUser@{createUser}}
+\index{createUser@{createUser}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{createUser()}{createUser()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a63aafcf5dab45f5692bb51bcbce2a5f2} 
+Admin\+Controller\+::create\+User (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00123}{123}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ On\ récupère\ les\ données\ nettoyées\ entrées\ dans\ le\ formulaire}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \$username\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'username'});}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Décoder\ les\ entités\ HTML\ pour\ conserver\ les\ apostrophes}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \$username\ =\ html\_entity\_decode(\$username);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Maintenant,\ vous\ pouvez\ utiliser\ \$username\ en\ toute\ sécurité\ avec\ les\ apostrophes}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ var\_dump(\$username);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\$username\ =\ "{}'''"{};}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \$mail\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'mail'});}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \$entreprise\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'entreprise'});}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \$password\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'pwd'});}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \$hashedPassword\ =\ password\_hash(\$password,\ PASSWORD\_DEFAULT);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \$role\ =\ \$\_POST[\textcolor{stringliteral}{'role'}];}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \$selectedProducts\ =\ \$\_POST[\textcolor{stringliteral}{'produit\_id'}];\ \textcolor{comment}{//\ Tableau\ des\ produits\ sélectionnés}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifie\ si\ l'utilisateur\ existe\ déjà}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ac84051a3ee1baac9e884ec0da3b3406b}{isUsernameExists}}(\$username))\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/config/routes.php/produits?erreur=1'});}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00145\ \ \ \ \ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a61c337589f08244481d27416e715887d}{createUser}}(\$username,\ \$mail,\ \$entreprise,\ \$hashedPassword,\ \$role);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Association\ des\ produits\ sélectionnés\ à\ l'utilisateur}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_af83ba6b65740e0bf4813b18743830e44}{addProduitUser}}(\$username,\ \$selectedProducts);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{comment}{//header('Location:\ /ticketsApp/config/routes.php/produits');}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a354050c79045357b2ff925768e544ea5}\index{AdminController@{AdminController}!getAllClosedTickets@{getAllClosedTickets}}
+\index{getAllClosedTickets@{getAllClosedTickets}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getAllClosedTickets()}{getAllClosedTickets()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a354050c79045357b2ff925768e544ea5} 
+Admin\+Controller\+::get\+All\+Closed\+Tickets (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00353}{353}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00354\ \ \ \ \ \{}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \$tickets\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ae708caac064d4ca3744612ab23fde1df}{getAllClosedTickets}}(\$produit\_id);}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/closed\_tickets\_view'},\ [\textcolor{stringliteral}{'tickets'}\ =>\ \$tickets]);}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ exit;\ }
+\DoxyCodeLine{00358\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a170c5c65e46d5e2ec9eb6b94e750b7b3}\index{AdminController@{AdminController}!getAllEventHistory@{getAllEventHistory}}
+\index{getAllEventHistory@{getAllEventHistory}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getAllEventHistory()}{getAllEventHistory()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a170c5c65e46d5e2ec9eb6b94e750b7b3} 
+Admin\+Controller\+::get\+All\+Event\+History (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00315}{315}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \$evenements\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_abfc61b0cc2832c280f59bfb22dddadd3}{getAllEventHistory}}(\$produit\_id);}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'admin\_view'},\ [\textcolor{stringliteral}{'evenements'}\ =>\ \$evenements]);}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00319\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a7619fe884dee2eda7e2150d66fd45aec}\index{AdminController@{AdminController}!getAllOpenTickets@{getAllOpenTickets}}
+\index{getAllOpenTickets@{getAllOpenTickets}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getAllOpenTickets()}{getAllOpenTickets()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a7619fe884dee2eda7e2150d66fd45aec} 
+Admin\+Controller\+::get\+All\+Open\+Tickets (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00327}{327}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \$tickets\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a50416f20350d353ca7cfc5253241af5d}{getAllOpenTickets}}(\$produit\_id);}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/open\_tickets\_view'},\ [\textcolor{stringliteral}{'tickets'}\ =>\ \$tickets]);}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ exit;\ }
+\DoxyCodeLine{00332\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a4ea725f49fcfe7b4bd480275fa833e04}\index{AdminController@{AdminController}!getAllSolvedTickets@{getAllSolvedTickets}}
+\index{getAllSolvedTickets@{getAllSolvedTickets}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getAllSolvedTickets()}{getAllSolvedTickets()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a4ea725f49fcfe7b4bd480275fa833e04} 
+Admin\+Controller\+::get\+All\+Solved\+Tickets (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00340}{340}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00341\ \ \ \ \ \{}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \$tickets\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a45aa3d4d4c826cc295ac0848d76f433b}{getAllSolvedTickets}}(\$produit\_id);}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/solved\_tickets\_view'},\ [\textcolor{stringliteral}{'tickets'}\ =>\ \$tickets]);}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ exit;\ }
+\DoxyCodeLine{00345\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_ada0ed1e059a0fe82ce93bd5ec6a413c7}\index{AdminController@{AdminController}!getClosedDetails@{getClosedDetails}}
+\index{getClosedDetails@{getClosedDetails}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getClosedDetails()}{getClosedDetails()}}
+{\footnotesize\ttfamily \label{class_admin_controller_ada0ed1e059a0fe82ce93bd5ec6a413c7} 
+Admin\+Controller\+::get\+Closed\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00446}{446}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00447\ \ \ \ \ \{}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_adb9e6e43abdf48d4575a7fbc2a3e5412}{getClosedDetails}}(\$ticket\_id);}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \$attachments\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a93f358a3ea6c7bdac1fc362b2e0abd88}{getAttachmentsTicket}}(\$ticket\_id);}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \$evenements\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a82e08984cf490ae1a9f5d7f6a73c8676}{getTicketEventHistory}}(\$ticket\_id);}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/details/closed\_details\_view'},\ [\textcolor{stringliteral}{'ticket'}\ =>\ \$ticket,\ \textcolor{stringliteral}{'attachments'}\ =>\ \$attachments,\ \textcolor{stringliteral}{'evenements'}\ =>\ \$evenements]);}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ exit;\ }
+\DoxyCodeLine{00453\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_abdae00b270df0c79eb9064d85739d0db}\index{AdminController@{AdminController}!getProduit@{getProduit}}
+\index{getProduit@{getProduit}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getProduit()}{getProduit()}}
+{\footnotesize\ttfamily \label{class_admin_controller_abdae00b270df0c79eb9064d85739d0db} 
+Admin\+Controller\+::get\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00641}{641}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00642\ \ \ \ \ \{}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérez\ les\ produits\ depuis\ votre\ modèle\ (par\ exemple,\ en\ utilisant\ une\ fonction\ getUsers\ dans\ votre\ modèle)}}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \$produits\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ae6715babb8accb268587092ce1927649}{getProduit}}();}
+\DoxyCodeLine{00645\ }
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Chargez\ la\ vue\ 'create\_user\_view.php'\ en\ passant\ les\ produits\ comme\ données\ supplémentaires}}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'create\_user\_view'},\ [\textcolor{stringliteral}{'produits'}\ =>\ \$produits]);}
+\DoxyCodeLine{00648\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a2820096082d107dc5f83d37760809c34}\index{AdminController@{AdminController}!getSanitizedInput@{getSanitizedInput}}
+\index{getSanitizedInput@{getSanitizedInput}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getSanitizedInput()}{getSanitizedInput()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a2820096082d107dc5f83d37760809c34} 
+Admin\+Controller\+::get\+Sanitized\+Input (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{, }\item[{}]{\$field}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00055}{55}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$postData[\$field]))\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Nettoie\ la\ valeur\ du\ champ\ avec\ le\ filtre\ FILTER\_SANITIZE\_SPECIAL\_CHARS}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \$sanitizedValue\ =\ filter\_var(\$postData[\$field],\ FILTER\_SANITIZE\_SPECIAL\_CHARS);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$sanitizedValue;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ le\ champ\ n'existe\ pas,\ retourne\ une\ chaîne\ de\ caractères\ vide}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a37d20ccb4f7cc195d827e3e04d29a9ab}\index{AdminController@{AdminController}!getSolvedDetails@{getSolvedDetails}}
+\index{getSolvedDetails@{getSolvedDetails}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getSolvedDetails()}{getSolvedDetails()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a37d20ccb4f7cc195d827e3e04d29a9ab} 
+Admin\+Controller\+::get\+Solved\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00461}{461}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00462\ \ \ \ \ \{}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a1fdbf5b91a654a26d187428af65e6f63}{getSolvedDetails}}(\$ticket\_id);}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \$attachments\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a93f358a3ea6c7bdac1fc362b2e0abd88}{getAttachmentsTicket}}(\$ticket\_id);}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \$evenements\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a82e08984cf490ae1a9f5d7f6a73c8676}{getTicketEventHistory}}(\$ticket\_id);}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/details/solved\_details\_view'},\ [\textcolor{stringliteral}{'ticket'}\ =>\ \$ticket,\ \textcolor{stringliteral}{'attachments'}\ =>\ \$attachments,\ \textcolor{stringliteral}{'evenements'}\ =>\ \$evenements]);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ exit;\ }
+\DoxyCodeLine{00468\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_afe61112eacaafa77b06fa381cae85b01}\index{AdminController@{AdminController}!getTicketClosedSaveDetails@{getTicketClosedSaveDetails}}
+\index{getTicketClosedSaveDetails@{getTicketClosedSaveDetails}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getTicketClosedSaveDetails()}{getTicketClosedSaveDetails()}}
+{\footnotesize\ttfamily \label{class_admin_controller_afe61112eacaafa77b06fa381cae85b01} 
+Admin\+Controller\+::get\+Ticket\+Closed\+Save\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00426}{426}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00427\ \ \ \ \ \{}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_adb9e6e43abdf48d4575a7fbc2a3e5412}{getClosedDetails}}(\$ticket\_id);}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \$attachments\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a93f358a3ea6c7bdac1fc362b2e0abd88}{getAttachmentsTicket}}(\$ticket\_id);}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \$ticketsave\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ad868ab9678c691322094bd2f9e5a1965}{getTicketSaveDetails}}(\$ticket\_id);}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/details/ticket\_save\_closed\_details\_view'},\ [}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ticket'}\ =>\ \$ticket,}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'attachments'}\ =>\ \$attachments,}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ticketsave'}\ =>\ \$ticketsave}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00438\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a933eca2f571420c66540d142610e7064}\index{AdminController@{AdminController}!getTicketDetailsAndEvents@{getTicketDetailsAndEvents}}
+\index{getTicketDetailsAndEvents@{getTicketDetailsAndEvents}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getTicketDetailsAndEvents()}{getTicketDetailsAndEvents()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a933eca2f571420c66540d142610e7064} 
+Admin\+Controller\+::get\+Ticket\+Details\+And\+Events (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00366}{366}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00367\ \ \ \ \ \{}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ad281715b03529e0022eb36116ef40573}{getTicketDetails}}(\$ticket\_id);}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \$attachments\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a93f358a3ea6c7bdac1fc362b2e0abd88}{getAttachmentsTicket}}(\$ticket\_id);}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \$evenements\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a82e08984cf490ae1a9f5d7f6a73c8676}{getTicketEventHistory}}(\$ticket\_id);}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/details/details\_ticket\_view'},\ [}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ticket'}\ =>\ \$ticket,}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'attachments'}\ =>\ \$attachments,}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'evenements'}\ =>\ \$evenements}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00378\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_af5c95418a0de378436c5bb3dea1046f4}\index{AdminController@{AdminController}!getTicketMessages@{getTicketMessages}}
+\index{getTicketMessages@{getTicketMessages}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getTicketMessages()}{getTicketMessages()}}
+{\footnotesize\ttfamily \label{class_admin_controller_af5c95418a0de378436c5bb3dea1046f4} 
+Admin\+Controller\+::get\+Ticket\+Messages (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00500}{500}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ad281715b03529e0022eb36116ef40573}{getTicketDetails}}(\$ticket\_id,\ \$username);}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \$allMessages\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a17e1a3b63fb4dc2dd6e4c2f62f63ccee}{getAllTicketMessages}}(\$ticket\_id,\ \$username);}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/details/ticket\_chat\_view'},\ [\textcolor{stringliteral}{'ticket'}\ =>\ \$ticket,\ \textcolor{stringliteral}{'messages'}\ =>\ \$allMessages]);}
+\DoxyCodeLine{00504\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_aacd9d5e352632a4d32d29c3b589ec078}\index{AdminController@{AdminController}!getTicketMessagesClosed@{getTicketMessagesClosed}}
+\index{getTicketMessagesClosed@{getTicketMessagesClosed}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getTicketMessagesClosed()}{getTicketMessagesClosed()}}
+{\footnotesize\ttfamily \label{class_admin_controller_aacd9d5e352632a4d32d29c3b589ec078} 
+Admin\+Controller\+::get\+Ticket\+Messages\+Closed (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00526}{526}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_adb9e6e43abdf48d4575a7fbc2a3e5412}{getClosedDetails}}(\$ticket\_id,\ \$username);}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \$allMessages\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a17e1a3b63fb4dc2dd6e4c2f62f63ccee}{getAllTicketMessages}}(\$ticket\_id,\ \$username);}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/details/ticket\_chat\_closed\_view'},\ [\textcolor{stringliteral}{'ticket'}\ =>\ \$ticket,\ \textcolor{stringliteral}{'messages'}\ =>\ \$allMessages]);}
+\DoxyCodeLine{00530\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a448306d0317a19e9d5a3341016c77455}\index{AdminController@{AdminController}!getTicketMessagesSolved@{getTicketMessagesSolved}}
+\index{getTicketMessagesSolved@{getTicketMessagesSolved}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getTicketMessagesSolved()}{getTicketMessagesSolved()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a448306d0317a19e9d5a3341016c77455} 
+Admin\+Controller\+::get\+Ticket\+Messages\+Solved (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00513}{513}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a1fdbf5b91a654a26d187428af65e6f63}{getSolvedDetails}}(\$ticket\_id,\ \$username);}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \$allMessages\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a17e1a3b63fb4dc2dd6e4c2f62f63ccee}{getAllTicketMessages}}(\$ticket\_id,\ \$username);}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/details/ticket\_chat\_solved\_view'},\ [\textcolor{stringliteral}{'ticket'}\ =>\ \$ticket,\ \textcolor{stringliteral}{'messages'}\ =>\ \$allMessages]);}
+\DoxyCodeLine{00517\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a5e9fcb44cd7d9a51caafc284086534bc}\index{AdminController@{AdminController}!getTicketSaveDetails@{getTicketSaveDetails}}
+\index{getTicketSaveDetails@{getTicketSaveDetails}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getTicketSaveDetails()}{getTicketSaveDetails()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a5e9fcb44cd7d9a51caafc284086534bc} 
+Admin\+Controller\+::get\+Ticket\+Save\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00386}{386}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00387\ \ \ \ \ \{}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ad281715b03529e0022eb36116ef40573}{getTicketDetails}}(\$ticket\_id);}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \$attachments\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a93f358a3ea6c7bdac1fc362b2e0abd88}{getAttachmentsTicket}}(\$ticket\_id);}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \$ticketsave\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ad868ab9678c691322094bd2f9e5a1965}{getTicketSaveDetails}}(\$ticket\_id);}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/details/ticket\_save\_details\_view'},\ [}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ticket'}\ =>\ \$ticket,}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'attachments'}\ =>\ \$attachments,}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ticketsave'}\ =>\ \$ticketsave}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00398\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a39a96e6ce3d5da64fc68b81fb0f8ab85}\index{AdminController@{AdminController}!getTicketSolvedSaveDetails@{getTicketSolvedSaveDetails}}
+\index{getTicketSolvedSaveDetails@{getTicketSolvedSaveDetails}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getTicketSolvedSaveDetails()}{getTicketSolvedSaveDetails()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a39a96e6ce3d5da64fc68b81fb0f8ab85} 
+Admin\+Controller\+::get\+Ticket\+Solved\+Save\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00406}{406}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00407\ \ \ \ \ \{}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a1fdbf5b91a654a26d187428af65e6f63}{getSolvedDetails}}(\$ticket\_id);}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \$attachments\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a93f358a3ea6c7bdac1fc362b2e0abd88}{getAttachmentsTicket}}(\$ticket\_id);}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \$ticketsave\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ad868ab9678c691322094bd2f9e5a1965}{getTicketSaveDetails}}(\$ticket\_id);}
+\DoxyCodeLine{00411\ }
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'tickets/details/ticket\_save\_solved\_details\_view'},\ [}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ticket'}\ =>\ \$ticket,}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'attachments'}\ =>\ \$attachments,}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'ticketsave'}\ =>\ \$ticketsave}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00418\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_ae4545f381bd3c6dfda4e351a43de5c10}\index{AdminController@{AdminController}!getUserByUsername@{getUserByUsername}}
+\index{getUserByUsername@{getUserByUsername}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getUserByUsername()}{getUserByUsername()}}
+{\footnotesize\ttfamily \label{class_admin_controller_ae4545f381bd3c6dfda4e351a43de5c10} 
+Admin\+Controller\+::get\+User\+By\+Username (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00486}{486}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \$user\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ac6e7e7ea7e913a0f9f85e7b0ea68aff4}{getUserByUsername}}(\$username);}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \$produits\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a1e14ed0dd4d0672824840ab0f7188c9d}{getProduitsByUser}}(\$username);}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'user\_details\_view'},\ [\textcolor{stringliteral}{'user'}\ =>\ \$user,\ \textcolor{stringliteral}{'produits'}\ =>\ \$produits]);}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ exit;\ }
+\DoxyCodeLine{00491\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a84c246d5e7e7a88c6520f80110827429}\index{AdminController@{AdminController}!getUsers@{getUsers}}
+\index{getUsers@{getUsers}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{getUsers()}{getUsers()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a84c246d5e7e7a88c6520f80110827429} 
+Admin\+Controller\+::get\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00474}{474}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \$users\ =\ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a20581b515b9f9499e3d000591ce011a1}{getUsers}}();}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'users\_view'},\ [\textcolor{stringliteral}{'users'}\ =>\ \$users]);}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ exit;\ }
+\DoxyCodeLine{00478\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a082b82c503a0f4c830a7a3ba32d4ff7b}\index{AdminController@{AdminController}!logEvent@{logEvent}}
+\index{logEvent@{logEvent}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{logEvent()}{logEvent()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a082b82c503a0f4c830a7a3ba32d4ff7b} 
+Admin\+Controller\+::log\+Event (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{, }\item[{}]{\$statut\+\_\+evenement\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00298}{298}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00299\ \ \ \ \ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_adb692dfbea0cc49a0177dc7f5763f7c4}{logEvent}}(\$ticket\_id,\ \$username,\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ \$e)\ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gérer\ l'exception\ en\ enregistrant\ l'erreur\ dans\ le\ journal\ des\ erreurs}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ log\ event:\ "{}}\ .\ \$e-\/>getMessage());}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Failed\ to\ log\ event.'});}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00307\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a1a7a728f284079c71d485a9d12a7c17a}\index{AdminController@{AdminController}!processAttachment@{processAttachment}}
+\index{processAttachment@{processAttachment}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{processAttachment()}{processAttachment()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a1a7a728f284079c71d485a9d12a7c17a} 
+Admin\+Controller\+::process\+Attachment (\begin{DoxyParamCaption}\item[{}]{\$attachment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00089}{89}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//On\ vérifie\ s'il\ y\ a\ eu\ une\ erreur\ lors\ de\ l'upload\ du\ fichier}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$attachment[\textcolor{stringliteral}{'error'}]\ !==\ UPLOAD\_ERR\_OK)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'An\ error\ occurred\ with\ the\ file\ upload.'});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//On\ récupère\ le\ nom\ original\ du\ fichier}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \$original\_file\_name\ =\ pathinfo(\$attachment[\textcolor{stringliteral}{'name'}],\ PATHINFO\_FILENAME);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{comment}{//On\ récupère\ l'extension\ du\ fichier'}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \$extension\ =\ pathinfo(\$attachment[\textcolor{stringliteral}{'name'}],\ PATHINFO\_EXTENSION);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tableau\ contenant\ les\ extensions\ autorisées}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \$allowedExtensions\ =\ [\textcolor{stringliteral}{'jpg'},\ \textcolor{stringliteral}{'jpeg'},\ \textcolor{stringliteral}{'png'},\ \textcolor{stringliteral}{'pdf'},\ \textcolor{stringliteral}{'doc'},\ \textcolor{stringliteral}{'docx'},\ \textcolor{stringliteral}{'zip'},\ \textcolor{stringliteral}{'rar'}];}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//On\ vérifie\ si\ l'extension\ du\ fichier\ est\ une\ extension\ autorisé}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!in\_array(\$extension,\ \$allowedExtensions))\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Invalid\ file\ extension.\ Only\ JPG,\ PNG,\ DOCX,\ ZIP,\ RAR,\ and\ PDF\ files\ are\ allowed.'});}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Générer\ le\ nom\ de\ la\ pièce\ jointe\ épurée\ en\ combinant\ le\ nom\ du\ fichier\ d'origine\ et\ l'extension}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \$attachment\_name\ =\ \$original\_file\_name\ .\ \textcolor{charliteral}{'.'}\ .\ \$extension;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//On\ renvoi\ le\ nom\ de\ fichier\ nettoyé}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$attachment\_name;}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}\index{AdminController@{AdminController}!render@{render}}
+\index{render@{render}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee} 
+Admin\+Controller\+::render (\begin{DoxyParamCaption}\item[{}]{\$view}{, }\item[{}]{\$data}{ = {\ttfamily \mbox{[}\mbox{]}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00073}{73}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ extract(\mbox{\hyperlink{test_8php_a6efc15b5a2314dd4b5aaa556a375c6d6}{\$data}});}
+\DoxyCodeLine{00075\ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ include(\_\_DIR\_\_\ .\ \textcolor{stringliteral}{"{}/../Views/admin/\{\$view\}.php"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a6590b6a48dac4d122a89eb541266cc47}\index{AdminController@{AdminController}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a6590b6a48dac4d122a89eb541266cc47} 
+Admin\+Controller\+::send\+Message (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00540}{540}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \$statut\_evenement\_id\ =\ 8;\ \textcolor{comment}{//\ 8\ =\ Message}}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Valide\ et\ nettoie\ les\ données}}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \$ticket\_id\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'ticket\_id'});}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \$sendMessage\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'message'});}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ac2e0958674a1084a1a6922fa7b2cf88c}{sendMessage}}(\$ticket\_id,\ \$sendMessage,\ \$username);}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_adb692dfbea0cc49a0177dc7f5763f7c4}{logEvent}}(\$ticket\_id,\ \$username,\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/config/routes.php/ticket-\/message-\/admin/'}\ .\ \$ticket\_id);}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00550\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a15ce20fd44d8acab6ec4939d0dcda2e9}\index{AdminController@{AdminController}!sendMessageClosed@{sendMessageClosed}}
+\index{sendMessageClosed@{sendMessageClosed}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{sendMessageClosed()}{sendMessageClosed()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a15ce20fd44d8acab6ec4939d0dcda2e9} 
+Admin\+Controller\+::send\+Message\+Closed (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00580}{580}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \$statut\_evenement\_id\ =\ 8;\ \textcolor{comment}{//\ 8\ =\ Message}}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Valide\ et\ nettoie\ les\ données}}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \$ticket\_id\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'ticket\_id'});}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \$sendMessage\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'message'});}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ac2e0958674a1084a1a6922fa7b2cf88c}{sendMessage}}(\$ticket\_id,\ \$sendMessage,\ \$username);}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_adb692dfbea0cc49a0177dc7f5763f7c4}{logEvent}}(\$ticket\_id,\ \$username,\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/config/routes.php/ticket-\/message-\/closed-\/admin/'}\ .\ \$ticket\_id);}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00590\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_a57d76c285e84adb3ad018f0b3834b803}\index{AdminController@{AdminController}!sendMessageSolved@{sendMessageSolved}}
+\index{sendMessageSolved@{sendMessageSolved}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{sendMessageSolved()}{sendMessageSolved()}}
+{\footnotesize\ttfamily \label{class_admin_controller_a57d76c285e84adb3ad018f0b3834b803} 
+Admin\+Controller\+::send\+Message\+Solved (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00560}{560}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \$statut\_evenement\_id\ =\ 8;\ \textcolor{comment}{//\ 8\ =\ Message}}
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Valide\ et\ nettoie\ les\ données}}
+\DoxyCodeLine{00564\ \ \ \ \ \ \ \ \ \$ticket\_id\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'ticket\_id'});}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \$sendMessage\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'message'});}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ac2e0958674a1084a1a6922fa7b2cf88c}{sendMessage}}(\$ticket\_id,\ \$sendMessage,\ \$username);}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_adb692dfbea0cc49a0177dc7f5763f7c4}{logEvent}}(\$ticket\_id,\ \$username,\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/config/routes.php/ticket-\/message-\/solved-\/admin/'}\ .\ \$ticket\_id);}
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00570\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_ad8ef5189be059ee5a01abbc8dd43e181}\index{AdminController@{AdminController}!updateTicketsDetails@{updateTicketsDetails}}
+\index{updateTicketsDetails@{updateTicketsDetails}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{updateTicketsDetails()}{updateTicketsDetails()}}
+{\footnotesize\ttfamily \label{class_admin_controller_ad8ef5189be059ee5a01abbc8dd43e181} 
+Admin\+Controller\+::update\+Tickets\+Details (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00599}{599}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00600\ }
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \$statut\_evenement\_id\ =\ 7;\ \textcolor{comment}{//\ 7\ =\ Text\ Changed}}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Valide\ et\ nettoie\ les\ données}}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \$ticket\_id\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'ticket\_id'});}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \$newTitle\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'titre'});}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \$newDescription\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'description'});}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_a5775e2b900e95eae8f702307cffb2bbb}{updateTicketsDetails}}(\$ticket\_id,\ \$newTitle,\ \$newDescription);}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_adb692dfbea0cc49a0177dc7f5763f7c4}{logEvent}}(\$ticket\_id,\ \$username,\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/config/routes.php/all\_opened'});}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00611\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_controller_ac13e58b134292fb463a7bab6de05a0ee}\index{AdminController@{AdminController}!updateUserPassword@{updateUserPassword}}
+\index{updateUserPassword@{updateUserPassword}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{updateUserPassword()}{updateUserPassword()}}
+{\footnotesize\ttfamily \label{class_admin_controller_ac13e58b134292fb463a7bab6de05a0ee} 
+Admin\+Controller\+::update\+User\+Password (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00620}{620}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Valide\ et\ nettoie\ les\ données}}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \$username\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'username'});}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ \$newPassword\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'new\_password'});}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ \$confirmPassword\ =\ \$this-\/>\mbox{\hyperlink{class_admin_controller_a2820096082d107dc5f83d37760809c34}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'confirm\_password'});}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifiez\ que\ le\ nouveau\ mot\ de\ passe\ et\ la\ confirmation\ correspondent}}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$newPassword\ !==\ \$confirmPassword)\ \{}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{"{}Location:\ /ticketsApp/config/routes.php/user\_details/\{\$username\}?erreur=1"{}});\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model}{AdminModel}}-\/>\mbox{\hyperlink{class_admin_model_ac66d28939888da0e528bcc66d5e43391}{updateUserPassword}}(\$username,\ \$newPassword);}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/config/routes.php/users'});}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \ \ \ \ exit;}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Charger\ la\ vue\ avec\ le\ formulaire}}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_controller_a59ebd152f635ddf6270567e77e8fe4ee}{render}}(\textcolor{stringliteral}{'user\_details\_view'},\ [\textcolor{stringliteral}{'username'}\ =>\ \$username]);}
+\DoxyCodeLine{00636\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_admin_controller_abe6ab1b12772db25dca8b49d8cd61dab}\index{AdminController@{AdminController}!\$AdminModel@{\$AdminModel}}
+\index{\$AdminModel@{\$AdminModel}!AdminController@{AdminController}}
+\doxysubsubsection{\texorpdfstring{\$AdminModel}{\$AdminModel}}
+{\footnotesize\ttfamily \label{class_admin_controller_abe6ab1b12772db25dca8b49d8cd61dab} 
+Admin\+Controller\+::\$\+Admin\+Model\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_controller_8php_source_l00034}{34}} du fichier \mbox{\hyperlink{_admin_controller_8php_source}{Admin\+Controller.\+php}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+app/src/\+Controllers/\mbox{\hyperlink{_admin_controller_8php}{Admin\+Controller.\+php}}\end{DoxyCompactItemize}

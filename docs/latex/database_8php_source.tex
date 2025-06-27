@@ -1,0 +1,54 @@
+\doxysection{database.\+php}
+\hypertarget{database_8php_source}{}\label{database_8php_source}\index{config/database.php@{config/database.php}}
+\mbox{\hyperlink{database_8php}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00003}00003\ require\_once(\textcolor{stringliteral}{'constants.php'});}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00005}00005\ \textcolor{comment}{/************************************************}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00006}00006\ \textcolor{comment}{\ *\ Fonction\ pour\ établir\ une\ connexion\ à\ la\ base\ de\ données}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00007}00007\ \textcolor{comment}{\ ***********************************************/}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00008}\mbox{\hyperlink{database_8php_a81a366428179a1f1020ce9438a27c51f}{00008}}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{database_8php_a81a366428179a1f1020ce9438a27c51f}{dbConnect}}()}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00010}00010\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Création\ d'une\ nouvelle\ instance\ PDO\ pour\ la\ connexion\ à\ la\ base\ de\ données}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$db\ =\ \textcolor{keyword}{new}\ PDO(}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'mysql:host='}\ .\ \mbox{\hyperlink{constants_8php_a046861af9c950733d95478526a7e19ae}{DB\_SERVER}}\ .\ \textcolor{stringliteral}{';dbname='}\ .\ \mbox{\hyperlink{constants_8php_ab5db0d3504f917f268614c50b02c53e2}{DB\_NAME}}\ .\ \textcolor{stringliteral}{';charset=utf8mb4'},}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{constants_8php_a1d1d99f8e08f387d84fe9848f3357156}{DB\_USER}},}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{constants_8php_a4dca144fafcc7bd3f71cb5778afcdd13}{DB\_PASSWORD}}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Définition\ du\ mode\ d'erreur\ PDO\ pour\ l'affichage\ des\ exceptions}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$db-\/>setAttribute(PDO::ATTR\_ERRMODE,\ PDO::ERRMODE\_EXCEPTION);}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00020}00020\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$exception)\ \{}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ En\ cas\ d'erreur\ lors\ de\ la\ connexion,\ un\ message\ est\ enregistré\ dans\ les\ logs}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{'Erreur\ de\ connexion\ :\ '}\ .\ \$exception-\/>getMessage());}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Retourne\ false\ pour\ indiquer\ une\ erreur\ de\ connexion}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{return}\ \$db;\ \textcolor{comment}{//\ Retourne\ l'objet\ PDO\ représentant\ la\ connexion\ à\ la\ base\ de\ données}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00028}00028\ \textcolor{comment}{/************************************************}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00029}00029\ \textcolor{comment}{\ *\ Fonction\ pour\ exécuter\ une\ requête\ sur\ la\ base\ de\ données}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00030}00030\ \textcolor{comment}{\ *\ @param\ PDO\ \$db\ Connexion\ PDO\ à\ utiliser\ pour\ la\ requête}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00031}00031\ \textcolor{comment}{\ *\ @param\ string\ \$request\ Requête\ SQL\ à\ exécuter}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00032}00032\ \textcolor{comment}{\ *\ @return\ array|bool\ Résultat\ de\ la\ requête\ ou\ false\ en\ cas\ d'erreur}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00033}00033\ \textcolor{comment}{\ ***********************************************/}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00034}\mbox{\hyperlink{database_8php_acb805aedc46bc4602bcce383b206c41b}{00034}}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{database_8php_acb805aedc46bc4602bcce383b206c41b}{dbRequest}}(\$db,\ \mbox{\hyperlink{routes_8php_abb35c8495a232b510389fa6d7b15d38a}{\$request}})}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Préparation\ et\ exécution\ de\ la\ requête\ SQL}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \$statement\ =\ \$db-\/>prepare(\mbox{\hyperlink{routes_8php_abb35c8495a232b510389fa6d7b15d38a}{\$request}});}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \$result\ =\ \$statement-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00042}00042\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$exception)\ \{}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ En\ cas\ d'erreur\ lors\ de\ l'exécution\ de\ la\ requête,\ un\ message\ est\ enregistré\ dans\ les\ logs}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{'Erreur\ de\ requête\ :\ '}\ .\ \$exception-\/>getMessage());}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Retourne\ false\ pour\ indiquer\ une\ erreur\ de\ requête}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{return}\ \$result;\ \textcolor{comment}{//\ Retourne\ le\ résultat\ de\ la\ requête\ sous\ forme\ de\ tableau\ associatif}}
+\DoxyCodeLine{\Hypertarget{database_8php_source_l00048}00048\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,198 @@
+\doxysection{Référence de la classe Login\+Controller}
+\hypertarget{class_login_controller}{}\label{class_login_controller}\index{LoginController@{LoginController}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_login_controller_a54a5326725f849d6bb08e8911a26927b}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_login_controller_a13318bbb88aab6294b4cdb6b37b3dfa5}{login}} (\$username, \$password)
+\item 
+\mbox{\hyperlink{class_login_controller_af4942bdfe5242fe1505a37f3b701afc8}{logout}} ()
+\item 
+\mbox{\hyperlink{class_login_controller_a1b319a78a42c9374ced2fd32766be97f}{password\+Change\+Request}} (\$post\+Data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_login_controller_a0072c195f9f308062dbf759ac599b785}{\$\+User\+Model}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_login_controller_a52cd2da8af60a6fdbd4c80e1e0ad2a15}{get\+Sanitized\+Input}} (\$post\+Data, \$field)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+
+
+Définition à la ligne \mbox{\hyperlink{_login_controller_8php_source_l00027}{27}} du fichier \mbox{\hyperlink{_login_controller_8php_source}{Login\+Controller.\+php}}.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_login_controller_a54a5326725f849d6bb08e8911a26927b}\index{LoginController@{LoginController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!LoginController@{LoginController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_login_controller_a54a5326725f849d6bb08e8911a26927b} 
+Login\+Controller\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_login_controller_8php_source_l00034}{34}} du fichier \mbox{\hyperlink{_login_controller_8php_source}{Login\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Établir\ une\ connexion\ à\ la\ base\ de\ données}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \$db\ =\ \mbox{\hyperlink{database_8php_a81a366428179a1f1020ce9438a27c51f}{dbConnect}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialiser\ le\ modèle\ UserModel\ avec\ la\ connexion\ à\ la\ base\ de\ données}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_user_model}{UserModel}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_user_model}{UserModel}}(\$db);}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_login_controller_a52cd2da8af60a6fdbd4c80e1e0ad2a15}\index{LoginController@{LoginController}!getSanitizedInput@{getSanitizedInput}}
+\index{getSanitizedInput@{getSanitizedInput}!LoginController@{LoginController}}
+\doxysubsubsection{\texorpdfstring{getSanitizedInput()}{getSanitizedInput()}}
+{\footnotesize\ttfamily \label{class_login_controller_a52cd2da8af60a6fdbd4c80e1e0ad2a15} 
+Login\+Controller\+::get\+Sanitized\+Input (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{, }\item[{}]{\$field}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_login_controller_8php_source_l00049}{49}} du fichier \mbox{\hyperlink{_login_controller_8php_source}{Login\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//On\ vérifie\ si\ le\ champ\ existe\ dans\ le\ taleau\ \$postData}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$postData[\$field]))\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Nettoyage\ de\ la\ valeur\ du\ champ\ avec\ le\ filtre\ FILTER\_SANITIZE\_STRING\ et\ renvoi\ de\ la\ valeur}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \$sanitizedValue\ =\ filter\_var(\$postData[\$field],\ FILTER\_SANITIZE\_STRING);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$sanitizedValue;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ le\ champ\ n'existe\ pas\ ,\ renvoi\ une\ chaine\ de\ caractère\ vide}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_login_controller_a13318bbb88aab6294b4cdb6b37b3dfa5}\index{LoginController@{LoginController}!login@{login}}
+\index{login@{login}!LoginController@{LoginController}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \label{class_login_controller_a13318bbb88aab6294b4cdb6b37b3dfa5} 
+Login\+Controller\+::login (\begin{DoxyParamCaption}\item[{}]{\$username}{, }\item[{}]{\$password}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_login_controller_8php_source_l00068}{68}} du fichier \mbox{\hyperlink{_login_controller_8php_source}{Login\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Valide\ et\ nettoie\ les\ données}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \$username\ =\ trim(\$username);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \$password\ =\ trim(\$password);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Vérifie\ si\ une\ session\ est\ cours,\ si\ non\ alors\ création\ d'une}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (session\_status()\ ==\ PHP\_SESSION\_NONE)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ session\_start();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \$user\ =\ \$this-\/>\mbox{\hyperlink{class_user_model}{UserModel}}-\/>\mbox{\hyperlink{class_user_model_aa6b3350b96deb4f2c37b55e660ad3289}{getUserByUsername}}(\$username);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ les\ identifiants\ sont\ corrects}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$user\ \&\&\ password\_verify(\$password,\ \$user[\textcolor{stringliteral}{'pwd'}]))\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'username'}]\ =\ \$username;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'loggedIn'}]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \$role\ =\ \$this-\/>\mbox{\hyperlink{class_user_model}{UserModel}}-\/>\mbox{\hyperlink{class_user_model_a2b6ffcd0b2c70f3c6f87a534baf173fd}{getUserRole}}(\$username);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Définir\ le\ rôle\ de\ l'utilisateur\ dans\ la\ session}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \$\_SESSION[\textcolor{stringliteral}{'role'}]\ =\ \$role;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Redirirection\ vers\ la\ page\ d'administration\ si\ l'utilisateur\ est\ un\ administrateur}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$role\ ===\ \textcolor{stringliteral}{'admin'})\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/admin/admin\_view.php'});}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/index.php'});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/login\_view.php?erreur=1'});}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_login_controller_af4942bdfe5242fe1505a37f3b701afc8}\index{LoginController@{LoginController}!logout@{logout}}
+\index{logout@{logout}!LoginController@{LoginController}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily \label{class_login_controller_af4942bdfe5242fe1505a37f3b701afc8} 
+Login\+Controller\+::logout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_login_controller_8php_source_l00109}{109}} du fichier \mbox{\hyperlink{_login_controller_8php_source}{Login\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Démarrer\ la\ session\ et\ détruire\ toutes\ les\ données\ de\ session}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ session\_start();}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ session\_destroy();}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rediriger\ vers\ la\ page\ de\ connexion\ après\ la\ déconnexion}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/login\_view.php'});}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_login_controller_a1b319a78a42c9374ced2fd32766be97f}\index{LoginController@{LoginController}!passwordChangeRequest@{passwordChangeRequest}}
+\index{passwordChangeRequest@{passwordChangeRequest}!LoginController@{LoginController}}
+\doxysubsubsection{\texorpdfstring{passwordChangeRequest()}{passwordChangeRequest()}}
+{\footnotesize\ttfamily \label{class_login_controller_a1b319a78a42c9374ced2fd32766be97f} 
+Login\+Controller\+::password\+Change\+Request (\begin{DoxyParamCaption}\item[{}]{\$post\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_login_controller_8php_source_l00124}{124}} du fichier \mbox{\hyperlink{_login_controller_8php_source}{Login\+Controller.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125\ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ et\ nettoyer\ le\ nom\ d'utilisateur\ à\ partir\ des\ données\ POST}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \$username\ =\ \$this-\/>\mbox{\hyperlink{class_login_controller_a52cd2da8af60a6fdbd4c80e1e0ad2a15}{getSanitizedInput}}(\$postData,\ \textcolor{stringliteral}{'username'});}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifier\ si\ l'utilisateur\ existe\ dans\ la\ base\ de\ données}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$this-\/>\mbox{\hyperlink{class_user_model}{UserModel}}-\/>\mbox{\hyperlink{class_user_model_a732632e43408b26e8139afced0277b93}{isUsernameExists}}(\$username))\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rediriger\ vers\ une\ page\ d'erreur\ si\ l'utilisateur\ n'existe\ pas}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/password\_view.php?erreur=1'});}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rediriger\ vers\ une\ page\ de\ confirmation\ si\ la\ demande\ de\ changement\ de\ mot\ de\ passe\ est\ valide}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/app/src/Views/password\_view.php?succes=1'});}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ exit();}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_login_controller_a0072c195f9f308062dbf759ac599b785}\index{LoginController@{LoginController}!\$UserModel@{\$UserModel}}
+\index{\$UserModel@{\$UserModel}!LoginController@{LoginController}}
+\doxysubsubsection{\texorpdfstring{\$UserModel}{\$UserModel}}
+{\footnotesize\ttfamily \label{class_login_controller_a0072c195f9f308062dbf759ac599b785} 
+Login\+Controller\+::\$\+User\+Model\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_login_controller_8php_source_l00029}{29}} du fichier \mbox{\hyperlink{_login_controller_8php_source}{Login\+Controller.\+php}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+app/src/\+Controllers/\mbox{\hyperlink{_login_controller_8php}{Login\+Controller.\+php}}\end{DoxyCompactItemize}

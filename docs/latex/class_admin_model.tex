@@ -1,0 +1,914 @@
+\doxysection{Référence de la classe Admin\+Model}
+\hypertarget{class_admin_model}{}\label{class_admin_model}\index{AdminModel@{AdminModel}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_admin_model_a18105909e60620ca7c61001ef7acedb9}{\+\_\+\+\_\+construct}} (PDO \$db)
+\item 
+\mbox{\hyperlink{class_admin_model_a61c337589f08244481d27416e715887d}{create\+User}} (\$username, \$mail, \$entreprise, \$hashed\+Password, \$role)
+\item 
+\mbox{\hyperlink{class_admin_model_af83ba6b65740e0bf4813b18743830e44}{add\+Produit\+User}} (\$username, \$selected\+Products)
+\item 
+\mbox{\hyperlink{class_admin_model_ac84051a3ee1baac9e884ec0da3b3406b}{is\+Username\+Exists}} (\$username)
+\item 
+\mbox{\hyperlink{class_admin_model_adb692dfbea0cc49a0177dc7f5763f7c4}{log\+Event}} (\$ticket\+\_\+id, \$username, \$statut\+\_\+evenement\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_a0865960423f2dea5bc888bc19cd10adc}{create\+Ticket}} (\$titre, \$description, \$date\+\_\+creation, \$statut\+\_\+id, \$urgence\+\_\+id, \$username, \$produit\+\_\+id, \$type\+\_\+id, \$files\+Data=null)
+\item 
+\mbox{\hyperlink{class_admin_model_a4a13082dbb4314461520699e6ad2d4a3}{create\+Ticket\+Save}} (\$ticket\+Id, \$titre, \$description, \$date\+\_\+creation, \$statut\+\_\+id, \$urgence\+\_\+id, \$username, \$produit\+\_\+id, \$type\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_ae905ca8c7cc680282c3841421524c501}{add\+Attachment}} (\$ticket\+Id, \$filename)
+\item 
+\mbox{\hyperlink{class_admin_model_abfc61b0cc2832c280f59bfb22dddadd3}{get\+All\+Event\+History}} (\$produit\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_a82e08984cf490ae1a9f5d7f6a73c8676}{get\+Ticket\+Event\+History}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_a50416f20350d353ca7cfc5253241af5d}{get\+All\+Open\+Tickets}} (\$produit\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_a45aa3d4d4c826cc295ac0848d76f433b}{get\+All\+Solved\+Tickets}} (\$produit\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_ae708caac064d4ca3744612ab23fde1df}{get\+All\+Closed\+Tickets}} (\$produit\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_a93f358a3ea6c7bdac1fc362b2e0abd88}{get\+Attachments\+Ticket}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_ad281715b03529e0022eb36116ef40573}{get\+Ticket\+Details}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_ad868ab9678c691322094bd2f9e5a1965}{get\+Ticket\+Save\+Details}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_adb9e6e43abdf48d4575a7fbc2a3e5412}{get\+Closed\+Details}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_a1fdbf5b91a654a26d187428af65e6f63}{get\+Solved\+Details}} (\$ticket\+\_\+id)
+\item 
+\mbox{\hyperlink{class_admin_model_a20581b515b9f9499e3d000591ce011a1}{get\+Users}} ()
+\item 
+\mbox{\hyperlink{class_admin_model_ae6715babb8accb268587092ce1927649}{get\+Produit}} ()
+\item 
+\mbox{\hyperlink{class_admin_model_a17e1a3b63fb4dc2dd6e4c2f62f63ccee}{get\+All\+Ticket\+Messages}} (\$ticket\+\_\+id, \$username)
+\item 
+\mbox{\hyperlink{class_admin_model_ac2e0958674a1084a1a6922fa7b2cf88c}{send\+Message}} (\$ticket\+\_\+id, \$message, \$username)
+\item 
+\mbox{\hyperlink{class_admin_model_a5775e2b900e95eae8f702307cffb2bbb}{update\+Tickets\+Details}} (\$ticket\+\_\+id, \$new\+Title, \$new\+Description)
+\item 
+\mbox{\hyperlink{class_admin_model_ac6e7e7ea7e913a0f9f85e7b0ea68aff4}{get\+User\+By\+Username}} (\$username)
+\item 
+\mbox{\hyperlink{class_admin_model_ac66d28939888da0e528bcc66d5e43391}{update\+User\+Password}} (\$username, \$new\+Password)
+\item 
+\mbox{\hyperlink{class_admin_model_a1e14ed0dd4d0672824840ab0f7188c9d}{get\+Produits\+By\+User}} (\$username)
+\item 
+\mbox{\hyperlink{class_admin_model_aded5ff5d0e12ebd38ce7f4ccac73f903}{get\+User\+Mail}} (\$username)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_admin_model_ab2f29f75e97371fd013eb3ff367a7d4c}{\$db}}
+\begin{DoxyCompactList}\small\item\em Objet PDO pour la connexion à la base de données. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00027}{27}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_admin_model_a18105909e60620ca7c61001ef7acedb9}\index{AdminModel@{AdminModel}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \label{class_admin_model_a18105909e60620ca7c61001ef7acedb9} 
+Admin\+Model\+::\+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{PDO}]{\$db}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00036}{36}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \$this-\/>db\ =\ \mbox{\hyperlink{class_admin_model_ab2f29f75e97371fd013eb3ff367a7d4c}{\$db}};}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_admin_model_ae905ca8c7cc680282c3841421524c501}\index{AdminModel@{AdminModel}!addAttachment@{addAttachment}}
+\index{addAttachment@{addAttachment}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{addAttachment()}{addAttachment()}}
+{\footnotesize\ttfamily \label{class_admin_model_ae905ca8c7cc680282c3841421524c501} 
+Admin\+Model\+::add\+Attachment (\begin{DoxyParamCaption}\item[{}]{\$ticket\+Id}{, }\item[{}]{\$filename}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00247}{247}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00248\ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ attachments\ (ticket\_id,\ filename)\ VALUES\ (:ticket\_id,\ :filename)"{}};}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticketId);}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':filename'},\ \$filename);}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérification\ si\ l'exécution\ est\ réussite\ sinon\ erreur}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Créer\ un\ événement\ pour\ l'ajout\ de\ la\ pièce\ jointe}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \$statut\_evenement\_id\ =\ 5;\ \textcolor{comment}{//\ 5\ =\ Attachment\ added}}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model_adb692dfbea0cc49a0177dc7f5763f7c4}{logEvent}}(\$ticketId,\ \$username,\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ \$e)\ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gérer\ l'exception\ selon\ les\ besoins}}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ log\ event:\ "{}}\ .\ \$e-\/>getMessage());}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ execute\ SQL\ query:\ "{}}\ .\ \$query);}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Failed\ to\ add\ attachment\ to\ the\ database.'});}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00272\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_af83ba6b65740e0bf4813b18743830e44}\index{AdminModel@{AdminModel}!addProduitUser@{addProduitUser}}
+\index{addProduitUser@{addProduitUser}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{addProduitUser()}{addProduitUser()}}
+{\footnotesize\ttfamily \label{class_admin_model_af83ba6b65740e0bf4813b18743830e44} 
+Admin\+Model\+::add\+Produit\+User (\begin{DoxyParamCaption}\item[{}]{\$username}{, }\item[{}]{\$selected\+Products}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00079}{79}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\$selectedProducts\ as\ \$produit\_id)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ user\_produit\ (username,\ produit\_id)\ VALUES\ (:username,\ :produit\_id)"{}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':produit\_id'},\ \$produit\_id);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ execute\ SQL\ query:\ "{}}\ .\ \$query);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Failed\ to\ associate\ user\ with\ products.'});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a0865960423f2dea5bc888bc19cd10adc}\index{AdminModel@{AdminModel}!createTicket@{createTicket}}
+\index{createTicket@{createTicket}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{createTicket()}{createTicket()}}
+{\footnotesize\ttfamily \label{class_admin_model_a0865960423f2dea5bc888bc19cd10adc} 
+Admin\+Model\+::create\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$titre}{, }\item[{}]{\$description}{, }\item[{}]{\$date\+\_\+creation}{, }\item[{}]{\$statut\+\_\+id}{, }\item[{}]{\$urgence\+\_\+id}{, }\item[{}]{\$username}{, }\item[{}]{\$produit\+\_\+id}{, }\item[{}]{\$type\+\_\+id}{, }\item[{}]{\$files\+Data}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00174}{174}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175\ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \$date\_creation\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});\ \textcolor{comment}{//\ Utiliser\ la\ date\ et\ l'heure\ actuelles}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ ticket\ (titre,\ description,\ date\_creation,\ statut\_id,\ urgence\_id,\ username,\ produit\_id,\ type\_id)\ }}
+\DoxyCodeLine{00180\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VALUES\ (:titre,\ :description,\ :date\_creation,\ :statut\_id,\ :urgence\_id,\ :username,\ :produit\_id,\ :type\_id)"{}};}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':titre'},\ \$titre);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':description'},\ \$description);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':date\_creation'},\ \$date\_creation);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':statut\_id'},\ \$statut\_id);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':urgence\_id'},\ \$urgence\_id);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':produit\_id'},\ \$produit\_id);}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':type\_id'},\ \$type\_id);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \$ticketId\ =\ \$this-\/>db-\/>lastInsertId();}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauvegarde\ des\ pièces\ jointes\ si\ elles\ existent}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$filesData)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>createAttachments(\$ticketId,\ \$filesData,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Appel\ de\ la\ fonction\ createTicketSave\ pour\ sauvegarder\ le\ ticket\ dans\ ticket\_save}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model_a4a13082dbb4314461520699e6ad2d4a3}{createTicketSave}}(\$ticketId,\ \$titre,\ \$description,\ \$date\_creation,\ \$statut\_id,\ \$urgence\_id,\ \$username,\ \$produit\_id,\ \$type\_id);}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Renvoi\ de\ l'ID\ du\ ticket\ créé}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ticketId;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Si\ échec\ renvoi\ false}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00207\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a4a13082dbb4314461520699e6ad2d4a3}\index{AdminModel@{AdminModel}!createTicketSave@{createTicketSave}}
+\index{createTicketSave@{createTicketSave}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{createTicketSave()}{createTicketSave()}}
+{\footnotesize\ttfamily \label{class_admin_model_a4a13082dbb4314461520699e6ad2d4a3} 
+Admin\+Model\+::create\+Ticket\+Save (\begin{DoxyParamCaption}\item[{}]{\$ticket\+Id}{, }\item[{}]{\$titre}{, }\item[{}]{\$description}{, }\item[{}]{\$date\+\_\+creation}{, }\item[{}]{\$statut\+\_\+id}{, }\item[{}]{\$urgence\+\_\+id}{, }\item[{}]{\$username}{, }\item[{}]{\$produit\+\_\+id}{, }\item[{}]{\$type\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00222}{222}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00223\ \ \ \ \ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ ticket\_save\ (ticket\_id,\ titre,\ description,\ date\_creation,\ statut\_id,\ urgence\_id,\ username,\ produit\_id,\ type\_id)\ }}
+\DoxyCodeLine{00225\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VALUES\ (:ticket\_id,\ :titre,\ :description,\ :date\_creation,\ :statut\_id,\ :urgence\_id,\ :username,\ :produit\_id,\ :type\_id)"{}};}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticketId);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':titre'},\ \$titre);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':description'},\ \$description);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':date\_creation'},\ \$date\_creation);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':statut\_id'},\ \$statut\_id);}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':urgence\_id'},\ \$urgence\_id);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':produit\_id'},\ \$produit\_id);}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':type\_id'},\ \$type\_id);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00237\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a61c337589f08244481d27416e715887d}\index{AdminModel@{AdminModel}!createUser@{createUser}}
+\index{createUser@{createUser}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{createUser()}{createUser()}}
+{\footnotesize\ttfamily \label{class_admin_model_a61c337589f08244481d27416e715887d} 
+Admin\+Model\+::create\+User (\begin{DoxyParamCaption}\item[{}]{\$username}{, }\item[{}]{\$mail}{, }\item[{}]{\$entreprise}{, }\item[{}]{\$hashed\+Password}{, }\item[{}]{\$role}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00052}{52}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ user\ (username,\ mail,\ entreprise,\ pwd,\ role)\ VALUES\ (:username,\ :mail,\ :entreprise,\ :pwd,\ :role)"{}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':mail'},\ \$mail);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':entreprise'},\ \$entreprise);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':pwd'},\ \$hashedPassword);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':role'},\ \$role);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérification\ si\ l'execution\ est\ réussite\ sinon\ erreur}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /ticketsApp/config/routes.php/user\_details/'}\ .\ urlencode(\$username));}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ execute\ SQL\ query:\ "{}}\ .\ \$query);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Failed\ to\ add\ attachment\ to\ the\ database.'});}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_ae708caac064d4ca3744612ab23fde1df}\index{AdminModel@{AdminModel}!getAllClosedTickets@{getAllClosedTickets}}
+\index{getAllClosedTickets@{getAllClosedTickets}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getAllClosedTickets()}{getAllClosedTickets()}}
+{\footnotesize\ttfamily \label{class_admin_model_ae708caac064d4ca3744612ab23fde1df} 
+Admin\+Model\+::get\+All\+Closed\+Tickets (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00365}{365}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00366\ \ \ \ \ \{}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00368\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00369\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00370\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00371\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00372\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00373\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 3\ AND\ \ p.produit\_id\ =\ :produit\_id}}
+\DoxyCodeLine{00374\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ ORDER\ BY\ t.ticket\_id"{}};}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':produit\_id'}\ =>\ \$produit\_id]);}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00378\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_abfc61b0cc2832c280f59bfb22dddadd3}\index{AdminModel@{AdminModel}!getAllEventHistory@{getAllEventHistory}}
+\index{getAllEventHistory@{getAllEventHistory}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getAllEventHistory()}{getAllEventHistory()}}
+{\footnotesize\ttfamily \label{class_admin_model_abfc61b0cc2832c280f59bfb22dddadd3} 
+Admin\+Model\+::get\+All\+Event\+History (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00280}{280}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00281\ \ \ \ \ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ e.evenement\_id,\ e.ticket\_id,\ DATE\_FORMAT(e.date\_evenement,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_evenement,\ e.username,\ se.event\_type,\ e.titre,\ e.description,\ p.nom\_produit,\ t.statut\_id\ }}
+\DoxyCodeLine{00283\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM\ evenement\ e}}
+\DoxyCodeLine{00284\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ statut\_evenement\ se\ ON\ e.statut\_evenement\_id\ =\ se.statut\_evenement\_id}}
+\DoxyCodeLine{00285\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ ticket\ t\ ON\ e.ticket\_id\ =\ t.ticket\_id}}
+\DoxyCodeLine{00286\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00287\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ p.produit\_id\ =\ :produit\_id}}
+\DoxyCodeLine{00288\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ORDER\ BY\ e.date\_evenement\ DESC"{}};}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':produit\_id'}\ =>\ \$produit\_id]);}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00293\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a50416f20350d353ca7cfc5253241af5d}\index{AdminModel@{AdminModel}!getAllOpenTickets@{getAllOpenTickets}}
+\index{getAllOpenTickets@{getAllOpenTickets}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getAllOpenTickets()}{getAllOpenTickets()}}
+{\footnotesize\ttfamily \label{class_admin_model_a50416f20350d353ca7cfc5253241af5d} 
+Admin\+Model\+::get\+All\+Open\+Tickets (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00322}{322}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00323\ \ \ \ \ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00325\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00326\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00327\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00328\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00329\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00330\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 1\ AND\ \ p.produit\_id\ =\ :produit\_id\ }}
+\DoxyCodeLine{00331\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ ORDER\ BY\ t.ticket\_id"{}};}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':produit\_id'}\ =>\ \$produit\_id]);}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00335\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a45aa3d4d4c826cc295ac0848d76f433b}\index{AdminModel@{AdminModel}!getAllSolvedTickets@{getAllSolvedTickets}}
+\index{getAllSolvedTickets@{getAllSolvedTickets}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getAllSolvedTickets()}{getAllSolvedTickets()}}
+{\footnotesize\ttfamily \label{class_admin_model_a45aa3d4d4c826cc295ac0848d76f433b} 
+Admin\+Model\+::get\+All\+Solved\+Tickets (\begin{DoxyParamCaption}\item[{}]{\$produit\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00343}{343}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00344\ \ \ \ \ \{}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00346\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00347\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00348\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00349\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00350\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00351\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 2\ AND\ \ p.produit\_id\ =\ :produit\_id}}
+\DoxyCodeLine{00352\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ ORDER\ BY\ t.ticket\_id"{}};}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':produit\_id'}\ =>\ \$produit\_id]);}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00356\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a17e1a3b63fb4dc2dd6e4c2f62f63ccee}\index{AdminModel@{AdminModel}!getAllTicketMessages@{getAllTicketMessages}}
+\index{getAllTicketMessages@{getAllTicketMessages}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getAllTicketMessages()}{getAllTicketMessages()}}
+{\footnotesize\ttfamily \label{class_admin_model_a17e1a3b63fb4dc2dd6e4c2f62f63ccee} 
+Admin\+Model\+::get\+All\+Ticket\+Messages (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00528}{528}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \$query\ =\ \$this-\/>db-\/>prepare(\textcolor{stringliteral}{'}}
+\DoxyCodeLine{00530\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ SELECT\ message\_sent,\ message\_sender,\ message\_receiver,\ date\_sent\ }}
+\DoxyCodeLine{00531\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ FROM\ chat\_messages\ }}
+\DoxyCodeLine{00532\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ WHERE\ ticket\_id\ =\ :ticket\_id\ AND\ (message\_sender\ =\ :username\ OR\ message\_receiver\ =\ :username)}}
+\DoxyCodeLine{00533\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ ORDER\ BY\ date\_sent\ ASC}}
+\DoxyCodeLine{00534\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ '});}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \$query-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id,\ PDO::PARAM\_INT);}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \$query-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \$query-\/>execute();}
+\DoxyCodeLine{00538\ \ \ \ \ }
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$query-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00540\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a93f358a3ea6c7bdac1fc362b2e0abd88}\index{AdminModel@{AdminModel}!getAttachmentsTicket@{getAttachmentsTicket}}
+\index{getAttachmentsTicket@{getAttachmentsTicket}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getAttachmentsTicket()}{getAttachmentsTicket()}}
+{\footnotesize\ttfamily \label{class_admin_model_a93f358a3ea6c7bdac1fc362b2e0abd88} 
+Admin\+Model\+::get\+Attachments\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00386}{386}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00387\ \ \ \ \ \{}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ attachments\ WHERE\ ticket\_id=:ticket\_id"{}};}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \$stmt-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \$stmt-\/>execute();}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00393\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_adb9e6e43abdf48d4575a7fbc2a3e5412}\index{AdminModel@{AdminModel}!getClosedDetails@{getClosedDetails}}
+\index{getClosedDetails@{getClosedDetails}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getClosedDetails()}{getClosedDetails()}}
+{\footnotesize\ttfamily \label{class_admin_model_adb9e6e43abdf48d4575a7fbc2a3e5412} 
+Admin\+Model\+::get\+Closed\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00457}{457}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00458\ \ \ \ \ \{}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ t.description,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00460\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00461\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00462\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00463\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00464\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00465\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 3\ AND\ t.ticket\_id\ =\ :ticket\_id}}
+\DoxyCodeLine{00466\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ ORDER\ BY\ t.date\_creation\ DESC"{}};}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id]);}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \$result\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$result;}
+\DoxyCodeLine{00471\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_ae6715babb8accb268587092ce1927649}\index{AdminModel@{AdminModel}!getProduit@{getProduit}}
+\index{getProduit@{getProduit}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getProduit()}{getProduit()}}
+{\footnotesize\ttfamily \label{class_admin_model_ae6715babb8accb268587092ce1927649} 
+Admin\+Model\+::get\+Produit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00513}{513}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00514\ \ \ \ \ \{}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ produit"{}};}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \$stmt-\/>execute();}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00519\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a1e14ed0dd4d0672824840ab0f7188c9d}\index{AdminModel@{AdminModel}!getProduitsByUser@{getProduitsByUser}}
+\index{getProduitsByUser@{getProduitsByUser}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getProduitsByUser()}{getProduitsByUser()}}
+{\footnotesize\ttfamily \label{class_admin_model_a1e14ed0dd4d0672824840ab0f7188c9d} 
+Admin\+Model\+::get\+Produits\+By\+User (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00683}{683}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00684\ \ \ \ \ \{}
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ p.*\ FROM\ produit\ p\ INNER\ JOIN\ user\_produit\ up\ ON\ p.produit\_id\ =\ up.produit\_id\ WHERE\ up.username\ =\ :username"{}};}
+\DoxyCodeLine{00686\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00688\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00689\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a1fdbf5b91a654a26d187428af65e6f63}\index{AdminModel@{AdminModel}!getSolvedDetails@{getSolvedDetails}}
+\index{getSolvedDetails@{getSolvedDetails}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getSolvedDetails()}{getSolvedDetails()}}
+{\footnotesize\ttfamily \label{class_admin_model_a1fdbf5b91a654a26d187428af65e6f63} 
+Admin\+Model\+::get\+Solved\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00479}{479}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00480\ \ \ \ \ \{}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ t.description,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ FROM\ ticket\ t}}
+\DoxyCodeLine{00482\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00483\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00484\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00485\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00486\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00487\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ WHERE\ s.statut\_id\ =\ 2\ AND\ t.ticket\_id\ =\ :ticket\_id}}
+\DoxyCodeLine{00488\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ ORDER\ BY\ t.date\_creation\ DESC"{}};}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id]);}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \$result\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$result;}
+\DoxyCodeLine{00493\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_ad281715b03529e0022eb36116ef40573}\index{AdminModel@{AdminModel}!getTicketDetails@{getTicketDetails}}
+\index{getTicketDetails@{getTicketDetails}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getTicketDetails()}{getTicketDetails()}}
+{\footnotesize\ttfamily \label{class_admin_model_ad281715b03529e0022eb36116ef40573} 
+Admin\+Model\+::get\+Ticket\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00401}{401}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00402\ \ \ \ \ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ t.description,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username\ }}
+\DoxyCodeLine{00404\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ FROM\ ticket\ t}}
+\DoxyCodeLine{00405\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00406\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00407\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00408\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00409\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00410\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ WHERE\ t.statut\_id\ =\ 1\ AND\ t.ticket\_id\ =\ :ticket\_id}}
+\DoxyCodeLine{00411\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ ORDER\ BY\ t.date\_creation\ DESC"{}};}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id]);}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \$result\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$result;}
+\DoxyCodeLine{00417\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a82e08984cf490ae1a9f5d7f6a73c8676}\index{AdminModel@{AdminModel}!getTicketEventHistory@{getTicketEventHistory}}
+\index{getTicketEventHistory@{getTicketEventHistory}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getTicketEventHistory()}{getTicketEventHistory()}}
+{\footnotesize\ttfamily \label{class_admin_model_a82e08984cf490ae1a9f5d7f6a73c8676} 
+Admin\+Model\+::get\+Ticket\+Event\+History (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00301}{301}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00302\ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ e.evenement\_id,\ e.ticket\_id,\ DATE\_FORMAT(e.date\_evenement,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_evenement,\ e.username,\ se.event\_type,\ e.titre,\ p.nom\_produit,\ e.description,\ t.statut\_id\ }}
+\DoxyCodeLine{00304\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM\ evenement\ e}}
+\DoxyCodeLine{00305\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ statut\_evenement\ se\ ON\ e.statut\_evenement\_id\ =\ se.statut\_evenement\_id}}
+\DoxyCodeLine{00306\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ ticket\ t\ ON\ e.ticket\_id\ =\ t.ticket\_id}}
+\DoxyCodeLine{00307\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00308\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ e.ticket\_id\ =\ :ticket\_id}}
+\DoxyCodeLine{00309\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ORDER\ BY\ e.date\_evenement\ DESC"{}};}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id]);}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00314\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_ad868ab9678c691322094bd2f9e5a1965}\index{AdminModel@{AdminModel}!getTicketSaveDetails@{getTicketSaveDetails}}
+\index{getTicketSaveDetails@{getTicketSaveDetails}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getTicketSaveDetails()}{getTicketSaveDetails()}}
+{\footnotesize\ttfamily \label{class_admin_model_ad868ab9678c691322094bd2f9e5a1965} 
+Admin\+Model\+::get\+Ticket\+Save\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00425}{425}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00426\ \ \ \ \ \{}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ t.ticket\_id,\ t.titre,\ t.description,\ DATE\_FORMAT(t.date\_creation,\ '\%d/\%m/\%Y\ \%H:\%i:\%s')\ as\ date\_creation,\ }}
+\DoxyCodeLine{00428\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ s.valeur,\ p.nom\_produit,\ ty.nom\_type,\ u.niveau,\ us.username}}
+\DoxyCodeLine{00429\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ FROM\ ticket\_save\ t}}
+\DoxyCodeLine{00430\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ statut\ s\ ON\ s.statut\_id\ =\ t.statut\_id}}
+\DoxyCodeLine{00431\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ urgence\ u\ ON\ u.urgence\_id\ =\ t.urgence\_id}}
+\DoxyCodeLine{00432\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ user\ us\ ON\ us.username\ =\ t.username}}
+\DoxyCodeLine{00433\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ produit\ p\ ON\ p.produit\_id\ =\ t.produit\_id}}
+\DoxyCodeLine{00434\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INNER\ JOIN\ type\ ty\ ON\ ty.type\_id\ =\ t.type\_id}}
+\DoxyCodeLine{00435\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ WHERE\ t.ticket\_save\_id\ =\ (}}
+\DoxyCodeLine{00436\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ MAX(t2.ticket\_save\_id)}}
+\DoxyCodeLine{00437\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM\ ticket\_save\ t2}}
+\DoxyCodeLine{00438\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ t2.ticket\_id\ =\ t.ticket\_id}}
+\DoxyCodeLine{00439\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AND\ t2.ticket\_save\_id\ <\ (}}
+\DoxyCodeLine{00440\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SELECT\ MAX(t3.ticket\_save\_id)}}
+\DoxyCodeLine{00441\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FROM\ ticket\_save\ t3}}
+\DoxyCodeLine{00442\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WHERE\ t3.ticket\_id\ =\ t.ticket\_id}}
+\DoxyCodeLine{00443\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )}}
+\DoxyCodeLine{00444\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ )\ AND\ t.ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':ticket\_id'}\ =>\ \$ticket\_id]);}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \$result\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$result\ ?:\ [];\ \textcolor{comment}{//\ Retourne\ un\ tableau\ vide\ si\ aucun\ résultat}}
+\DoxyCodeLine{00449\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_ac6e7e7ea7e913a0f9f85e7b0ea68aff4}\index{AdminModel@{AdminModel}!getUserByUsername@{getUserByUsername}}
+\index{getUserByUsername@{getUserByUsername}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getUserByUsername()}{getUserByUsername()}}
+{\footnotesize\ttfamily \label{class_admin_model_ac6e7e7ea7e913a0f9f85e7b0ea68aff4} 
+Admin\+Model\+::get\+User\+By\+Username (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00643}{643}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00644\ \ \ \ \ \{}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ u.username,\ u.mail,\ u.entreprise,\ u.pwd\ ,u.role\ FROM\ user\ u\ }}
+\DoxyCodeLine{00646\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ WHERE\ username=:username"{}};}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ \$stmt-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ \$stmt-\/>execute();}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00651\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_aded5ff5d0e12ebd38ce7f4ccac73f903}\index{AdminModel@{AdminModel}!getUserMail@{getUserMail}}
+\index{getUserMail@{getUserMail}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getUserMail()}{getUserMail()}}
+{\footnotesize\ttfamily \label{class_admin_model_aded5ff5d0e12ebd38ce7f4ccac73f903} 
+Admin\+Model\+::get\+User\+Mail (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00697}{697}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00698\ \ \ \ \ \{}
+\DoxyCodeLine{00699\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ mail\ FROM\ user\ WHERE\ username\ =\ :username"{}};}
+\DoxyCodeLine{00700\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00701\ \ \ \ \ \ \ \ \ \$stmt-\/>execute([\textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{00702\ \ \ \ \ \ \ \ \ \$userData\ =\ \$stmt-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$userData\ \&\&\ isset(\$userData[\textcolor{stringliteral}{'mail'}]))\ \{}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$userData[\textcolor{stringliteral}{'mail'}];\ \textcolor{comment}{//Récupération\ du\ mail\ en\ chaîne\ de\ caract\ plutôt\ qu'en\ tableau}}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{''};\ }
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00709\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a20581b515b9f9499e3d000591ce011a1}\index{AdminModel@{AdminModel}!getUsers@{getUsers}}
+\index{getUsers@{getUsers}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{getUsers()}{getUsers()}}
+{\footnotesize\ttfamily \label{class_admin_model_a20581b515b9f9499e3d000591ce011a1} 
+Admin\+Model\+::get\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00500}{500}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00501\ \ \ \ \ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ user"{}};}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \$stmt\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \$stmt-\/>execute();}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$stmt-\/>fetchAll(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00506\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_ac84051a3ee1baac9e884ec0da3b3406b}\index{AdminModel@{AdminModel}!isUsernameExists@{isUsernameExists}}
+\index{isUsernameExists@{isUsernameExists}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{isUsernameExists()}{isUsernameExists()}}
+{\footnotesize\ttfamily \label{class_admin_model_ac84051a3ee1baac9e884ec0da3b3406b} 
+Admin\+Model\+::is\+Username\+Exists (\begin{DoxyParamCaption}\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00100}{100}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ COUNT(*)\ FROM\ user\ WHERE\ username\ =\ :username"{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \$count\ =\ \$statement-\/>fetchColumn();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$count\ >\ 0;}
+\DoxyCodeLine{00108\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_adb692dfbea0cc49a0177dc7f5763f7c4}\index{AdminModel@{AdminModel}!logEvent@{logEvent}}
+\index{logEvent@{logEvent}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{logEvent()}{logEvent()}}
+{\footnotesize\ttfamily \label{class_admin_model_adb692dfbea0cc49a0177dc7f5763f7c4} 
+Admin\+Model\+::log\+Event (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$username}{, }\item[{}]{\$statut\+\_\+evenement\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00118}{118}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ le\ titre,\ la\ description\ et\ le\ produit\_id\ du\ ticket}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ titre,\ description,\ produit\_id,\ date\_creation,\ statut\_id,\ urgence\_id,\ username,\ type\_id\ FROM\ ticket\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$ticket)\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Ticket\ not\ found.'});}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Préparer\ les\ données\ pour\ l'insertion\ dans\ la\ table\ evenement}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \$titre\ =\ \$ticket[\textcolor{stringliteral}{'titre'}];}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \$description\ =\ \$ticket[\textcolor{stringliteral}{'description'}];}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \$produit\_id\ =\ \$ticket[\textcolor{stringliteral}{'produit\_id'}];}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \$date\_evenement\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});\ \textcolor{comment}{//\ Utiliser\ la\ date\ et\ l'heure\ actuelles}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \$date\_creation\ =\ \$ticket[\textcolor{stringliteral}{'date\_creation'}];}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \$statut\_id\ =\ \$ticket[\textcolor{stringliteral}{'statut\_id'}];}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \$urgence\_id\ =\ \$ticket[\textcolor{stringliteral}{'urgence\_id'}];}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \$type\_id\ =\ \$ticket[\textcolor{stringliteral}{'type\_id'}];}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insérer\ les\ données\ dans\ la\ table\ evenement}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ evenement\ (ticket\_id,\ username,\ date\_evenement,\ statut\_evenement\_id,\ titre,\ description,\ produit\_id)\ }}
+\DoxyCodeLine{00144\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VALUES\ (:ticket\_id,\ :username,\ :date\_evenement,\ :statut\_evenement\_id,\ :titre,\ :description,\ :produit\_id)"{}};}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':date\_evenement'},\ \$date\_evenement);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':statut\_evenement\_id'},\ \$statut\_evenement\_id);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':titre'},\ \$titre);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':description'},\ \$description);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':produit\_id'},\ \$produit\_id);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ log\ event:\ "{}}\ .\ \$query);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{'Failed\ to\ log\ event.'});}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_ac2e0958674a1084a1a6922fa7b2cf88c}\index{AdminModel@{AdminModel}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily \label{class_admin_model_ac2e0958674a1084a1a6922fa7b2cf88c} 
+Admin\+Model\+::send\+Message (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$message}{, }\item[{}]{\$username}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00550}{550}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \$date\_sent\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});}
+\DoxyCodeLine{00553\ \ \ \ \ }
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ le\ créateur\ du\ ticket}}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \$query\ =\ \$this-\/>db-\/>prepare(\textcolor{stringliteral}{'}}
+\DoxyCodeLine{00556\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ SELECT\ username\ }}
+\DoxyCodeLine{00557\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ FROM\ ticket\ }}
+\DoxyCodeLine{00558\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ WHERE\ ticket\_id\ =\ :ticket\_id}}
+\DoxyCodeLine{00559\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ '});}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \$query-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id,\ PDO::PARAM\_INT);}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \$query-\/>execute();}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$query-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00564\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\$ticket)\ \{}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception(\textcolor{stringliteral}{"{}Ticket\ not\ found"{}});}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00567\ \ \ \ \ }
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ \$receiver\ =\ \$ticket[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00569\ \ \ \ \ }
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insérer\ le\ message\ dans\ la\ table\ chat\_message}}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \$insertQuery\ =\ \$this-\/>db-\/>prepare(\textcolor{stringliteral}{'}}
+\DoxyCodeLine{00572\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ INSERT\ INTO\ chat\_messages\ (message\_sender,\ message\_receiver,\ message\_sent,\ date\_sent,\ ticket\_id)\ }}
+\DoxyCodeLine{00573\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ VALUES\ (:message\_sender,\ :message\_receiver,\ :message\_sent,\ :date\_sent,\ :ticket\_id)}}
+\DoxyCodeLine{00574\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ '});}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':message\_sender'},\ \$username,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':message\_receiver'},\ \$receiver,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':message\_sent'},\ \$message,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':date\_sent'},\ \$date\_sent,\ PDO::PARAM\_STR);}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \$insertQuery-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id,\ PDO::PARAM\_INT);}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \$insertQuery-\/>execute();}
+\DoxyCodeLine{00581\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_a5775e2b900e95eae8f702307cffb2bbb}\index{AdminModel@{AdminModel}!updateTicketsDetails@{updateTicketsDetails}}
+\index{updateTicketsDetails@{updateTicketsDetails}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{updateTicketsDetails()}{updateTicketsDetails()}}
+{\footnotesize\ttfamily \label{class_admin_model_a5775e2b900e95eae8f702307cffb2bbb} 
+Admin\+Model\+::update\+Tickets\+Details (\begin{DoxyParamCaption}\item[{}]{\$ticket\+\_\+id}{, }\item[{}]{\$new\+Title}{, }\item[{}]{\$new\+Description}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00591}{591}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00592\ \ \ \ \ \{}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ date\_default\_timezone\_set(\textcolor{stringliteral}{'Europe/Paris'});}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ \$date\_creation\ =\ date(\textcolor{stringliteral}{'Y-\/m-\/d\ H:i:s'});}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ \$username\ =\ \$\_SESSION[\textcolor{stringliteral}{'username'}];}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Récupérer\ l'état\ actuel\ du\ ticket}}
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ ticket\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \$ticket\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{00602\ }
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$ticket)\ \{}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauvegarder\ l'état\ actuel\ du\ ticket\ dans\ ticket\_save}}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00606\ }
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mettre\ à\ jour\ le\ ticket\ avec\ les\ nouvelles\ valeurs}}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}UPDATE\ ticket\ SET\ titre\ =\ :newTitle,\ description\ =\ :newDescription\ WHERE\ ticket\_id\ =\ :ticket\_id"{}};}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':ticket\_id'},\ \$ticket\_id);}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':newTitle'},\ \$newTitle);}
+\DoxyCodeLine{00612\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':newDescription'},\ \$newDescription);}
+\DoxyCodeLine{00613\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00614\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>\mbox{\hyperlink{class_admin_model_a4a13082dbb4314461520699e6ad2d4a3}{createTicketSave}}(}
+\DoxyCodeLine{00615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'ticket\_id'}],}
+\DoxyCodeLine{00616\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$newTitle,}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$newDescription,}
+\DoxyCodeLine{00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$date\_creation,}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'statut\_id'}],}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'urgence\_id'}],}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$username,}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'produit\_id'}],}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket[\textcolor{stringliteral}{'type\_id'}]}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ execute\ SQL\ query:\ "{}}\ .\ \$query);}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Ticket\ with\ ID\ \$ticket\_id\ not\ found."{}});}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00635\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_admin_model_ac66d28939888da0e528bcc66d5e43391}\index{AdminModel@{AdminModel}!updateUserPassword@{updateUserPassword}}
+\index{updateUserPassword@{updateUserPassword}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{updateUserPassword()}{updateUserPassword()}}
+{\footnotesize\ttfamily \label{class_admin_model_ac66d28939888da0e528bcc66d5e43391} 
+Admin\+Model\+::update\+User\+Password (\begin{DoxyParamCaption}\item[{}]{\$username}{, }\item[{}]{\$new\+Password}{}\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00660}{660}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00661\ \ \ \ \ \{}
+\DoxyCodeLine{00662\ \ \ \ \ \ \ \ \ \$hashedPassword\ =\ password\_hash(\$newPassword,\ PASSWORD\_DEFAULT);}
+\DoxyCodeLine{00663\ \ \ \ \ }
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ \$query\ =\ \textcolor{stringliteral}{"{}UPDATE\ user\ SET\ pwd\ =\ :hashedPassword\ WHERE\ username\ =\ :username"{}};}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>db-\/>prepare(\$query);}
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':hashedPassword'},\ \$hashedPassword);}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \$statement-\/>bindValue(\textcolor{stringliteral}{':username'},\ \$username);}
+\DoxyCodeLine{00668\ \ \ \ \ }
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$statement-\/>execute())\ \{}
+\DoxyCodeLine{00670\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00671\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00672\ \ \ \ \ \ \ \ \ \ \ \ \ error\_log(\textcolor{stringliteral}{"{}Failed\ to\ execute\ SQL\ query:\ "{}}\ .\ \$query);}
+\DoxyCodeLine{00673\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00674\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00675\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_admin_model_ab2f29f75e97371fd013eb3ff367a7d4c}\index{AdminModel@{AdminModel}!\$db@{\$db}}
+\index{\$db@{\$db}!AdminModel@{AdminModel}}
+\doxysubsubsection{\texorpdfstring{\$db}{\$db}}
+{\footnotesize\ttfamily \label{class_admin_model_ab2f29f75e97371fd013eb3ff367a7d4c} 
+Admin\+Model\+::\$db\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Objet PDO pour la connexion à la base de données. 
+
+
+
+Définition à la ligne \mbox{\hyperlink{_admin_model_8php_source_l00029}{29}} du fichier \mbox{\hyperlink{_admin_model_8php_source}{Admin\+Model.\+php}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+app/src/\+Models/\mbox{\hyperlink{_admin_model_8php}{Admin\+Model.\+php}}\end{DoxyCompactItemize}

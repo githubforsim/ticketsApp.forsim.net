@@ -1,0 +1,121 @@
+.content {
+  padding-top: 20px;
+  padding-left: 280px;
+}
+
+.SolvedTable th.num,
+.SolvedTable td.num {
+  width: 25px;
+}
+
+.SolvedTable th.date,
+.SolvedTable td.date {
+  width: 100px;
+}
+
+.SolvedTable th.type,
+.SolvedTable td.type {
+  width: 75px;
+}
+
+.SolvedTable th.urgence,
+.SolvedTable td.urgence {
+  width: 75px;
+}
+
+.SolvedTable th.demandeur,
+.SolvedTable td.demandeur {
+  width: 75px;
+}
+
+.SolvedTable th.title,
+.SolvedTable td.title {
+  width: 200px;
+  max-width: 400px; 
+  word-wrap: break-word; 
+  white-space: normal; 
+}
+
+.SolvedTable th.comparaison,
+.SolvedTable td.comparaison {
+  width: 75px;
+}
+.SolvedTable th.message,
+.SolvedTable td.message {
+  width: 50px;
+}
+.SolvedTable th.details,
+.SolvedTable td.details {
+  width: 25px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #48aad7;
+}
+
+.SolvedTable {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 1200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.SolvedTable thead tr {
+  background-color: #48aad7;
+  color: #ffffff;
+  text-align: center;
+}
+
+.SolvedTable th,
+.SolvedTable td {
+  padding: 12px 15px;
+  border-right: 1px solid #dddddd;
+}
+
+.SolvedTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.SolvedTable tbody tr:nth-of-type(even) {
+  background-color: #faf9f9;
+}
+
+.SolvedTable tbody tr:last-of-type {
+  border-bottom: 2px solid #48aad7;
+}
+
+.solved_btn:link,
+.solved_btn:visited {
+  border-radius: 5px;
+  background-color: #48aad7;
+  color: rgb(255, 255, 255);
+  border: 1px solid #48aad7;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.open_btn:link,
+.open_btn:visited {
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #48aad7;
+  border: 1px solid #48aad7;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.open_btn:hover {
+  background-color: #48aad7;
+  color: #ffffff;
+}

@@ -1,0 +1,296 @@
+.content {
+  padding-top: 20px;
+  padding-left: 280px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#details label {
+  color: #48aad7;
+  font-weight: bold;
+  font-size: large;
+}
+
+.ticketTable th.details,
+.ticketTable td.details{
+  width: 10px;
+}
+
+/* Styles pour les champs de texte */
+.input-field {
+  width: 25%; /* Largeur maximale */
+  padding: 5px; /* Padding pour un meilleur espacement */
+  border: 1px solid #ccc; /* Bordure de couleur gris clair */
+  border-radius: 5px; /* Bordure arrondie */
+  font-size: 16px; /* Taille de la police */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet d'élévation */
+  background-color: #f9f9f9; /* Couleur de fond */
+}
+
+.input-field:focus {
+  border-color: #007bff; /* Couleur de la bordure lors du focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Ombre lors du focus */
+  outline: none; /* Supprimer le contour par défaut */
+}
+
+.attachment label {
+  color: #48aad7;
+  font-weight: normal;
+  font-size: large;
+}
+#ticket_details div {
+  margin-bottom: 20px;
+}
+#ticket_details {
+  margin-top: 25px;
+  margin-left: 150px;
+  margin-right: 180px;
+  margin-bottom: 20px;
+  bottom: 300px;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 9%, 93%);
+  display: block;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+#attachment {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+#attachment label {
+  display: inline-block;
+  width: 180px;
+}
+
+#attachment + label {
+  position: static;
+  width: 180px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #48aad7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  overflow: hidden; /* Prevent text overflow */
+  transition: transform 0.2s ease-out;
+}
+
+.file-container {
+  display: flex;
+  align-items: center;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column; /* Display file names in a column */
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.file-list li {
+  display: flex;
+  align-items: center;
+  margin-right: 15px; /* Adjust the margin to create space between items */
+  color: rgb(104, 98, 98);
+  font-size: 13px;
+}
+
+.remove-button {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  width: 13px; /* Adjust the width to your preference */
+  height: 13px; /* Adjust the height to your preference */
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.remove-button::before,
+.remove-button::after {
+  content: "";
+  position: absolute;
+  width: 1.5px; /* Adjust the width of the lines */
+  height: 8px; /* Adjust the height of the lines */
+  background-color: white;
+}
+
+.remove-button::before {
+  transform: rotate(45deg);
+}
+
+.remove-button::after {
+  transform: rotate(-45deg);
+}
+
+div input[type="submit"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  padding: 8px 20px;
+  background-color: #48aad7;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+div input[type="submit"]:hover {
+  background-color: #1a678b;
+}
+
+#close_btn a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #b1acac;
+  border-radius: 3px;
+  padding: 8px 20px;
+  color: #5f5e5e;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#close_btn a:hover {
+  border-color: #2c2c2c;
+}
+
+#buttons {
+  display: flex;
+  align-items: right; /* Centre les boutons verticalement */
+  justify-content: flex-end; /* Aligne les éléments à droite */
+  flex-wrap: wrap; /* Permet aux boutons de se déplacer sur la ligne suivante si l'espace est insuffisant */
+}
+
+#modif,
+#close_btn {
+  padding-left: 10px;
+  display: inline-block;
+  float: right;
+}
+
+.pending-deletion {
+  display: none;
+}
+
+.delete-attachment {
+  overflow: hidden;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: transparent;
+  color: #48aad7;
+  font: inherit;
+  text-indent: 100%;
+  cursor: pointer;
+}
+.delete-attachment:focus {
+  outline: solid 0 transparent;
+  box-shadow: 0 0 0 2px #8ed0f9;
+}
+
+.delete-attachment:hover {
+  background: rgba(29, 161, 142, 0.1);
+}
+
+.delete-attachment:before,
+.delete-attachment:after {
+  position: absolute;
+  top: 15%;
+  left: calc(50% - 0.0625em);
+  width: 0.125em;
+  height: 70%;
+  border-radius: 0.125em;
+  transform: rotate(45deg);
+  background: currentcolor;
+  content: "";
+}
+
+.delete-attachment:after {
+  transform: rotate(-45deg);
+}
+
+#pieces-jointes {
+}
+
+#solve,
+#close {
+  padding-left: 10px;
+
+  display: inline-block;
+}
+
+#closing_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  padding: 8px 20px;
+  background-color: #48aad7;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#closing_btn:hover {
+  background-color: #1a678b;
+}
+
+#solve_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  padding: 8px 20px;
+  background-color: #48aad7;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#solve_btn:hover {
+  background-color: #1a678b;
+}
+
+#open_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  padding: 8px 20px;
+  background-color: #48aad7;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#open_btn:hover {
+  background-color: #1a678b;
+}

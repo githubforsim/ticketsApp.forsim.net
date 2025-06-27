@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TicketsApp:  Fichier source de config/database.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TicketsApp<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_9f351d46ce3cc29445a41dc3a31e6919.html">config</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">database.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="database_8php.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>require_once(<span class="stringliteral">&#39;constants.php&#39;</span>);</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/************************************************</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Fonction pour établir une connexion à la base de données</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> ***********************************************/</span></div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="database_8php.html#a81a366428179a1f1020ce9438a27c51f">    8</a></span><span class="keyword">function</span> <a class="code hl_function" href="database_8php.html#a81a366428179a1f1020ce9438a27c51f">dbConnect</a>()</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="comment">// Création d&#39;une nouvelle instance PDO pour la connexion à la base de données</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        $db = <span class="keyword">new</span> PDO(</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="stringliteral">&#39;mysql:host=&#39;</span> . <a class="code hl_variable" href="constants_8php.html#a046861af9c950733d95478526a7e19ae">DB_SERVER</a> . <span class="stringliteral">&#39;;dbname=&#39;</span> . <a class="code hl_variable" href="constants_8php.html#ab5db0d3504f917f268614c50b02c53e2">DB_NAME</a> . <span class="stringliteral">&#39;;charset=utf8mb4&#39;</span>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <a class="code hl_variable" href="constants_8php.html#a1d1d99f8e08f387d84fe9848f3357156">DB_USER</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <a class="code hl_variable" href="constants_8php.html#a4dca144fafcc7bd3f71cb5778afcdd13">DB_PASSWORD</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        );</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="comment">// Définition du mode d&#39;erreur PDO pour l&#39;affichage des exceptions</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        $db-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    } <span class="keywordflow">catch</span> (PDOException $exception) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="comment">// En cas d&#39;erreur lors de la connexion, un message est enregistré dans les logs</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        error_log(<span class="stringliteral">&#39;Erreur de connexion : &#39;</span> . $exception-&gt;getMessage());</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Retourne false pour indiquer une erreur de connexion</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> $db; <span class="comment">// Retourne l&#39;objet PDO représentant la connexion à la base de données</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/************************************************</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> * Fonction pour exécuter une requête sur la base de données</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> * @param PDO $db Connexion PDO à utiliser pour la requête</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> * @param string $request Requête SQL à exécuter</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> * @return array|bool Résultat de la requête ou false en cas d&#39;erreur</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> ***********************************************/</span></div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="database_8php.html#acb805aedc46bc4602bcce383b206c41b">   34</a></span><span class="keyword">function</span> <a class="code hl_function" href="database_8php.html#acb805aedc46bc4602bcce383b206c41b">dbRequest</a>($db, <a class="code hl_variable" href="routes_8php.html#abb35c8495a232b510389fa6d7b15d38a">$request</a>)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">// Préparation et exécution de la requête SQL</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        $statement = $db-&gt;prepare(<a class="code hl_variable" href="routes_8php.html#abb35c8495a232b510389fa6d7b15d38a">$request</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        $statement-&gt;execute();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        $result = $statement-&gt;fetchAll(PDO::FETCH_ASSOC);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    } <span class="keywordflow">catch</span> (PDOException $exception) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// En cas d&#39;erreur lors de l&#39;exécution de la requête, un message est enregistré dans les logs</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        error_log(<span class="stringliteral">&#39;Erreur de requête : &#39;</span> . $exception-&gt;getMessage());</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Retourne false pour indiquer une erreur de requête</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> $result; <span class="comment">// Retourne le résultat de la requête sous forme de tableau associatif</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="ttc" id="aconstants_8php_html_a046861af9c950733d95478526a7e19ae"><div class="ttname"><a href="constants_8php.html#a046861af9c950733d95478526a7e19ae">DB_SERVER</a></div><div class="ttdeci">const DB_SERVER</div><div class="ttdef"><b>Definition</b> <a href="constants_8php_source.html#l00008">constants.php:8</a></div></div>
+<div class="ttc" id="aconstants_8php_html_a1d1d99f8e08f387d84fe9848f3357156"><div class="ttname"><a href="constants_8php.html#a1d1d99f8e08f387d84fe9848f3357156">DB_USER</a></div><div class="ttdeci">const DB_USER</div><div class="ttdef"><b>Definition</b> <a href="constants_8php_source.html#l00005">constants.php:5</a></div></div>
+<div class="ttc" id="aconstants_8php_html_a4dca144fafcc7bd3f71cb5778afcdd13"><div class="ttname"><a href="constants_8php.html#a4dca144fafcc7bd3f71cb5778afcdd13">DB_PASSWORD</a></div><div class="ttdeci">const DB_PASSWORD</div><div class="ttdef"><b>Definition</b> <a href="constants_8php_source.html#l00006">constants.php:6</a></div></div>
+<div class="ttc" id="aconstants_8php_html_ab5db0d3504f917f268614c50b02c53e2"><div class="ttname"><a href="constants_8php.html#ab5db0d3504f917f268614c50b02c53e2">DB_NAME</a></div><div class="ttdeci">const DB_NAME</div><div class="ttdef"><b>Definition</b> <a href="constants_8php_source.html#l00007">constants.php:7</a></div></div>
+<div class="ttc" id="adatabase_8php_html_a81a366428179a1f1020ce9438a27c51f"><div class="ttname"><a href="database_8php.html#a81a366428179a1f1020ce9438a27c51f">dbConnect</a></div><div class="ttdeci">dbConnect()</div><div class="ttdef"><b>Definition</b> <a href="#l00008">database.php:8</a></div></div>
+<div class="ttc" id="adatabase_8php_html_acb805aedc46bc4602bcce383b206c41b"><div class="ttname"><a href="database_8php.html#acb805aedc46bc4602bcce383b206c41b">dbRequest</a></div><div class="ttdeci">dbRequest($db, $request)</div><div class="ttdef"><b>Definition</b> <a href="#l00034">database.php:34</a></div></div>
+<div class="ttc" id="aroutes_8php_html_abb35c8495a232b510389fa6d7b15d38a"><div class="ttname"><a href="routes_8php.html#abb35c8495a232b510389fa6d7b15d38a">$request</a></div><div class="ttdeci">$request</div><div class="ttdef"><b>Definition</b> <a href="routes_8php_source.html#l00032">routes.php:32</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
