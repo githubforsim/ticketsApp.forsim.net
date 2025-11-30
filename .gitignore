@@ -1,1 +1,38 @@
-db/
+# Ignorer les bases de données binaires et dossiers MySQL/MariaDB
+/db/
+
+# Ignorer les certificats SSL et clés privées générés par Certbot/Let's Encrypt
+/certs/
+
+# Ignorer les fichiers de logs
+*.log
+logs/
+
+# Ignorer les fichiers temporaires, caches et sauvegardes
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+
+# Ignorer les dumps automatiques non voulus
+*.sql~
+
+# Ignorer les fichiers système
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers de configuration sensibles
+.env
+.env.*
+
+# Ignorer les fichiers générés par l'éditeur
+.vscode/
+.idea/
+
+# Ignorer les fichiers de build Docker éventuels
+**/node_modules/
+**/dist/
+
+# Autoriser le dump SQL principal (à versionner)
+!tickets_app.sql

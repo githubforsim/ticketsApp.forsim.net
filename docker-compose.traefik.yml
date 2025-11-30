@@ -1,0 +1,54 @@
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: bODw50eeKjPT/rVW
+      MYSQL_DATABASE: ticketsApp
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./ticket_app.sql:/docker-entrypoint-initdb.d/ticket_app.sql
+    restart: always
+    networks:
+      - internal
+
+  web:
+    build: ./docker/web    
+    depends_on:
+      - db
+    volumes:
+      - ./apache-config:/etc/apache2/sites-available
+      - ./certs:/etc/letsencrypt
+      - ./www:/var/www/html/ticketsApp
+    restart: always
+    networks:
+      - internal
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.ticketsapp.rule=Host(`ticketsapp.forsim.net`)"
+      - "traefik.http.routers.ticketsapp.entrypoints=websecure"
+      - "traefik.http.routers.ticketsapp.tls.certresolver=letsencrypt"
+      - "traefik.http.services.ticketsapp.loadbalancer.server.port=80"
+
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - db
+    restart: always
+    environment:
+      PMA_HOST: db
+    networks:
+      - internal
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.phpmyadmin.rule=Host(`pma.forsim.net`)"
+      - "traefik.http.routers.phpmyadmin.entrypoints=websecure"
+      - "traefik.http.routers.phpmyadmin.tls.certresolver=letsencrypt"
+      - "traefik.http.services.phpmyadmin.loadbalancer.server.port=80"
+
+networks:
+  internal:
+    driver: bridge
+  web:
+    external: true
