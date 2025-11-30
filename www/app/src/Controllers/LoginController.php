@@ -1,4 +1,5 @@
 <?php
+error_log("[DEBUG LOGINCONTROLLER] LoginController.php chargé");
 
 
 require_once __DIR__ . '/../Models/UserModel.php';
@@ -74,7 +75,11 @@ class LoginController
             session_start();
         }
     
+        // DEBUG TEMPORAIRE
+            error_log("[DEBUG LOGIN] username: $username, password: $password");
+
         $user = $this->UserModel->getUserByUsername($username);
+            error_log("[DEBUG LOGIN] user: ".print_r($user, true));
     
         if ($user && isset($user['pwd']) && password_verify($password, $user['pwd'])) {
             $_SESSION['username'] = $username;
@@ -90,7 +95,8 @@ class LoginController
             header("Location: $redirect");
             exit();
         } else {
-        header('Location: /ticketsApp/?view=login&erreur=1');
+            error_log("[DEBUG LOGIN] Auth failed for $username");
+            header('Location: /ticketsApp/?view=login&erreur=1');
             exit();
         }
     }

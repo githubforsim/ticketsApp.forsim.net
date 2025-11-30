@@ -1,11 +1,19 @@
-RewriteEngine On
-RewriteBase /ticketsApp
 
-# Rediriger toutes les requêtes vers index.php sauf si le fichier ou dossier existe
+RewriteEngine On
+#RewriteBase /ticketsApp
+
+# Ne pas réécrire les requêtes vers /ticketsApp/public/
+RewriteCond %{REQUEST_URI} ^/ticketsApp/public/ [NC]
+RewriteRule ^ - [L]
+
+# Réécrire toutes les requêtes sauf si le fichier ou dossier existe
+# Rediriger toutes les requêtes GET vers index.php sauf si le fichier ou dossier existe
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
 # Empêcher l'accès direct au dossier config
+php_flag display_errors On
+php_value error_reporting 32767
 <Files "config">
     Order Allow,Deny
     Deny from all

@@ -1,3 +1,4 @@
+<?php error_log('[DEBUG LOGINVIEW] login_view.php chargé'); ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/ticketsApp/app/public/css/login.css" />
+    <link rel="stylesheet" href="/ticketsApp/public/css/login.css" />
 
     <title>Connexion</title>
 </head>
@@ -22,8 +23,8 @@
                 <input type="password" placeholder="Entrer le mot de passe" name="pwd" required>
 
                 <input type="submit" id='submit' value='Se connecter' >
-                
-                <a href="/ticketsApp/app/src/Views/password_view.php"><i class="fas fa-home fa-lg"></i>Mot de passe oublié ?</a>
+                <?php error_log('[DEBUG LOGINVIEW] avant lien password_view.php'); ?>
+                <a href="/ticketsApp/?view=password"><i class="fas fa-home fa-lg"></i>Mot de passe oublié ?</a>
 
                 <?php
                 if(isset($_GET['erreur'])){
@@ -34,5 +35,6 @@
                 ?>
             </form>
         </div>
+    <?php error_log('[DEBUG LOGINVIEW] fin login_view.php'); ?>
     </body>
 </html>
