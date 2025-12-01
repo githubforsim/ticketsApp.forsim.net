@@ -23,8 +23,8 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/ticketsApp/app/public/css/sidebar.css" />
-    <link rel="stylesheet" href="/ticketsApp/app/public/css/tickets/open_ticket.css" />
+    <link rel="stylesheet" href="/app/public/css/sidebar.css?v=2.4" />
+    <link rel="stylesheet" href="/app/public/css/tickets/open_ticket.css?v=2.4" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Tickets ouverts</title>
   </head>
@@ -72,6 +72,6 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
       </table>
     </div>
 
-    <script type="text/javascript" src="/ticketsApp/app/public/js/admin/open_tickets.js" defer></script>
+    <script type="text/javascript" src="/app/public/js/admin/open_tickets.js" defer></script>
   </body>
 </html>

@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     displayForm(selectedProduct);
   });
   
+  // DÉSACTIVÉ - Les données sont déjà dans le PHP, pas besoin d'AJAX
+  /*
   //Récupération et affichage du type de ticket dans des boutons radios
   ajaxRequest("GET", "/ticketsApp/config/routes.php/type", getTypeTicket);
   function getTypeTicket(html) {
@@ -65,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     radioContainer.innerHTML = rowHTML;
   }
+  */
   
   //Fonction qui permet d'éviter les doublons de pièces jointes
   function isDuplicateFile(file, fileList) {
@@ -143,12 +146,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     //On apelle la requête
-    ajaxRequest("POST", "/ticketsApp/config/routes.php/create-admin", handleTicketResponse, data);
+    ajaxRequest("POST", "/ticketsApp/create-admin", handleTicketResponse, data);
   }
   
   // fonction qui renvoi à la page d'accueil lorsqu'un ticket est créé
   function handleTicketResponse() {
-    window.location.href = "/ticketsApp/app/src/Views/admin/tickets/open_tickets_view.php";
+    window.location.href = "/ticketsApp/admin/tickets/open";
   }
   
   // Lorsque le formulaire est envoyé appel de la fonction createTicket

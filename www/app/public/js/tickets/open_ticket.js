@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Réglez l'option sélectionnée dans le select
     selectElement.value = selectedProduct;
 
-    // Appeler openTickets avec le produit actuellement sélectionné
-    openTickets(selectedProduct);
+    // NE PAS appeler openTickets au chargement car les tickets sont déjà chargés côté serveur
+    // openTickets(selectedProduct);
   } else {
     // Sinon, réglez le select sur une valeur vide
     selectElement.value = "";

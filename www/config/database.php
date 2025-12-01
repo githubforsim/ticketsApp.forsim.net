@@ -15,8 +15,9 @@ function dbConnect()
         );
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $exception) {
-        // Afficher l’erreur pour debug
-        die('Erreur de connexion PDO : ' . $exception->getMessage());
+        error_log('Erreur de connexion PDO : ' . $exception->getMessage());
+        echo '<pre style="color:red;">Erreur de connexion PDO : ' . htmlspecialchars($exception->getMessage()) . '</pre>';
+        die();
     }
 
     return $db;

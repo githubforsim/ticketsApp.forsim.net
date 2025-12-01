@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (selectedProduct) {
     selectElement.value = selectedProduct;
-    // Appel de closedTickets avec le produit actuel
-    closedTickets(selectedProduct);
+    // NE PAS appeler closedTickets au chargement car les tickets sont déjà chargés côté serveur
+    // closedTickets(selectedProduct);
   } else {
     selectElement.value = "";
   }

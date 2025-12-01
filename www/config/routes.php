@@ -54,8 +54,14 @@ error_log("==================");
 // ============================================================
 
 // Traitement des requêtes en fonction de la méthode HTTP
+error_log("[DEBUG ROUTES] requestMethod: $requestMethod, requestRessource: $requestRessource");
+// Correction : si POST sans PATH_INFO, router vers login
+if ($requestMethod === 'POST' && empty($requestRessource) && isset($_POST['username'], $_POST['pwd'])) {
+    error_log('[DEBUG ROUTES] POST sans PATH_INFO, route login');
+    $loginController->login($_POST['username'], $_POST['pwd']);
+    exit();
+}
 switch ($requestMethod) {
-    
     case 'GET':
         switch ($requestRessource) {
             // Routes GET pour les tickets ouverts

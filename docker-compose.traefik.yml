@@ -2,7 +2,7 @@ services:
   db:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: bODw50eeKjPT/rVW
+      MYSQL_ROOT_PASSWORD: Plouzane**
       MYSQL_DATABASE: ticketsApp
     volumes:
       - ./db:/var/lib/mysql

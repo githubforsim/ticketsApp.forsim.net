@@ -5,7 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 // Vérifie si l'utilisateur est connecté et a le rôle d'administrateur
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     // Redirige vers la page de connexion si l'utilisateur n'est pas connecté ou n'est pas administrateur
-    header('Location: /ticketsApp/app/src/Views/login_view.php');
+    header('Location: /app/src/Views/login_view.php');
     exit;
 }
 ?>
@@ -16,7 +16,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/ticketsApp/app/public/css/admin/ticket_save_details.css" />
+    <link rel="stylesheet" href="/app/public/css/admin/ticket_save_details.css?v=2.4" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Détails Tickets</title>
 </head>
@@ -148,6 +148,6 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
 </div>
 </body>
 
-<script type="text/javascript" src="/ticketsApp/app/public/js/ajax.js" defer></script>
-<script type="text/javascript" src="/ticketsApp/app/public/js/admin/details/ticket_save_details.js" defer></script>
+<script type="text/javascript" src="/app/public/js/ajax.js" defer></script>
+<script type="text/javascript" src="/app/public/js/admin/details/ticket_save_details.js" defer></script>
 </html>

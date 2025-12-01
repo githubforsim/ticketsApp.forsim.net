@@ -329,14 +329,27 @@ public function getEventDetails($event_id)
     exit;
 }
     /************************************************
+     *  Fonction qui affiche la page d'accueil admin avec les produits et l'historique des événements
+     *
+     *  @param int $produit_id L'identifiant du produit (par défaut 1 si non spécifié)
+     ***********************************************/
+    public function showAdminHome($produit_id = 1){
+        $produits = $this->AdminModel->getProduit();
+        $evenements = $this->AdminModel->getAllEventHistory($produit_id);
+        $this->render('admin_view', ['evenements' => $evenements, 'produits' => $produits]);
+        exit;
+    }
+
+    /************************************************
      *  Fonction qui récupère l'historique de tous les événements
      *  associés à un produit spécifique et les affiche dans la vue admin.
      *
      *  @param int $produit_id L'identifiant du produit pour lequel récupérer l'historique des événements.
      ***********************************************/
     public function getAllEventHistory($produit_id){
+        $produits = $this->AdminModel->getProduit();
         $evenements = $this->AdminModel->getAllEventHistory($produit_id);
-        $this->render('admin_view', ['evenements' => $evenements]);
+        $this->render('admin_view', ['evenements' => $evenements, 'produits' => $produits]);
         exit;
     }
 
@@ -347,9 +360,9 @@ public function getEventDetails($event_id)
      *  @param int $produit_id L'identifiant du produit pour lequel récupérer les tickets ouverts.
      ***********************************************/
     public function getAllOpenTickets($produit_id) {
-
+        $produits = $this->AdminModel->getProduit();
         $tickets = $this->AdminModel->getAllOpenTickets($produit_id);
-        $this->render('tickets/open_tickets_view', ['tickets' => $tickets]);
+        $this->render('tickets/open_tickets_view', ['tickets' => $tickets, 'produits' => $produits]);
         exit; 
     }
 
@@ -361,8 +374,9 @@ public function getEventDetails($event_id)
      ***********************************************/
     public function getAllSolvedTickets($produit_id) 
     {
+        $produits = $this->AdminModel->getProduit();
         $tickets = $this->AdminModel->getAllSolvedTickets($produit_id);
-        $this->render('tickets/solved_tickets_view', ['tickets' => $tickets]);
+        $this->render('tickets/solved_tickets_view', ['tickets' => $tickets, 'produits' => $produits]);
         exit; 
     }
 
@@ -374,8 +388,9 @@ public function getEventDetails($event_id)
      ***********************************************/
     public function getAllClosedTickets($produit_id) 
     {
+        $produits = $this->AdminModel->getProduit();
         $tickets = $this->AdminModel->getAllClosedTickets($produit_id);
-        $this->render('tickets/closed_tickets_view', ['tickets' => $tickets]);
+        $this->render('tickets/closed_tickets_view', ['tickets' => $tickets, 'produits' => $produits]);
         exit; 
     }
 

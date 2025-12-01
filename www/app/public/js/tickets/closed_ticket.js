@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (selectedProduct) {
     // Définit la valeur du select pour afficher le produit sélectionné
     selectElement.value = selectedProduct;
-    // Appel de la fonction closedTickets avec le produit actuellement sélectionné
-    closedTickets(selectedProduct);
+    // NE PAS appeler closedTickets au chargement car les tickets sont déjà chargés côté serveur
+    // closedTickets(selectedProduct);
   } else {
     // Si aucune valeur de produit n'est présente dans le localStorage, définir le select sur une valeur vide
     selectElement.value = "";

@@ -14,22 +14,36 @@ function getProduitName(html) {
 
   const selectElement = document.getElementById("produit_select");
 
-  // Remplacer le contenu du select par les options sélectionnées
-  selectElement.innerHTML = optionsHTML;
+  // Ne remplacer que si on a des options valides
+  if (optionsHTML.trim() !== "") {
+    // Remplacer le contenu du select par les options sélectionnées
+    selectElement.innerHTML = optionsHTML;
+  }
 
   // Initialiser la valeur de l'élément select à partir du localStorage
   var selectedProduct = localStorage.getItem("selectedOption");
   if (selectedProduct) {
     selectElement.value = selectedProduct;
-  } else {
-    selectElement.value = "";
   }
 }
 
-ajaxRequest("GET", "/ticketsApp/config/routes.php/produit", getProduitName);
+// Ne charger les produits via AJAX que si le select est vide (pas déjà chargé côté serveur)
+const selectElement = document.getElementById("produit_select");
+if (selectElement && selectElement.options.length <= 1) {
+  // Seulement l'option "Choisissez un produit" ou vide
+  ajaxRequest("GET", "/ticketsApp/produits", getProduitName);
+} else {
+  // Les produits sont déjà chargés, juste restaurer la sélection du localStorage
+  var selectedProduct = localStorage.getItem("selectedOption");
+  if (selectedProduct && selectElement) {
+    selectElement.value = selectedProduct;
+  }
+}
 
 // Quand l'utilisateur change l'option sélectionnée, on sauvegarde la nouvelle valeur dans le localStorage
-document.getElementById("produit_select").addEventListener("change", function () {
-  var selectedOption = this.value;
-  localStorage.setItem("selectedOption", selectedOption);
-});
+if (selectElement) {
+  selectElement.addEventListener("change", function () {
+    var selectedOption = this.value;
+    localStorage.setItem("selectedOption", selectedOption);
+  });
+}
