@@ -22,7 +22,7 @@ if (!isset($user) || $user === false) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/app/public/css/admin/user_details.css" />
+    <link rel="stylesheet" href="/app/public/css/admin/user_details.css?v=2.4" />
 
     <title>Détails</title>
   </head>

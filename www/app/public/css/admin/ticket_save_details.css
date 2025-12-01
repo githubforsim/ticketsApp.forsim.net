@@ -1,21 +1,22 @@
 .content {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure the content takes up the full height of the viewport */
-    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #f7fafc;
   }
   
   #details label {
-    color: #48aad7;
-    font-weight: bold;
-    font-size: large;
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 1rem;
   }
   
   .attachment label {
-    color: #48aad7;
-    font-weight: normal;
-    font-size: large;
+    color: #4a5568;
+    font-weight: 500;
+    font-size: 1rem;
   }
   
   #ticket_container {
@@ -27,16 +28,17 @@
   
   .ticket {
     box-sizing: border-box;
-    padding: 1rem;
-    border-radius: 2px;
-    background-color: hsl(0, 0%, 100%);
-    border: 2px solid hsl(0, 9%, 93%);
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     margin: 10px;
     width: 100%;
-    max-width: 600px; /* Increased width */
+    max-width: 650px;
   }
   
   .ticket div {
-    margin-bottom: 10px; /* Add space between elements */
+    margin-bottom: 16px;
   }
   

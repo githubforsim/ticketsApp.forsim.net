@@ -1,20 +1,21 @@
 #chat-box {
   width: 100%;
-  height: 400px; /* Hauteur fixe pour permettre le défilement */
-  border: 1px solid #ccc;
-  overflow-y: auto; /* Activer le défilement vertical */
+  height: 400px;
+  border: 2px solid #e2e8f0;
+  overflow-y: auto;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 12px;
   display: flex;
-  flex-direction: column; /* Affiche les messages récents en bas */
-  padding: 10px;
+  flex-direction: column;
+  padding: 16px;
   box-sizing: border-box;
+  background: linear-gradient(to bottom, #f7fafc 0%, #ffffff 100%);
 }
 
 .message-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .sender-wrapper {
@@ -28,34 +29,48 @@
 
 .message {
   max-width: 60%;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 12px 16px;
+  border-radius: 12px;
   word-wrap: break-word;
   display: inline-block;
-  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  animation: messageSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .receiver {
-  background-color: #48aad7;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   align-self: flex-start;
 }
 
 .sender {
-  background-color: #ccc;
-  color: black;
+  background-color: #e2e8f0;
+  color: #2d3748;
   align-self: flex-end;
 }
 
 .username {
   font-size: 0.8em;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .date {
-  font-size: 0.8em;
-  margin-top: 2px;
-  color: #666;
+  font-size: 0.75em;
+  margin-top: 4px;
+  color: #718096;
 }
 
 .sender-wrapper .date {
@@ -65,43 +80,59 @@
 #chat-form {
   display: flex;
   margin-top: 10px;
+  gap: 10px;
 }
 
 #message {
   flex: 1;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#message:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 #send-btn {
-  background-color: #48aad7;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 12px 24px;
   cursor: pointer;
-  margin-left: 10px;
-  border-radius: 20px;
+  margin-left: 0;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
 }
 
 #send-btn:hover {
-  background-color: #1a678b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
 }
 
 .content {
   padding-top: 20px;
   padding-left: 280px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 #details label {
-  color: #48aad7;
-  font-weight: bold;
-  font-size: large;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .attachment label {
-  color: #48aad7;
-  font-weight: normal;
-  font-size: large;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 #ticket_container {
@@ -113,44 +144,58 @@
 
 .ticket {
   box-sizing: border-box;
-  padding: 1rem;
-  border-radius: 2px;
-  background-color: hsl(0, 0%, 100%);
-  border: 2px solid hsl(0, 9%, 93%);
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
   margin-top: 150px;
   width: 100%;
   max-width: 600px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .ticket div {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .solved_btn:link,
 .solved_btn:visited {
-  border-radius: 5px;
-  background-color: #48aad7;
-  color: rgb(255, 255, 255);
-  border: 1px solid #48aad7;
-  padding: 10px 20px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+.solved_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
 }
 
 .open_btn:link,
 .open_btn:visited {
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #ffffff;
-  color: #48aad7;
-  border: 1px solid #48aad7;
-  padding: 10px 20px;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 10px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .open_btn:hover {
-  background-color: #48aad7;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
 }

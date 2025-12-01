@@ -1,52 +1,62 @@
 .content {
   padding-top: 20px;
   padding-left: 280px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #f7fafc;
 }
+
 #details label {
-  color: #48aad7;
-  font-weight: bold;
-  font-size: large;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: inline-block;
 }
 
 .ticketTable th.details,
-.ticketTable td.details{
+.ticketTable td.details {
   width: 10px;
 }
 
-/* Styles pour les champs de texte */
+/* Modern input field styles */
 .input-field {
   display: block;
-  width:100%; /* Largeur initiale à 100% */
-  min-width: 200px; /* Largeur minimale */
-  max-width: 600px; /* Largeur maximale */
-  min-height: 50px; /* Hauteur minimale */
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
-  resize: vertical; /* Permet le redimensionnement vertical */
-  overflow-y: auto; /* Afficher une barre de défilement si nécessaire */
+  width: 100%;
+  min-width: 200px;
+  max-width: 600px;
+  min-height: 50px;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  resize: vertical;
+  overflow-y: auto;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-field:focus {
-  border-color: #007bff; /* Couleur de la bordure lors du focus */
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Ombre lors du focus */
-  outline: none; /* Supprimer le contour par défaut */
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+  background-color: #ffffff;
 }
 
 .attachment label {
-  color: #48aad7;
-  font-weight: normal;
-  font-size: large;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 1rem;
 }
 #ticket_details div {
   margin-bottom: 20px;
 }
+
 #ticket_details {
   margin-top: 25px;
   margin-left: 150px;
@@ -54,10 +64,11 @@ body {
   margin-bottom: 20px;
   bottom: 300px;
   box-sizing: border-box;
-  padding: 1rem;
-  border-radius: 2px;
-  background-color: hsl(0, 0%, 100%);
-  border: 2px solid hsl(0, 9%, 93%);
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   display: block;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -78,18 +89,24 @@ body {
 #attachment + label {
   position: static;
   width: 180px;
-  height: 30px;
-  border-radius: 5px;
-  background-color: #48aad7;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  height: 42px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
-  overflow: hidden; /* Prevent text overflow */
-  transition: transform 0.2s ease-out;
+  font-size: 0.95rem;
+  font-weight: 500;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#attachment + label:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
 }
 
 .file-container {
@@ -109,9 +126,9 @@ body {
 .file-list li {
   display: flex;
   align-items: center;
-  margin-right: 15px; /* Adjust the margin to create space between items */
-  color: rgb(104, 98, 98);
-  font-size: 13px;
+  margin-right: 15px;
+  color: #4a5568;
+  font-size: 0.875rem;
 }
 
 .remove-button {
@@ -122,20 +139,26 @@ body {
   color: white;
   font-weight: 500;
   text-align: center;
-  width: 13px; /* Adjust the width to your preference */
-  height: 13px; /* Adjust the height to your preference */
-  background-color: red;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.remove-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(245, 101, 101, 0.4);
 }
 
 .remove-button::before,
 .remove-button::after {
   content: "";
   position: absolute;
-  width: 1.5px; /* Adjust the width of the lines */
-  height: 8px; /* Adjust the height of the lines */
+  width: 2px;
+  height: 10px;
   background-color: white;
 }
 
@@ -151,48 +174,56 @@ div input[type="submit"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 3px;
-  padding: 8px 20px;
-  background-color: #48aad7;
+  border-radius: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
   border: none;
   cursor: pointer;
   margin-left: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
 }
 
 div input[type="submit"]:hover {
-  background-color: #1a678b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
 }
 
 #close_btn a {
   display: inline-block;
   text-decoration: none;
   background-color: #ffffff;
-  border: 1px solid #b1acac;
-  border-radius: 3px;
-  padding: 8px 20px;
-  color: #5f5e5e;
-  font-size: 14px;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  padding: 10px 24px;
+  color: #4a5568;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #close_btn a:hover {
-  border-color: #2c2c2c;
+  border-color: #667eea;
+  color: #667eea;
+  background-color: #f7fafc;
 }
 
 #buttons {
   display: flex;
-  align-items: right; /* Centre les boutons verticalement */
-  justify-content: flex-end; /* Aligne les éléments à droite */
-  flex-wrap: wrap; /* Permet aux boutons de se déplacer sur la ligne suivante si l'espace est insuffisant */
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 #modif,
 #close_btn {
-  padding-left: 10px;
+  padding-left: 0;
   display: inline-block;
-  float: right;
 }
 
 .pending-deletion {
@@ -204,22 +235,25 @@ div input[type="submit"]:hover {
   position: relative;
   border: none;
   padding: 0;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.75em;
+  height: 1.75em;
   border-radius: 50%;
   background: transparent;
-  color: #48aad7;
+  color: #667eea;
   font: inherit;
   text-indent: 100%;
   cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .delete-attachment:focus {
-  outline: solid 0 transparent;
-  box-shadow: 0 0 0 2px #8ed0f9;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
 }
 
 .delete-attachment:hover {
-  background: rgba(29, 161, 142, 0.1);
+  background: rgba(102, 126, 234, 0.1);
+  transform: scale(1.1);
 }
 
 .delete-attachment:before,
@@ -244,8 +278,7 @@ div input[type="submit"]:hover {
 
 #solve,
 #close {
-  padding-left: 10px;
-
+  padding-left: 0;
   display: inline-block;
 }
 
@@ -253,32 +286,40 @@ div input[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 3px;
-  padding: 8px 20px;
-  background-color: #48aad7;
+  border-radius: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
   border: none;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(245, 101, 101, 0.3);
 }
 
 #closing_btn:hover {
-  background-color: #1a678b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(245, 101, 101, 0.4);
 }
 
 #solve_btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 3px;
-  padding: 8px 20px;
-  background-color: #48aad7;
+  border-radius: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
   border: none;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(72, 187, 120, 0.3);
 }
 
 #solve_btn:hover {
-  background-color: #1a678b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(72, 187, 120, 0.4);
 }

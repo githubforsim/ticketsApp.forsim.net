@@ -17,6 +17,15 @@ if (isset($userProduits) && !empty($userProduits)) {
     $availableProducts = $produits;
 }
 
+// DEBUG
+error_log("=== DEBUG VIEW ===");
+error_log("userProduits isset: " . (isset($userProduits) ? 'YES' : 'NO'));
+error_log("produits isset: " . (isset($produits) ? 'YES' : 'NO'));
+error_log("types isset: " . (isset($types) ? 'YES' : 'NO'));
+error_log("urgences isset: " . (isset($urgences) ? 'YES' : 'NO'));
+error_log("availableProducts count: " . count($availableProducts));
+error_log("==================");
+
 $hasMultipleProducts = count($availableProducts) > 1;
 $singleProduct = $hasMultipleProducts ? null : ($availableProducts[0] ?? null);
 ?>
@@ -26,8 +35,6 @@ $singleProduct = $hasMultipleProducts ? null : ($availableProducts[0] ?? null);
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/app/public/css/tickets/create_ticket.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Nouveau Ticket</title>
 </head>
 <body>
@@ -63,8 +70,57 @@ $singleProduct = $hasMultipleProducts ? null : ($availableProducts[0] ?? null);
             <?php endif; ?>
         <?php endif; ?>
 
-        <!-- Formulaire de création de ticket -->
+        <!-- Champs Type et Urgence - TOUJOURS VISIBLES -->
         <?php if (!empty($availableProducts)): ?>
+            <div id="type_radio">
+                <fieldset>
+                    <legend>Type :</legend>
+                    <div id="radio_options">
+                        <?php if (isset($types) && !empty($types)): ?>
+                            <?php foreach ($types as $type): ?>
+                                <div>
+                                    <input type="radio" 
+                                           id="type<?= $type['type_id'] ?>" 
+                                           name="type_id" 
+                                           value="<?= $type['type_id'] ?>" 
+                                           form="ticket_form"
+                                           <?= (strtolower($type['nom_type']) === 'bug') ? 'checked' : '' ?>
+                                           required>
+                                    <label for="type<?= $type['type_id'] ?>"><?= htmlspecialchars($type['nom_type']) ?></label>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p style="color: red;">Aucun type disponible</p>
+                        <?php endif; ?>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div id="urgence_radio">
+                <fieldset>
+                    <legend>Urgence :</legend>
+                    <div id="urgence_options">
+                        <?php if (isset($urgences) && !empty($urgences)): ?>
+                            <?php foreach ($urgences as $urgence): ?>
+                                <div>
+                                    <input type="radio" 
+                                           id="urgence<?= $urgence['urgence_id'] ?>" 
+                                           name="urgence_id" 
+                                           value="<?= $urgence['urgence_id'] ?>" 
+                                           form="ticket_form"
+                                           <?= (strtolower($urgence['niveau']) === 'normale') ? 'checked' : '' ?>
+                                           required>
+                                    <label for="urgence<?= $urgence['urgence_id'] ?>"><?= htmlspecialchars($urgence['niveau']) ?></label>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p style="color: red;">Aucune urgence disponible</p>
+                        <?php endif; ?>
+                    </div>
+                </fieldset>
+            </div>
+        
+        <!-- Formulaire de création de ticket -->
             <form id="ticket_form" style="<?= $hasMultipleProducts ? 'display: none;' : 'display: block;' ?>" action="/ticketsApp/create" method="POST" enctype="multipart/form-data">
                 <input type="hidden" id="produit_id_hidden" name="produit_id" value="<?= $singleProduct ? $singleProduct['produit_id'] : '' ?>">
                 <!-- Champ caché pour la redirection -->
@@ -75,51 +131,6 @@ $singleProduct = $hasMultipleProducts ? null : ($availableProducts[0] ?? null);
                     <input type="text" id="titre" name="titre" required />
                 </div>
 
-               <div id="type_radio">
-    <fieldset>
-        <legend>Type :</legend>
-        <div id="radio_options">
-            <?php if (isset($types) && !empty($types)): ?>
-                <?php foreach ($types as $type): ?>
-                    <div>
-                        <input type="radio" 
-                               id="type<?= $type['type_id'] ?>" 
-                               name="type_id" 
-                               value="<?= $type['type_id'] ?>" 
-                               <?= (strtolower($type['nom_type']) === 'bug') ? 'checked' : '' ?>
-                               required>
-                        <label for="type<?= $type['type_id'] ?>"><?= htmlspecialchars($type['nom_type']) ?></label>
-                    </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <p style="color: red;">Aucun type disponible</p>
-            <?php endif; ?>
-        </div>
-    </fieldset>
-</div>
-
-              <div id="urgence_radio">
-    <fieldset>
-        <legend>Urgence :</legend>
-        <div id="urgence_options">
-            <?php if (isset($urgences) && !empty($urgences)): ?>
-                <?php foreach ($urgences as $urgence): ?>
-                    <div>
-                        <input type="radio" 
-                               id="urgence<?= $urgence['urgence_id'] ?>" 
-                               name="urgence_id" 
-                               value="<?= $urgence['urgence_id'] ?>" 
-                               <?= (strtolower($urgence['niveau']) === 'normale') ? 'checked' : '' ?>
-                               required>
-                        <label for="urgence<?= $urgence['urgence_id'] ?>"><?= htmlspecialchars($urgence['niveau']) ?></label>
-                    </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <p style="color: red;">Aucune urgence disponible</p>
-            <?php endif; ?>
-        </div>
-    </fieldset>
-</div>
               <div>
     <label for="description">Description (optionnelle) :</label>
     <textarea id="description" name="description"></textarea>
@@ -144,153 +155,39 @@ $singleProduct = $hasMultipleProducts ? null : ($availableProducts[0] ?? null);
         <?php endif; ?>
     </div>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const selectElement = document.getElementById("produit_id");
-        const ticketForm = document.getElementById("ticket_form");
-        const consigne = document.getElementById("consigne");
-        const hiddenInput = document.getElementById("produit_id_hidden");
-        const fileInput = document.getElementById("attachment");
-        const fileList = document.querySelector(".file-list");
-        const fileError = document.getElementById("file-error");
-        
-        // Extensions autorisées
-        const allowedExtensions = ['jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx', 'zip', 'rar'];
-        
-        // Gestion de la sélection de produit (seulement si plusieurs produits)
-        if (selectElement) {
-            selectElement.addEventListener("change", function () {
-                const selectedProduct = this.value;
-                console.log("Produit sélectionné:", selectedProduct);
-                
-                if (selectedProduct !== "") {
-                    ticketForm.style.display = "block";
-                    consigne.style.display = "none";
-                    hiddenInput.value = selectedProduct;
-                } else {
-                    ticketForm.style.display = "none";
-                    consigne.style.display = "block";
-                }
-            });
-        }
-        
-        // Gestion de la sélection de fichiers
-        if (fileInput) {
-            fileInput.addEventListener("change", function(e) {
-                const files = Array.from(e.target.files);
-                fileList.innerHTML = "";
-                fileError.style.display = "none";
-                
-                let hasInvalidFiles = false;
-                const validFiles = [];
-                
-                files.forEach((file, index) => {
-                    const fileName = file.name.toLowerCase();
-                    const fileExtension = fileName.split('.').pop();
-                    
-                    const listItem = document.createElement("li");
-                    
-                    if (allowedExtensions.includes(fileExtension)) {
-                        listItem.innerHTML = `
-                            <i class="fas fa-file"></i> 
-                            <span>${file.name}</span> 
-                            <small>(${(file.size / 1024 / 1024).toFixed(2)} MB)</small>
-                            <span class="file-status valid"><i class="fas fa-check"></i></span>
-                        `;
-                        listItem.className = "file-item valid";
-                        validFiles.push(file);
-                    } else {
-                        listItem.innerHTML = `
-                            <i class="fas fa-file"></i> 
-                            <span>${file.name}</span> 
-                            <span class="file-status invalid"><i class="fas fa-times"></i> Format non autorisé</span>
-                        `;
-                        listItem.className = "file-item invalid";
-                        hasInvalidFiles = true;
-                    }
-                    
-                    fileList.appendChild(listItem);
-                });
-                
-                if (hasInvalidFiles) {
-                    fileError.textContent = "Certains fichiers ont un format non autorisé. Seuls les fichiers JPG, JPEG, PNG, PDF, DOC, DOCX, ZIP et RAR sont acceptés.";
-                    fileError.style.display = "block";
-                    
-                    // Créer un nouveau FileList avec seulement les fichiers valides
-                    const dt = new DataTransfer();
-                    validFiles.forEach(file => dt.items.add(file));
-                    fileInput.files = dt.files;
-                }
-            });
-        }
-        
-        // Gestion AJAX du formulaire pour éviter la page JSON
-        const form = document.getElementById("ticket_form");
-        if (form) {
-            form.addEventListener("submit", function (event) {
-                event.preventDefault(); // Empêcher la soumission normale
-                
-                console.log("Soumission AJAX du formulaire...");
-                
-                // Vérifier s'il y a des fichiers invalides
-                const invalidFiles = document.querySelectorAll('.file-item.invalid');
-                if (invalidFiles.length > 0) {
-                    alert('Veuillez supprimer les fichiers avec des formats non autorisés avant de soumettre le formulaire.');
-                    return;
-                }
-                
-                // Créer un FormData avec toutes les données du formulaire
-                const formData = new FormData(form);
-                
-                // Si aucun fichier n'est sélectionné, ne pas inclure le champ file
-                const fileInput = document.getElementById("attachment");
-                if (fileInput.files.length === 0) {
-                    formData.delete("attachment[]");
-                }
-                
-                // Afficher un message de chargement (optionnel)
-                const submitBtn = form.querySelector('input[type="submit"]');
-                const originalText = submitBtn.value;
-                submitBtn.value = "Création en cours...";
-                submitBtn.disabled = true;
-                
-                // Envoyer la requête AJAX
-                fetch('/ticketsApp/create', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Réponse:', data);
-                    
-                    if (data.status === 'success') {
-                        // Succès - rediriger vers la page des tickets ouverts
-                        console.log("Ticket créé avec succès, redirection...");
-                        window.location.href = "https://ticketsapp.forsim.net/ticketsApp/tickets/open";
-                    } else {
-                        // Erreur - afficher le message d'erreur
-                        alert('Erreur: ' + (data.message || 'Une erreur est survenue'));
-                        submitBtn.value = originalText;
-                        submitBtn.disabled = false;
-                    }
-                })
-                .catch(error => {
-                    console.error('Erreur:', error);
-                    alert('Erreur de connexion. Veuillez réessayer.');
-                    submitBtn.value = originalText;
-                    submitBtn.disabled = false;
-                });
-            });
-        }
-    });
-    </script>
+    <script type="text/javascript" src="/app/public/js/ajax.js" defer></script>
+    <script type="text/javascript" src="/app/public/js/tickets/create_ticket.js" defer></script>
 
     <style>
+    /* FORCER L'AFFICHAGE DÈS LE CHARGEMENT */
+    #type_radio, #urgence_radio {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    #type_radio fieldset, #urgence_radio fieldset {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    #radio_options, #urgence_options {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 16px !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    #radio_options > div, #urgence_options > div {
+        display: flex !important;
+        align-items: center !important;
+        margin: 5px 0;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
     #produit-selection {
         background: #f8f9fa;
         padding: 15px;
@@ -338,7 +235,17 @@ $singleProduct = $hasMultipleProducts ? null : ($availableProducts[0] ?? null);
     }
     
     #radio_options > div, #urgence_options > div {
+        display: flex !important;
+        align-items: center !important;
         margin: 5px 0;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    #type_radio, #urgence_radio {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .file-container {

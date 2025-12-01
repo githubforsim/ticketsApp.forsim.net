@@ -17,7 +17,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/app/public/css/admin/users.css" />
+    <link rel="stylesheet" href="/app/public/css/admin/users.css?v=2.4" />
 
     <title>Utilisateurs</title>
     <?php include 'admin_sidebar.php'; ?>

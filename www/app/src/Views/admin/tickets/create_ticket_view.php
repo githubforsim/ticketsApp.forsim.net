@@ -15,9 +15,43 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/app/public/css/tickets/create_ticket.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="/app/public/css/tickets/create_ticket.css?v=2.6" />
     <title>Nouveau ticket</title>
+    <style>
+    /* FORCER L'AFFICHAGE DES OPTIONS AVEC SPÉCIFICITÉ MAXIMALE */
+    body #type_radio, 
+    body #urgence_radio,
+    body div#type_radio,
+    body div#urgence_radio {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    
+    body #radio_options, 
+    body #urgence_options,
+    body div#radio_options,
+    body div#urgence_options {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 16px !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    
+    body #radio_options input,
+    body #radio_options label,
+    body #urgence_options input,
+    body #urgence_options label {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    </style>
   </head>
   <body>
     <!--Ajout du menu de navigation-->
@@ -100,22 +134,6 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
       </form>
     </div>
 
-    <!-- Script pour afficher les noms des fichiers sélectionnés -->
-    <script>
-      document.getElementById('attachment').addEventListener('change', function(e) {
-        const fileList = document.querySelector('.file-list');
-        fileList.innerHTML = '';
-        
-        if (this.files.length > 0) {
-          for (let i = 0; i < this.files.length; i++) {
-            const file = this.files[i];
-            const listItem = document.createElement('li');
-            listItem.innerHTML = `<i class="fas fa-file"></i> ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
-            fileList.appendChild(listItem);
-          }
-        }
-      });
-    </script>
   </body>
   <script type="text/javascript" src="/app/public/js/ajax.js" defer></script>
   <script type="text/javascript" src="/app/public/js/admin/create_ticket.js" defer></script>

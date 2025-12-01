@@ -1,81 +1,163 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  min-height: 100vh;
 }
+
 .sidebar {
   position: fixed;
-  left: 0; /* Modifier la valeur de "left" */
-  width: 250px;
+  left: 0;
+  width: 260px;
   height: 100%;
-  background: #48aad7;
-  transition: all 0.5s ease;
+  background: linear-gradient(180deg, #2d3748 0%, #1a202c 100%);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
 }
+
 .sidebar header {
-  font-size: 16px;
+  padding: 24px 20px;
   color: white;
-  line-height: 70px;
   text-align: center;
-  background: #4db5e5;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   user-select: none;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar header p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.sidebar ul {
+  padding-top: 10px;
+}
+
+.sidebar ul li {
+  position: relative;
+  overflow: hidden;
 }
 
 .sidebar ul li.active a {
-  background-color: #3f86a7;
-  padding-left: 50px;
+  background: linear-gradient(90deg, rgba(66, 153, 225, 0.15) 0%, transparent 100%);
+  border-left: 4px solid #4299e1;
+  padding-left: 36px;
+  color: #4299e1;
+}
+
+.sidebar ul li.active a::before {
+  opacity: 1;
 }
 
 .sidebar ul a {
-  display: block;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  height: 56px;
   width: 100%;
-  line-height: 65px;
-  font-size: 16px;
-  color: white;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
   padding-left: 40px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #48aad7;
-  border-top: 1px solid #48aad7;
-  transition: 0.4s;
+  border-left: 4px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
+
+.sidebar ul a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(66, 153, 225, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .sidebar ul li:hover a {
-  padding-left: 50px;
-  background-color: #3f86a7;
+  padding-left: 44px;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(66, 153, 225, 0.08) 0%, transparent 100%);
+  border-left-color: rgba(66, 153, 225, 0.5);
 }
+
+.sidebar ul li:hover a::before {
+  opacity: 1;
+}
+
 .sidebar ul a i {
-  margin-right: 16px;
+  margin-right: 14px;
+  font-size: 18px;
+  min-width: 24px;
+  transition: transform 0.3s ease;
 }
+
+.sidebar ul li:hover a i {
+  transform: translateX(2px);
+}
+
 .sidebar header label {
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  background: #4db5e5;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .sidebar ul a:focus {
-  background-color: #3f86a7;
+  outline: none;
 }
-.sidebar ul a #logout {
-  color: red;
+
+.produit {
+  margin-top: 12px;
 }
 
 .produit select {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  background-color: white;
-  border: 1px solid #398bb1;
-  border-radius: 3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(66, 153, 225, 0.3);
+  border-radius: 8px;
   text-align: center;
-  width: 200px;
-  height: 40px;
+  width: 220px;
+  height: 42px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #2d3748;
+}
+
+.produit select:hover {
+  border-color: #4299e1;
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.2);
+  transform: translateY(-1px);
+}
+
+.produit select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
 }
 
 .user header a {
-  color: azure;
+  color: #4299e1;
+  transition: color 0.3s ease;
+}
+
+.user header a:hover {
+  color: #63b3ed;
 }
 
