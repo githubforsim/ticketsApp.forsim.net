@@ -31,7 +31,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/ticketsApp/app/public/css/sidebar.css" />
+    <link rel="stylesheet" href="/app/public/css/sidebar.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
 
@@ -73,6 +73,6 @@
 
   </div>
   </body>
-  <script type="text/javascript" src="/ticketsApp/app/public/js/ajax.js" defer></script>
-  <script type="text/javascript" src="/ticketsApp/app/public/js/sidebar.js" defer></script>
+  <script type="text/javascript" src="/app/public/js/ajax.js" defer></script>
+  <script type="text/javascript" src="/app/public/js/sidebar.js" defer></script>
 </html>

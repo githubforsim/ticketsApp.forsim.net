@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CHEMINS CSS CORRIGÉS -->
-    <link rel="stylesheet" href="/ticketsApp/app/public/css/admin/ticket_save_details.css" />
+    <link rel="stylesheet" href="/app/public/css/admin/ticket_save_details.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Détails Tickets</title>
 </head>
@@ -145,7 +145,7 @@ if (!isset($_SESSION['username'])) {
     </div>
 
     <!-- CHEMINS JS CORRIGÉS -->
-    <script type="text/javascript" src="/ticketsApp/app/public/js/ajax.js" defer></script>
-    <script type="text/javascript" src="/ticketsApp/app/public/js/tickets/details/ticket_save_details.js" defer></script>
+    <script type="text/javascript" src="/app/public/js/ajax.js" defer></script>
+    <script type="text/javascript" src="/app/public/js/tickets/details/ticket_save_details.js" defer></script>
 </body>
 </html>

@@ -2,8 +2,10 @@
 RewriteEngine On
 #RewriteBase /ticketsApp
 
-# Ne pas réécrire les requêtes vers /ticketsApp/public/
-RewriteCond %{REQUEST_URI} ^/ticketsApp/public/ [NC]
+# Ne pas réécrire les requêtes vers les fichiers statiques (CSS, JS, images, etc.)
+RewriteCond %{REQUEST_URI} ^/ticketsApp/app/public/ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/ticketsApp/public/ [NC,OR]
+RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ [NC]
 RewriteRule ^ - [L]
 
 # Réécrire toutes les requêtes sauf si le fichier ou dossier existe

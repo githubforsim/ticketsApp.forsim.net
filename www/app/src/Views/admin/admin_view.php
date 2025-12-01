@@ -16,7 +16,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ticketsApp/app/public/css/tickets/open_ticket.css">
+    <link rel="stylesheet" href="/app/public/css/tickets/open_ticket.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Espace Administration</title>
 </head>
@@ -26,7 +26,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     <?php include 'admin_sidebar.php'; ?>
 
     <div class="content">
-        <img src="/ticketsApp/app/src/upload/logo_FORSIM124.png" alt="Logo Forsim" style="height: 50px; margin-bottom: 20px;" />
+        <img src="/app/src/upload/logo_FORSIM124.png" alt="Logo Forsim" style="height: 50px; margin-bottom: 20px;" />
         <h1>Bienvenue <?= htmlspecialchars($_SESSION['username']) ?> sur l'espace administration !</h1>
 
         <!-- Contenu pour afficher les tickets ouverts -->
@@ -91,7 +91,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
         </table>
     </div>
 
-    <script type="text/javascript" src="/ticketsApp/app/public/js/ajax.js" defer></script>
-    <script type="text/javascript" src="/ticketsApp/app/public/js/admin/admin_view.js" defer></script>
+    <script type="text/javascript" src="/app/public/js/ajax.js" defer></script>
+    <script type="text/javascript" src="/app/public/js/admin/admin_view.js" defer></script>
 </body>
 </html>
