@@ -5,14 +5,14 @@ services:
       MYSQL_ROOT_PASSWORD: bODw50eeKjPT/rVW
       MYSQL_DATABASE: ticketsApp
     volumes:
-      - ./db:/var/lib/mysql
+      - db_data:/var/lib/mysql
       - ./db/dump.sql:/docker-entrypoint-initdb.d/dump.sql
     restart: always
   web:
     build: ./docker/web    
     ports:
-      - 80:80
-      - 443:443
+      - 8081:80
+      - 8443:443
     depends_on:
       - db
     volumes:
@@ -30,3 +30,10 @@ services:
     environment:
       PMA_HOST: db
 
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local

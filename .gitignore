@@ -30,6 +30,14 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Ignorer les fichiers et dossiers de tests
+.phpunit.cache/
+.phpunit.result.cache
+coverage/
+.coverage/
+vendor/
+composer.lock
+
 # Ignorer la configuration Docker locale
 docker-compose.override.yml
 

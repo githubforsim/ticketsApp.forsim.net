@@ -1,7 +1,4 @@
-FROM php:8.4-apache
-
-RUN apt-get update
-RUN apt-get install python3-certbot-apache curl -y
+FROM php:8.3-apache
 
 # Installation les extensions PHP nécessaires
 RUN docker-php-ext-install mysqli pdo pdo_mysql

@@ -1,0 +1,24 @@
+{
+  "name": "ticketsapp/ticketsapp",
+  "description": "Système de gestion de tickets de support",
+  "type": "project",
+  "require": {
+    "php": ">=8.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "TicketsApp\\": "www/app/src/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-html coverage",
+    "test-filter": "phpunit --filter"
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}

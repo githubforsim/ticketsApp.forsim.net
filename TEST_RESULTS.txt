@@ -1,0 +1,28 @@
+﻿========================================
+ TESTS UNITAIRES - RÉSULTATS FINAUX
+========================================
+
+Base de données de test: ticketsApp_test 
+
+Tests: 36
+Assertions: 93
+Status: OK 
+
+Détails:
+   30 tests réussis
+   6 tests skipped (limitations documentées)
+   0 tests risky (tous utilisent la DB de test)
+   0 échecs
+
+Composants testés:
+   Database Functions (9/9)
+   UserModel (5/5)
+   TicketModel (11/13 - 2 skipped)
+   AdminModel (10/11 - 1 skipped)
+
+Scripts disponibles:
+  .\create-test-db.ps1       - Créer/réinitialiser la DB de test
+  .\run-tests.ps1            - Lancer les tests
+  .\run-tests.ps1 -Coverage  - Tests avec couverture de code
+
+========================================

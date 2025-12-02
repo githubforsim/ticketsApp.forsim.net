@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+         cacheDirectory=".phpunit.cache"
+         beStrictAboutOutputDuringTests="true"
+         failOnRisky="true"
+         failOnWarning="true">
+    <testsuites>
+        <testsuite name="TicketsApp Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <source>
+        <include>
+            <directory suffix=".php">ticketsApp/app/src</directory>
+            <directory suffix=".php">ticketsApp/config</directory>
+        </include>
+        <exclude>
+            <directory>ticketsApp/app/src/Views</directory>
+        </exclude>
+    </source>
+
+    <php>
+        <env name="DB_SERVER" value="db"/>
+        <env name="DB_NAME" value="ticketsApp_test"/>
+        <env name="DB_USER" value="root"/>
+        <env name="DB_PASSWORD" value="Plouzane**"/>
+    </php>
+</phpunit>
